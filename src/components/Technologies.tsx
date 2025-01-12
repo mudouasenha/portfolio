@@ -1,11 +1,10 @@
 import { Variants } from "framer-motion";
 import { motion } from "motion/react";
-import { BiLogoPostgresql } from "react-icons/bi";
-import { DiRedis } from "react-icons/di";
-import { FaNodeJs } from "react-icons/fa";
-import { RiReactjsLine } from "react-icons/ri";
-import { SiMongodb } from "react-icons/si";
-import { TbBrandNextjs } from "react-icons/tb";
+import { DiMsqlServer, DiRedis } from "react-icons/di";
+import { GrGraphQl } from "react-icons/gr";
+import { SiTypescript } from "react-icons/si";
+import { TbBrandCSharp } from "react-icons/tb";
+import { VscAzure } from "react-icons/vsc";
 
 const iconVariants = (duration: number): Variants => ({
     initial: { y: -10 },
@@ -43,15 +42,7 @@ const Technologies = () => {
                     animate="animate"
                     className="rounded-2xl border-4 border-neutral-800 p-4"
                 >
-                    <RiReactjsLine className="text-7xl text-cy-400" />
-                </motion.div>
-                <motion.div
-                    variants={iconVariants(3)}
-                    initial="initial"
-                    animate="animate"
-                    className="rounded-2xl border-4 border-neutral-800 p-4"
-                >
-                    <TbBrandNextjs className="text-7xl" />
+                    <TbBrandCSharp className="text-7xl text-purple-400" />
                 </motion.div>
                 <motion.div
                     variants={iconVariants(5)}
@@ -59,15 +50,24 @@ const Technologies = () => {
                     animate="animate"
                     className="rounded-2xl border-4 border-neutral-800 p-4"
                 >
-                    <SiMongodb className="text-7xl text-green-400" />
+                    <DiMsqlServer className="text-7xl text-red-400" />
                 </motion.div>
+                <motion.div
+                    variants={iconVariants(3)}
+                    initial="initial"
+                    animate="animate"
+                    className="rounded-2xl border-4 border-neutral-800 p-4"
+                >
+                    <VscAzure className="text-7xl text-blue-400" />
+                </motion.div>
+
                 <motion.div
                     variants={iconVariants(2)}
                     initial="initial"
                     animate="animate"
                     className="rounded-2xl border-4 border-neutral-800 p-4"
                 >
-                    <DiRedis className="text-7xl text-red-700" />
+                    <SiTypescript className="text-7xl text-blue-400" />
                 </motion.div>
                 <motion.div
                     variants={iconVariants(6)}
@@ -75,7 +75,7 @@ const Technologies = () => {
                     animate="animate"
                     className="rounded-2xl border-4 border-neutral-800 p-4"
                 >
-                    <FaNodeJs className="text-7xl text-green-500" />
+                    <GrGraphQl className="text-7xl text-pink-500" />
                 </motion.div>
                 <motion.div
                     variants={iconVariants(4)}
@@ -83,8 +83,14 @@ const Technologies = () => {
                     animate="animate"
                     className="rounded-2xl border-4 border-neutral-800 p-4"
                 >
-                    <BiLogoPostgresql className="text-7xl text-sky-700" />
+                    <DiRedis className="text-7xl text-red-600" />
                 </motion.div>
+                <p>
+                    C# | .NET | MSSQL | GraphQL | EF Core | MessagePack | ElasticSearch | Hangfire
+                    | BenchmarkDotNet | JavaScript | Python | R | TimescaleDB | Node | React | Git
+                    | Serialization | XUnit | Unit Testing | Integration Testing | Grafana Load
+                    Testing
+                </p>
             </motion.div>
         </div>
     );

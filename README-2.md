@@ -1,3 +1,10 @@
+## TODO:
+- Complete About and Description Sections
+- Complete Experiences Section
+- Complete Projects section
+- Create Languages Section
+- Complete Technologies section with more detailed tech stack
+
 ## Deploy:
 It was used Vercel to deploy this application.
 

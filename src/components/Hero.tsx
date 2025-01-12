@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import profilePic from "../assets/kevinRushProfile.png";
+import profilePic from "../assets/MatheusGomesProfile.jpg";
 import { HERO_CONTENT } from "../constants/index.ts";
 
 const container = (delay: number) => ({

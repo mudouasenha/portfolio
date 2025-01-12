@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import aboutImg from "../assets/about.jpg";
+import aboutImg from "../assets/MatheusGomesProfile.jpg";
 import { ABOUT_TEXT } from "../constants";
 
 const About = () => {
