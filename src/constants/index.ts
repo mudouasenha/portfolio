@@ -3,7 +3,9 @@ import ufsc_brasao from "../assets/projects/ufsc_brasao.jpg";
 import portfolio from "../assets/projects/portfolio.jpg";
 import microsoft_certified_fundamentals_badge from "../assets/certifications/microsoft_certified_fundamentals_badge.svg";
 
-export const HERO_CONTENT = `I'm a .NET Developer with professional experience in software development since 2020, specializing in C#, .NET, MS SQL, Azure, and related technologies. I have a strong passion for crafting clean, scalable, and maintainable solutions, always prioritizing concise and readable code. Experienced in agile environments, I excel at collaborating within diverse teams to deliver high-quality software efficiently. I'm fluent in English and adaptable to new challenges, and currently enhancing my expertise in microservices, Azure, and Domain-Driven Design (DDD) and IA programming to deliver even more robust and modern solutions.
+export const HERO_CONTENT = `I'm a .NET Developer with professional experience in software development since 2020, specializing in C#, .NET, MS SQL, Azure, and related technologies. I have a strong passion for crafting clean, scalable, and maintainable solutions, always prioritizing concise and readable code. 
+
+Experienced in agile environments, I excel at collaborating within diverse teams to deliver high-quality software efficiently. I'm fluent in English and adaptable to new challenges, and currently enhancing my expertise in microservices, Azure, and Domain-Driven Design (DDD) and IA programming to deliver even more robust and modern solutions.
 `;
 
 export const SKILLS = [
@@ -33,13 +35,13 @@ export const SKILLS = [
     }
 ];
 
-export const ABOUT_TEXT = `I am a hard-working and versatile backend developer with a passion for building **robust, modern, and maintainable solutions**. With **5 years of professional experience**, I have worked across diverse systems and technologies, contributing to **the full Software Development Life Cycle (SDLC)** while ensuring **scalability and business value**.
+export const ABOUT_TEXT = `I am a hard-working and versatile backend developer with a passion for building **robust, modern, and maintainable solutions**. With **5 years** of professional experience, I have worked across diverse systems and technologies, contributing to the full **Software Development Life Cycle (SDLC)** while ensuring **scalability and business value**.
 
-My journey in development began in high school, where I earned a **technical degree in Telecommunications** and developed a deep curiosity for how the internet and software systems work. Starting in **technical support**, I transitioned into backend development, continuously striving to **learn, improve, and adapt to new challenges**.
+My journey in development began in high school, where I earned a technical degree in Telecommunications and developed a deep curiosity for how the internet and software systems work. Starting in technical support, I transitioned into backend development, continuously striving to **learn, improve, and adapt to new challenges**.
 
 I thrive in **collaborative, high-communication environments**, where I can exchange knowledge with teammates and other business areas. Experienced in **solving complex and critical problems**, I am dedicated to delivering **high-quality, robust solutions** that drive real impact. My tech stack includes **.NET, Azure, Entity Framework, MSSQL, PostgreSQL** and others.
 
-Outside of coding, I enjoy **going to the gym, spending time with family and friends, and exploring new technologies**. I also love refining my code, researching best practices, and watching tech-related content on YouTube.
+Outside of coding, I enjoy going to the gym, spending time with family and friends, and exploring new technologies. I also love refining my code, researching best practices, and watching tech-related content on YouTube.
 `;
 
 export const EXPERIENCES = [
@@ -80,6 +82,7 @@ export const PROJECTS = [
         description:
             "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
         technologies: [".NET", "SQL Server", "Microservices", "Redis", "DDD", "MongoDB"],
+        url: ""
     },
     {
         title: "Cachara AI Image classifier and data extraction Platform (In Progress...)",
@@ -87,6 +90,7 @@ export const PROJECTS = [
         description:
             "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
         technologies: [".NET", "OpenAI", "ML.NET", "Next.js", "React"],
+        url: ""
     },
     {
         title: "Portfolio Website",
@@ -94,6 +98,7 @@ export const PROJECTS = [
         description:
             "A personal portfolio website showcasing projects, skills, and contact information.",
         technologies: ["HTML", "CSS", "React", "Tailwindcss"],
+        url: ""
     },
     {
         title: "Monography - Data Serialization Techniques evaluation",
@@ -101,6 +106,7 @@ export const PROJECTS = [
         description:
             "Evaluation of Serialization Strategies for Communication in Distributed Systems.",
         technologies: [".NET", "R", "MessagePack", "Protobuf", "Grafana k6", "BenchmarkDotNet"],
+        url: ""
     },
 ];
 

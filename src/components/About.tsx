@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import aboutImg from "../assets/MatheusGomesProfile.jpg";
 import { ABOUT_TEXT } from "../constants";
+import ReactMarkdown from "react-markdown";
 
 const About = () => {
     return (
@@ -26,7 +27,9 @@ const About = () => {
                     className="w-full lg:w-1/2"
                 >
                     <div className="flex justify-center lg:justify-start">
-                        <p className="my-2 maxw-xl py-6">{ABOUT_TEXT}</p>
+                    <div className="my-2 max-w-xl py-6 font-light text-justify leading-relaxed tracking-tighter">
+                        <ReactMarkdown>{ABOUT_TEXT}</ReactMarkdown>
+                    </div>
                     </div>
                 </motion.div>
             </div>

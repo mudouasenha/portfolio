@@ -10,6 +10,14 @@ const formatDate = (date: string) => {
     }).format(new Date(date));
   };
 
+  const cardHoverEffect = {
+    hover: {
+        scale: 1.1,
+        boxShadow: "0px 5px 20px rgba(255, 255, 255, 0.2)",
+        transition: { duration: 0.3 },
+    },
+};
+
 const Certifications = () => {
     return (
         <div className="border-b border-neutral-900 pb-20 border-width-6">
@@ -24,7 +32,7 @@ const Certifications = () => {
             <div className="flex flex-wrap justify-center gap-6">
             {CERTIFICATIONS.map((certification, index) => (
               <a 
-              href="https://learn.microsoft.com/pt-br/credentials/certifications/azure-fundamentals/?practice-assessment-type=certification"
+              href={certification.url}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full max-w-sm lg:max-w-md"
@@ -34,6 +42,7 @@ const Certifications = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: 50 }}
                 transition={{ duration: 0.5 }}
+                variants={cardHoverEffect}
                 className="rounded-xl border border-neutral-700 bg-neutral-900/70 p-6 text-center shadow-lg shadow-indigo-900/30 hover:bg-neutral-800/80 hover:border-cyan-400 hover:shadow-cyan-500/30 cursor-pointer"
               >
                 <h4 className="mb-4 text-lg font-semibold text-neutral-200">{certification.name}</h4>
