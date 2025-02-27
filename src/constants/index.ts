@@ -113,10 +113,10 @@ export const LANGUAGES = {
 export const CERTIFICATIONS = [{
     name: "Azure Fundamentals (AZ-900)",
     issued_by: "Microsoft",
-    date: "2025",
-    credentialId: "D1319B18E7067172",
-    certificationNumber: "FE9D1E-F05MCF",
-    image: microsoft_certified_fundamentals_badge
+    date: "2025-01-14T00:00:00.000-03:00",
+    image: microsoft_certified_fundamentals_badge,
+    description: "Demonstrate foundational knowledge of cloud concepts, core Azure services, plus Azure management and governance features and tools.",
+    url: "https://learn.microsoft.com/pt-br/credentials/certifications/azure-fundamentals/?practice-assessment-type=certification"
 }]
 
 export const CONTACT = {

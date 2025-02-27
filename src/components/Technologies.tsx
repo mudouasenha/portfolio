@@ -5,6 +5,7 @@ import { GrGraphQl } from "react-icons/gr";
 import { SiTypescript } from "react-icons/si";
 import { TbBrandCSharp } from "react-icons/tb";
 import { VscAzure } from "react-icons/vsc";
+import { SKILLS } from "../constants";
 
 const iconVariants = (duration: number): Variants => ({
     initial: { y: -10 },
@@ -85,14 +86,42 @@ const Technologies = () => {
                 >
                     <DiRedis className="text-7xl text-red-600" />
                 </motion.div>
-                <p>
-                    C# | .NET | MSSQL | GraphQL | EF Core | MessagePack | ElasticSearch | Hangfire
-                    | BenchmarkDotNet | JavaScript | Python | R | TimescaleDB | Node | React | Git
-                    | Serialization | XUnit | Unit Testing | Integration Testing | Grafana Load
-                    Testing
-                </p>
+            </motion.div>
+            <motion.h1
+                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: -100 }}
+                transition={{ duration: 1.5 }}
+                className="my-20 text-center text-4xl"
+            >
+                Skills
+            </motion.h1>
+
+            <motion.div
+                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, x: -50 }}
+                transition={{ duration: 1 }}
+                className="mx-auto max-w-4xl space-y-6"
+            >
+                {SKILLS.map((category, categoryIndex) => (
+                    <div key={categoryIndex}>
+                        <h2 className="mb-3 text-lg font-semibold text-neutral-300">
+                            {category.name}
+                        </h2>
+                        <div className="flex flex-wrap gap-2">
+                            {category.skills.map((tech, index) => (
+                                <span
+                                    key={index}
+                                    className="mr-2 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-900"
+                                >
+                                    {tech}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+                ))}
             </motion.div>
         </div>
+        
     );
 };
 

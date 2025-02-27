@@ -1,9 +1,18 @@
 import { motion } from "motion/react";
 import { CERTIFICATIONS } from "../constants";
 
+const formatDate = (date: string) => {
+    const userLocale = navigator.language || "en-US"; // Detects the user's browser language
+    return new Intl.DateTimeFormat(userLocale, {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    }).format(new Date(date));
+  };
+
 const Certifications = () => {
     return (
-        <div className="border-b border-neutral-900 pb-20">
+        <div className="border-b border-neutral-900 pb-20 border-width-6">
             <motion.h1
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: -100 }}
@@ -12,46 +21,36 @@ const Certifications = () => {
             >
                 Certifications
             </motion.h1>
-            <div>
-                {CERTIFICATIONS.map((certification, index) => (
-                    <div key={index} className="mb-8 flex flex-wrap lg:justify-center">
-                        <motion.div
-                            whileInView={{ opacity: 1, x: 0 }}
-                            initial={{ opacity: 0, x: -100 }}
-                            transition={{ duration: 1 }}
-                            className="w-full lg:w-1/4"
-                        >
-                            <img
-                                src={certification.image}
-                                width={300}
-                                height={250}
-                                alt={certification.name}
-                                className="mb-6 rounded"
-                            />
-                        </motion.div>
-                        <motion.div
-                            whileInView={{ opacity: 1, x: 0 }}
-                            initial={{ opacity: 0, x: 100 }}
-                            transition={{ duration: 1 }}
-                            className="w-full max-w-xl lg:w-3/4"
-                        >
-                            <h6 className="mb-2 font-semibold">{certification.name} -{" "}
-                                <span className="text-sm text-purple-100">
-                                    Issued by{" "}{certification.issued_by}
-                                </span></h6>
-                            <p className="mb-4 text-neutral-400">{certification.description}</p>
-                            {certification.technologies.map((tech, index) => (
-                                <span
-                                    key={index}
-                                    className="mr-2 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-900"
-                                >
-                                    {tech}
-                                </span>
-                            ))}
-                        </motion.div>
-                    </div>
-                ))}
-                <div></div>
+            <div className="flex flex-wrap justify-center gap-6">
+            {CERTIFICATIONS.map((certification, index) => (
+              <a 
+              href="https://learn.microsoft.com/pt-br/credentials/certifications/azure-fundamentals/?practice-assessment-type=certification"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full max-w-sm lg:max-w-md"
+            >
+              <motion.div
+                key={index}
+                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 50 }}
+                transition={{ duration: 0.5 }}
+                className="rounded-xl border border-neutral-700 bg-neutral-900/70 p-6 text-center shadow-lg shadow-indigo-900/30 hover:bg-neutral-800/80 hover:border-cyan-400 hover:shadow-cyan-500/30 cursor-pointer"
+              >
+                <h4 className="mb-4 text-lg font-semibold text-neutral-200">{certification.name}</h4>
+                <div className="flex justify-center">
+                  <img
+                    src={certification.image}
+                    alt={certification.name}
+                    className="mb-4 h-32 w-auto rounded-lg"
+                  />
+                </div>
+                <p className="text-sm text-neutral-400">
+                  <span className="font-semibold text-cyan-400">Issued by:</span> {certification.issued_by} on <strong>{formatDate(certification.date)}</strong>
+                </p>
+                <p className="mt-2 text-sm text-neutral-500">{certification.description}</p>
+              </motion.div>
+            </a>
+            ))}
             </div>
         </div>
     );
