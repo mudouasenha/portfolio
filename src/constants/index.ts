@@ -15,7 +15,7 @@ export const SKILLS = [
     },
     {
         name: "Databases",
-        skills: ["Microsoft SQL Server", "ElasticSearch", "Postgres", "TimescaleDB"]
+        skills: ["Microsoft SQL Server", "ElasticSearch", "Postgres", "Redis", "TimescaleDB"]
     },
     {
         name: "Cloud & DevOps",
