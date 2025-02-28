@@ -11,7 +11,7 @@ Experienced in agile environments, I excel at collaborating within diverse teams
 export const SKILLS = [
     {
         name: "Programming and Frameworks",
-        skills: ["C#", ".NET 9", "Entity Framework Core", "GraphQL", "Node", "React", "R"]
+        skills: ["C#", ".NET 9", "Entity Framework Core", "GraphQL", "Typescript", "React", "R", "Hangfire"]
     },
     {
         name: "Databases",
@@ -19,7 +19,7 @@ export const SKILLS = [
     },
     {
         name: "Cloud & DevOps",
-        skills: ["Azure", "CI/CD",  "Azure API Management", "Hangfire", "Docker"]
+        skills: ["Azure", "CI/CD",  "Azure API Management", "Docker", "Terraform"]
     },
     {
         name: "Software Architecture",
