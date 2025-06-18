@@ -1,8 +1,30 @@
 import { motion } from "motion/react";
-import { PROJECTS } from "../constants";
 import Tag from "./Tag";
+import { useTranslation } from 'react-i18next';
+import { Project } from '../models/Project';
+import cachara from "../assets/projects/cachara.jpg";
+import ufsc_brasao from "../assets/projects/ufsc_brasao.jpg";
+import portfolio from "../assets/projects/portfolio.jpg";
 
 const Projects = () => {
+    const { t } = useTranslation();
+
+    const imagesMap: Record<string, string> = {
+  'monography-data-serialization': ufsc_brasao,
+  'cachara-social-platform': cachara,
+  'cachara-ai-image-classifier': cachara,
+  'portfolio-website': portfolio,
+};
+
+      const rawProjects = t('projectsList', { returnObjects: true }) as Project[] || [];
+      const projects = rawProjects.map(cert => {
+        const c = new Project(cert);
+        c.image = imagesMap[c.id] || '';
+        return c;
+      });
+
+      console.log('rawProjects:', projects);
+
     return (
         <div className="border-b border-neutral-900 pb-4">
             <motion.h1
@@ -11,17 +33,18 @@ const Projects = () => {
                 transition={{ duration: 0.5 }}
                 className="my-20 text-center text-4xl"
             >
-                Projects
+                {t('projects')}
             </motion.h1>
             <div>
-                {PROJECTS.map((project, index) => (
+                {projects.map((project, index) => (
                       <a 
+                      key={index}
                       href={project.url}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-full max-w-sm lg:max-w-md"
                     >
-                    <div key={index} className="mb-8 flex flex-wrap lg:justify-center">
+                    <div  className="mb-8 flex flex-wrap lg:justify-center">
                         <motion.div
                             whileInView={{ opacity: 1, x: 0 }}
                             initial={{ opacity: 0, x: -100 }}
@@ -46,7 +69,7 @@ const Projects = () => {
                             <p className="mb-1 text-neutral-400">{project.description}</p>
                             <div className="flex flex-wrap">
                                 {project.technologies.map((tech, index) => (
-                                    <Tag key={index} text={tech} />
+                                    <Tag key={index} tagKey={index} text={tech} />
                                 ))}
                             </div>
                         </motion.div>

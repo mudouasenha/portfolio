@@ -1,8 +1,13 @@
 import { motion } from "motion/react";
-import { EXPERIENCES } from "../constants";
 import Tag from "./Tag";
+import { useTranslation } from 'react-i18next';
+import { ExperienceItem } from '../models/ExperienceItem';
 
 const Experience = () => {
+    const { t } = useTranslation();
+
+    const experiences = t('experiences', { returnObjects: true }) as ExperienceItem[];
+
     return (
         <div className="border-b border-neutral-900 pb-4">
             <motion.h1
@@ -11,10 +16,10 @@ const Experience = () => {
                 transition={{ duration: 0.5 }}
                 className="my-20 text-center text-4xl"
             >
-                Experience
+                {t('experience')} 
             </motion.h1>
             <div>
-                {EXPERIENCES.map((experience, index) => (
+                {experiences.map((experience, index) => (
                     <div key={index} className="mb-8 flex flex-wrap lg:justify-center">
                         <motion.div
                             whileInView={{ opacity: 1, x: 0 }}
@@ -22,7 +27,7 @@ const Experience = () => {
                             transition={{ duration: 1 }}
                             className="w-full lg:w-1/4"
                         >
-                            <p className="mb-2 text-sm text-neutral-400">{experience.year}</p>
+                            <p className="mb-2 text-sm text-neutral-400">{experience.date}</p>
                         </motion.div>
                         <motion.div
                             whileInView={{ opacity: 1, x: 0 }}
@@ -39,7 +44,7 @@ const Experience = () => {
                             <p className="mb-1 text-neutral-400">{experience.description}</p>
                             <div className="flex flex-wrap">
                                 {experience.technologies.map((tech, index) => (
-                                    <Tag key={index} text={tech} />
+                                    <Tag key={index} tagKey={index} text={tech} />
                                 ))}
                             </div>
                         </motion.div>

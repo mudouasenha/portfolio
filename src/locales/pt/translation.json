@@ -1,0 +1,182 @@
+{
+  "aboutMe": "Sobre <1>Mim</1>",
+  "experience": "Experiência",
+  "projects": "Projetos",
+  "technologies": "Tecnologias",
+  "getInTouch":  "Entre em Contato",
+  "hero": {
+    "content": "Sou um desenvolvedor .NET com experiência profissional em desenvolvimento de software desde 2020, especializado em C#, .NET, MS SQL, Azure e tecnologias relacionadas. Tenho uma forte paixão por criar soluções limpas, escaláveis e fáceis de manter, sempre priorizando código conciso e legível.\n\nExperiente em ambientes ágeis, destaco-me na colaboração com equipes diversas para entregar software de alta qualidade de forma eficiente. Sou fluente em inglês, adaptável a novos desafios e atualmente aprimorando minha expertise em microserviços, Azure, Domain-Driven Design (DDD) e programação de IA para entregar soluções ainda mais robustas e modernas."
+  },
+  "about": {
+    "text": "Sou um desenvolvedor backend dedicado e versátil, apaixonado por construir soluções **robustas, modernas e fáceis de manter**. Com **5 anos** de experiência profissional, trabalhei com diversos sistemas e tecnologias, contribuindo para todo o **Ciclo de Vida do Desenvolvimento de Software (SDLC)**, sempre garantindo **escalabilidade e valor para o negócio**.\n\nMinha jornada começou no ensino médio, onde obtive um diploma técnico em Telecomunicações e desenvolvi uma profunda curiosidade sobre o funcionamento da internet e dos sistemas de software. Começando no suporte técnico, migrei para o desenvolvimento backend, buscando continuamente **aprender, melhorar e me adaptar a novos desafios**.\n\nEu prospero em ambientes **colaborativos e com alta comunicação**, onde posso trocar conhecimentos com colegas e outras áreas do negócio. Com experiência em **resolver problemas complexos e críticos**, sou dedicado a entregar soluções **de alta qualidade e robustas** que geram impacto real. Minha stack inclui **.NET, Azure, Entity Framework, MSSQL, PostgreSQL** entre outras.\n\nFora da programação, gosto de ir à academia, passar tempo com família e amigos, e explorar novas tecnologias. Também adoro refinar meu código, pesquisar boas práticas e assistir conteúdos técnicos no YouTube."
+  },
+  "certifications": [
+    {
+      "id": "azure-fundamentals",
+      "name": "Fundamentos do Azure (AZ-900)",
+      "issued_by": "Microsoft",
+      "date": "2025-01-14",
+      "description": "Demonstra conhecimento fundamental sobre conceitos de nuvem, serviços principais do Azure, além de recursos e ferramentas de gerenciamento e governança do Azure.",
+      "url": "https://learn.microsoft.com/pt-br/credentials/certifications/azure-fundamentals/"
+    }
+  ],
+  "contact": {
+    "address": "Florianópolis, SC, Brasil",
+    "phoneNo": "Telefone: Contate-me pelo LinkedIn",
+    "email": "Email: contact.me@linkedin"
+  },
+  "languages": {
+    "Portuguese": "Nativo",
+    "English": "Avançado",
+    "Spanish": "Intermediário"
+  },
+  "skills": [
+    {
+      "name": "Programação e Frameworks",
+      "skills": [
+        "C#",
+        ".NET 9",
+        "Entity Framework Core",
+        "GraphQL",
+        "Typescript",
+        "React",
+        "R",
+        "Hangfire"
+      ]
+    },
+    {
+      "name": "Bancos de Dados",
+      "skills": [
+        "Microsoft SQL Server",
+        "ElasticSearch",
+        "Postgres",
+        "Redis",
+        "TimescaleDB"
+      ]
+    },
+    {
+      "name": "Cloud & DevOps",
+      "skills": [
+        "Azure",
+        "CI/CD",
+        "Azure API Management",
+        "Docker",
+        "Terraform"
+      ]
+    },
+    {
+      "name": "Arquitetura de Software",
+      "skills": [
+        "Microsserviços",
+        "Sistemas Distribuídos",
+        "Computação em Nuvem",
+        "Clean Architecture",
+        "Backend",
+        "DDD",
+        "SOLID",
+        "POO"
+      ]
+    },
+    {
+      "name": "Testes e Monitoramento",
+      "skills": [
+        "XUnit",
+        "Testes Unitários",
+        "Testes de Integração",
+        "Grafana Load Testing",
+        "BenchmarkDotNet"
+      ]
+    },
+    {
+      "name": "Idiomas e outras habilidades",
+      "skills": [
+        "Inglês",
+        "Português Brasileiro",
+        "Espanhol",
+        "Scrum",
+        "Resolução de Problemas",
+        "Git",
+        "Ágil"
+      ]
+    }
+  ],
+  "experiences": [
+    {
+      "year": "2021 - Presente",
+      "role": "Desenvolvedor Backend Pleno",
+      "company": "Way2 Technology",
+      "description": "Projetei e desenvolvi aplicações de microsserviços de nível empresarial para um motor de Coleta e Processamento de Faturas, responsável por fornecer acesso a mais de 11 mil faturas/mês via Azure API Management. Desenvolvi e mantive sistemas e APIs escaláveis para um ecossistema de gestão de dados de telemetria. Enriquece e analisei métricas do sistema integrando microsserviços com ElasticSearch. Pull requests, revisões de código, testes de QA e deploy faziam parte da rotina diária. Aprendi, pratiquei e reforcei conceitos de Domain Driven Design, Clean Architecture e SOLID no desenvolvimento cotidiano.",
+      "technologies": [
+        ".NET",
+        "Azure",
+        "EF Core",
+        "SQL Server",
+        "GraphQL",
+        "CI/CD",
+        "Hangfire",
+        "Testes"
+      ]
+    },
+    {
+      "year": "2020 - 2021",
+      "role": "Estagiário em Desenvolvimento Backend",
+      "company": "Way2 Technology",
+      "description": "Desenvolvi e mantive APIs, bancos de dados e serviços para atender soluções dentro e fora do roadmap do produto.",
+      "technologies": [
+        "Node.js",
+        "SQL Server",
+        ".NET"
+      ]
+    },
+    {
+      "year": "2020 - 2020",
+      "role": "Estagiário em Desenvolvimento Frontend",
+      "company": "Pipz Platform",
+      "description": "Desenvolvi e mantive aplicações frontend de uma plataforma SaaS de Automação de Marketing usando React e AngularJS. Implementei automação de marketing e segmentação de contatos usando Python e Flask.",
+      "technologies": [
+        "Python",
+        "Flask",
+        "React",
+        "Angular.js",
+        "Postgres"
+      ]
+    },
+    {
+      "year": "2016 - 2020",
+      "role": "Analista de Suporte Técnico",
+      "company": "Dígitro Technology",
+      "description": "Analisei e mantive sistemas críticos de telefonia de alta segurança usando UNIX e PostgreSQL. Desenvolvi scripts de automação e otimização usando Shell Script. Auxiliei clientes não técnicos com comunicação clara, simplificando conceitos técnicos complexos e resolvendo problemas urgentes para minimizar tempo de inatividade.",
+      "technologies": [
+        "UNIX",
+        "PostgreSQL",
+        "Shell Script"
+      ]
+    }
+  ],
+  "projectsList": [
+  {
+    "id": "cachara-social-platform",
+    "title": "Plataforma Social Cachara (Em andamento...)",
+    "description": "Um site de e-commerce totalmente funcional com funcionalidades como listagem de produtos, carrinho de compras e autenticação de usuários.",
+    "technologies": [".NET", "SQL Server", "Microsserviços", "Redis", "DDD", "MongoDB"]
+  },
+  {
+    "id": "cachara-ai-image-classifier",
+    "title": "Cachara Plataforma de classificação de imagens e extração de dados com IA (Em andamento...)",
+    "description": "Uma aplicação para gerenciamento de tarefas e projetos, com recursos como criação de tarefas, atribuições e acompanhamento de progresso.",
+    "technologies": [".NET", "OpenAI", "ML.NET", "Next.js", "React"]
+  },
+  {
+    "id": "portfolio-website",
+    "title": "Site de Portfólio",
+    "description": "Um site pessoal de portfólio exibindo projetos, habilidades e informações de contato.",
+    "technologies": ["HTML", "CSS", "React", "Tailwindcss"]
+  },
+  {
+    "id": "monography-data-serialization",
+    "title": "Monografia - Avaliação de Técnicas de Serialização de Dados",
+    "description": "Avaliação de Estratégias de Serialização para Comunicação em Sistemas Distribuídos.",
+    "technologies": [".NET", "R", "MessagePack", "Protobuf", "Grafana k6", "BenchmarkDotNet"]
+  }
+]
+}

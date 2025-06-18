@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { SKILLS } from "../constants";
 import Tag from "./Tag";
+import { SkillSet } from "../models/SkillSet";
+import { useTranslation } from 'react-i18next';
 
 const cardHoverEffect = {
     hover: {
@@ -13,6 +14,10 @@ const cardHoverEffect = {
 };
 
 const Skills = () => {
+    const { t } = useTranslation();
+
+    const skills = t('skills', { returnObjects: true }) as SkillSet[];
+
     return (
         <div className="border-b border-neutral-800 pb-24">
             <motion.h1
@@ -30,7 +35,7 @@ const Skills = () => {
                 transition={{ duration: 1 }}
                 className="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-6"
             >
-                {SKILLS.map((category, categoryIndex) => (
+                {skills.map((category, categoryIndex) => (
                     <motion.div
                     key={categoryIndex}
                     whileHover="hover"
@@ -40,7 +45,7 @@ const Skills = () => {
                         <h2 className="mb-3 text-lg font-semibold text-neutral-300">{category.name}</h2>
                         <div className="flex flex-wrap gap-1">
                             {category.skills.map((tech, index) => (
-                                <Tag key={index} text={tech} />
+                                <Tag key={index} tagKey={index} text={tech} />
                             ))}
                         </div>
                     </motion.div>

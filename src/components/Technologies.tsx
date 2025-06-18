@@ -5,6 +5,7 @@ import { GrGraphQl } from "react-icons/gr";
 import { SiTypescript } from "react-icons/si";
 import { TbBrandCSharp } from "react-icons/tb";
 import { VscAzure } from "react-icons/vsc";
+import { useTranslation } from 'react-i18next';
 
 const iconVariants = (duration: number): Variants => ({
     initial: { y: -10 },
@@ -20,6 +21,8 @@ const iconVariants = (duration: number): Variants => ({
 });
 
 const Technologies = () => {
+    const { t } = useTranslation();
+
     return (
         <div className="border-b border-neutral-900 pb-24">
             <motion.h1
@@ -28,7 +31,7 @@ const Technologies = () => {
                 transition={{ duration: 1.5 }}
                 className="my-20 text-center text-4xl"
             >
-                Technologies
+                {t('technologies')}
             </motion.h1>
 
             <motion.div

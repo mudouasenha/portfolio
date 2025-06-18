@@ -1,13 +1,19 @@
 import { motion } from "motion/react";
 import aboutImg from "../assets/MatheusGomesProfile.jpg";
-import { ABOUT_TEXT } from "../constants";
 import ReactMarkdown from "react-markdown";
+import { Trans, useTranslation } from 'react-i18next';
 
 const About = () => {
+    const { t } = useTranslation();
+  
+    const about = t("about.text");
+
     return (
         <div className="border-b border-neutral-800 pb-4">
             <h1 className="my-20 text-center text-4xl">
-                About <span className="text-neutral-500">Me</span>
+                <Trans i18nKey="aboutMe" defaults="About <1>Me</1>">
+                    About <span className="text-neutral-500">Me</span>
+                </Trans>
             </h1>
             <div className="flex flex-wrap">
                 <motion.div
@@ -28,7 +34,7 @@ const About = () => {
                 >
                     <div className="flex justify-center lg:justify-start">
                     <div className="my-2 max-w-xl py-6 font-light text-justify leading-relaxed tracking-tighter">
-                        <ReactMarkdown>{ABOUT_TEXT}</ReactMarkdown>
+                        <ReactMarkdown>{about}</ReactMarkdown>
                     </div>
                     </div>
                 </motion.div>

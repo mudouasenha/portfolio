@@ -1,0 +1,183 @@
+{
+  "aboutMe": "About <1>Me</1>",
+  "experience": "Experience",
+  "projects": "Projects",
+  "technologies": "Technologies",
+  "getInTouch":  "Get In Touch",
+  "hero": {
+    "content": "I am a .NET developer with professional software development experience since 2020, specializing in C#, .NET, MS SQL, Azure, and related technologies. I have a strong passion for creating clean, scalable, and maintainable solutions, always prioritizing concise and readable code.\n\nExperienced in agile environments, I excel at collaborating with diverse teams to deliver high-quality software efficiently. I am fluent in English, adaptable to new challenges, and currently enhancing my expertise in microservices, Azure, Domain-Driven Design (DDD), and AI programming to deliver even more robust and modern solutions."
+  },
+  "about": {
+    "text": "I am a dedicated and versatile backend developer, passionate about building **robust, modern, and maintainable solutions**. With **5 years** of professional experience, I have worked with various systems and technologies, contributing to the entire **Software Development Life Cycle (SDLC)** while ensuring **scalability and business value**.\n\nMy journey began in high school, where I obtained a technical diploma in Telecommunications and developed a deep curiosity about how the internet and software systems work. Starting in technical support, I transitioned to backend development, continuously seeking to **learn, improve, and adapt to new challenges**.\n\nI thrive in **collaborative and high-communication environments**, where I can exchange knowledge with colleagues and other business areas. With experience in **solving complex and critical problems**, I am dedicated to delivering **high-quality and robust solutions** that make a real impact. My stack includes **.NET, Azure, Entity Framework, MSSQL, PostgreSQL**, among others.\n\nOutside of programming, I enjoy going to the gym, spending time with family and friends, and exploring new technologies. I also love refining my code, researching best practices, and watching technical content on YouTube."
+  },
+  "certifications": [
+    {
+      "id": "azure-fundamentals",
+      "name": "Azure Fundamentals (AZ-900)",
+      "issued_by": "Microsoft",
+      "date": "2025-01-14",
+      "description": "Demonstrate foundational knowledge of cloud concepts, core Azure services, plus Azure management and governance features and tools.",
+      "url": "https://learn.microsoft.com/en-us/learn/certifications/azure-fundamentals/"
+    }
+  ],
+  "contact": {
+    "address": "Florianopolis, SC, Brazil",
+    "phoneNo": "Phone number: Contact me at LinkedIn",
+    "email": "Email: contact.me@linkedin"
+  },
+  "languages": {
+    "Portuguese": "Native",
+    "English": "Advanced",
+    "Spanish": "Intermediate"
+  },
+  "skills": [
+    {
+      "name": "Programming and Frameworks",
+      "skills": [
+        "C#",
+        ".NET 9",
+        "Entity Framework Core",
+        "GraphQL",
+        "Typescript",
+        "React",
+        "R",
+        "Hangfire"
+      ]
+    },
+    {
+      "name": "Databases",
+      "skills": [
+        "Microsoft SQL Server",
+        "ElasticSearch",
+        "Postgres",
+        "Redis",
+        "TimescaleDB"
+      ]
+    },
+    {
+      "name": "Cloud & DevOps",
+      "skills": [
+        "Azure",
+        "CI/CD",
+        "Azure API Management",
+        "Docker",
+        "Terraform"
+      ]
+    },
+    {
+      "name": "Software Architecture",
+      "skills": [
+        "Microservices",
+        "Distributed Systems",
+        "Cloud Computing",
+        "Clean Architecture",
+        "Backend",
+        "DDD",
+        "SOLID",
+        "OOP"
+      ]
+    },
+    {
+      "name": "Testing & Monitoring",
+      "skills": [
+        "XUnit",
+        "Unit Testing",
+        "Integration Testing",
+        "Grafana Load Testing",
+        "BenchmarkDotNet"
+      ]
+    },
+    {
+      "name": "Languages and other Skills",
+      "skills": [
+        "English",
+        "Brazilian Portuguese",
+        "Spanish",
+        "Scrum",
+        "Problem-Solving",
+        "Git",
+        "Agile"
+      ]
+    }
+  ],
+  "experiences": [
+    {
+      "year": "2021 - Present",
+      "role": "Mid-Level Backend Developer",
+      "company": "Way2 Technology",
+      "description": "Designed and developed enterprise-level microservice applications of an Invoice Collection and Processing Engine, responsible for providing access to over 11k invoices/month via Azure API Management. Developed and maintained scalable systems and APIs for a telemetry data management ecosystem. Enriched and analyzed system metrics by integrating microservices with telemetry using ElasticSearch. Pull requests, code reviews, QA testing, and deployment were part of the daily routine. Learned, put in practice and reinforced Domain Driven Design, Clean Architecture and SOLID concepts in daily basis development.",
+      "technologies": [
+        ".NET",
+        "Azure",
+        "EF Core",
+        "SQL Server",
+        "GraphQL",
+        "CI/CD",
+        "Hangfire",
+        "Testing"
+      ]
+    },
+    {
+      "year": "2020 - 2021",
+      "role": "Backend Developer Intern",
+      "company": "Way2 Technology",
+      "description": "Developed and maintained APIs, databases and services to serve solutions inside and outside the product roadmap.",
+      "technologies": [
+        "Node.js",
+        "SQL Server",
+        ".NET"
+      ]
+    },
+    {
+      "year": "2020 - 2020",
+      "role": "Frontend Developer Intern",
+      "company": "Pipz Platform",
+      "description": "Developed and maintained frontend applications of a Marketing Automation SaaS Platform using React and AngularJS. Implemented marketing automation and contact segmentation using Python and Flask.",
+      "technologies": [
+        "Python",
+        "Flask",
+        "React",
+        "Angular.js",
+        "Postgres"
+      ]
+    },
+    {
+      "year": "2016 - 2020",
+      "role": "Technical Support Analyst",
+      "company": "Dígitro Technology",
+      "description": "Analyzed, and maintained high-security, critical telephony systems using UNIX and PostgreSQL. Developed automation and optimization scripts using Shell Script. Assisted non-technical clients with clear communication and support, simplifying complex technical concepts for end-users, in diagnosing and resolving urgent issues to minimize downtime.",
+      "technologies": [
+        "UNIX",
+        "PostgreSQL",
+        "Shell Script"
+      ]
+    }
+  ],
+  "projectsList": [
+  {
+    "id": "cachara-social-platform",
+    "title": "Cachara Social Platform (In Progress...)",
+    "description": "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
+    "technologies": [".NET", "SQL Server", "Microservices", "Redis", "DDD", "MongoDB"]
+  },
+  {
+    "id": "cachara-ai-image-classifier",
+    "title": "Cachara AI Image classifier and data extraction Platform (In Progress...)",
+    "description": "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
+    "technologies": [".NET", "OpenAI", "ML.NET", "Next.js", "React"]
+  },
+  {
+    "id": "portfolio-website",
+    "title": "Portfolio Website",
+    "description": "A personal portfolio website showcasing projects, skills, and contact information.",
+    "technologies": ["HTML", "CSS", "React", "Tailwindcss"]
+  },
+  {
+    "id": "monography-data-serialization",
+    "title": "Monography - Data Serialization Techniques evaluation",
+    "description": "Evaluation of Serialization Strategies for Communication in Distributed Systems.",
+    "technologies": [".NET", "R", "MessagePack", "Protobuf", "Grafana k6", "BenchmarkDotNet"]
+  }
+]
+
+}

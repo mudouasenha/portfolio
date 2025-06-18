@@ -1,5 +1,7 @@
 import { motion } from "motion/react";
-import { CERTIFICATIONS } from "../constants";
+import { useTranslation } from 'react-i18next';
+import { Certification } from '../models/Certification';
+import microsoft_certified_fundamentals_badge from "../assets/certifications/microsoft_certified_fundamentals_badge.svg";
 
 const formatDate = (date: string) => {
     const userLocale = navigator.language || "en-US";
@@ -20,7 +22,21 @@ const formatDate = (date: string) => {
   },
 };
 
+const imagesMap: Record<string, string> = {
+  'azure-fundamentals': microsoft_certified_fundamentals_badge,
+};
+
 const Certifications = () => {
+    const { t } = useTranslation();
+  
+  const rawCerts = t('certifications', { returnObjects: true }) as Certification[] || [];
+  const certifications = rawCerts.map(cert => {
+    const c = new Certification(cert);
+    c.image = imagesMap[c.id] || '';
+    return c;
+  });
+
+
     return (
         <div className="border-b border-neutral-800 pb-20 border-width-6">
             <motion.h1
@@ -32,8 +48,9 @@ const Certifications = () => {
                 Certifications
             </motion.h1>
             <div className="flex flex-wrap justify-center gap-6">
-            {CERTIFICATIONS.map((certification, index) => (
+            {certifications.map((certification, index) => (
               <a 
+              key={certification.id}
               href={certification.url}
               target="_blank"
               rel="noopener noreferrer"

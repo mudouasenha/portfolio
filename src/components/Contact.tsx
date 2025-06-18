@@ -1,7 +1,12 @@
 import { motion } from "motion/react";
-import { CONTACT } from "../constants";
+import { ContactInfo } from '../models/ContactInfo';
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
+    const { t } = useTranslation();
+  
+    const contact = t('contact', { returnObjects: true }) as ContactInfo;
+    
     return (
         <div className="border-b border-neutral-900 pb-20">
             <motion.h1
@@ -10,7 +15,7 @@ const Contact = () => {
                 transition={{ duration: 0.5 }}
                 className="my-10 text-center text-4xl"
             >
-                Get in Touch
+                {t('getInTouch')}
             </motion.h1>
             <div className="text-center tracking-tighter">
                 <motion.p
@@ -19,7 +24,7 @@ const Contact = () => {
                     transition={{ duration: 1 }}
                     className="my-4"
                 >
-                    {CONTACT.address}
+                    {contact.address}
                 </motion.p>
                 <motion.p
                     whileInView={{ opacity: 1, x: 0 }}
@@ -27,10 +32,10 @@ const Contact = () => {
                     transition={{ duration: 1 }}
                     className="my-4"
                 >
-                    {CONTACT.phoneNo}
+                    {contact.phoneNo}
                 </motion.p>
                 <a href="#" className="border-b">
-                    {CONTACT.email}
+                    {contact.email}
                 </a>
             </div>
         </div>
