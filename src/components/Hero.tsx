@@ -1,6 +1,5 @@
 import { motion } from "motion/react";
 import profilePic from "../assets/MatheusGomesProfile.jpg";
-import { t } from 'i18next';
 import { useTranslation } from 'react-i18next';
 
 const container = (delay: number) => ({
