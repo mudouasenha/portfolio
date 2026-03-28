@@ -1,31 +1,79 @@
-# 🚀 Matheus Gomes - My Portfolio Website
+# Portfolio — Personal Website
 
-This is my **personal portfolio** built with modern web technologies, showcasing my projects, skills, and experience as a **.NET Backend Developer**.
+Personal portfolio application built with React + TypeScript.  
+It presents projects, skills, certifications, contact information, and professional experience with bilingual support (`pt` and `en`).
 
-## 🌍 Live Demo
-🔗 [Visit My Portfolio](https://portfolio-matheus-miranda-torres-gomes-projects.vercel.app/)  
+## Live Demo
+
+- [Visit My Portfolio](https://portfolio-matheus-miranda-torres-gomes-projects.vercel.app/)
 
 ![website sample](image.png)
 
-## 🛠 Technologies Used
+## Prerequisites
 
-- **Frontend:** React, TypeScript, TailwindCSS, Framer Motion  
-- **Deployment:** Vercel  
-- **Other Tools:** ESLint, Prettier  
+- Node.js 20+
+- npm 10+
 
-## 🏗 Installation & Running Locally
+## Local Setup
 
-To run this project locally, follow these steps:
+1. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+2. Run development server:
+
+   ```bash
+   npm run dev
+   ```
+
+3. Open Vite local URL (default `http://localhost:5173`).
+
+## Build & Test Commands
 
 ```bash
-# Clone the repository
-git clone https://github.com/mudouasenha/portfolio.git
+# Build (TypeScript + Vite)
+npm run build
 
-# Navigate to the project directory
-cd portfolio
+# Lint
+npm run lint
 
-# Install dependencies
-npm install  # or yarn install
+# Preview production build
+npm run preview
+```
 
-# Start the development server
-npm run dev  # or yarn dev
+## Technology Stack
+
+- **Framework:** React 18
+- **Language:** TypeScript
+- **Build Tool:** Vite
+- **Styling:** TailwindCSS
+- **Routing:** React Router
+- **Localization:** i18next + react-i18next
+- **Animation:** Motion
+- **Deployment:** Vercel
+
+## Repository Structure
+
+| Path | Purpose |
+|---|---|
+| `src/components/` | Page sections and reusable UI blocks |
+| `src/models/` | Typed content models (`Project`, `SkillSet`, `ExperienceItem`, etc.) |
+| `src/locales/` | Translation dictionaries (`en` and `pt`) |
+| `src/assets/` | Images for profile, projects, and certifications |
+| `src/constants/` | Shared constants and static labels |
+| `public/` | Public static assets |
+
+## Content Update Guide
+
+- Edit text content in `src/locales/en/translation.json` and `src/locales/pt/translation.json`.
+- Keep translation keys synchronized across both locale files.
+- Update images in `src/assets/` and keep component references consistent.
+- Update model-driven content in `src/models/` when adding projects, skills, or certifications.
+
+## Contribution Notes
+
+- Keep changes aligned with current folder organization.
+- Prefer small, focused pull requests.
+- Validate with `npm run lint` and `npm run build` before opening a PR.
