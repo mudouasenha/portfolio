@@ -23,8 +23,6 @@ const Projects = () => {
         return c;
       });
 
-      console.log('rawProjects:', projects);
-
     return (
         <div className="border-b border-neutral-900 pb-4">
             <motion.h1
