@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 current_plan: 3
-status: executing
-stopped_at: Completed 01-01-PLAN.md
-last_updated: "2026-03-29T23:09:45.125Z"
+status: verifying
+stopped_at: Completed 01-03-PLAN.md
+last_updated: "2026-03-29T23:20:19.237Z"
 last_activity: 2026-03-29
 progress:
   total_phases: 4
-  completed_phases: 0
+  completed_phases: 1
   total_plans: 3
-  completed_plans: 2
+  completed_plans: 3
 ---
 
 # Project State
@@ -33,7 +33,7 @@ Total Plans in Phase: 3
 Last Activity: 2026-03-29
 **Current Plan:** 3
 **Total Plans in Phase:** 3
-**Status:** Ready to execute
+**Status:** Phase complete — ready for verification
 **Last Activity:** 2026-03-29
 
 ## Performance Metrics
@@ -57,6 +57,7 @@ Last Activity: 2026-03-29
 
 | Phase 01-baseline-stabilization P02 | 14min | 3 tasks | 5 files |
 | Phase 01-baseline-stabilization P01 | 13min | 2 tasks | 2 files |
+| Phase 01-baseline-stabilization P03 | 3min | 3 tasks | 6 files |
 
 ## Accumulated Context
 
@@ -71,6 +72,8 @@ Recent decisions affecting current work:
 - [Phase 01-baseline-stabilization]: Preferred language detection order is localStorage('portfolio.lang') then navigator.language then en.
 - [Phase 01-baseline-stabilization]: LangRouter now exposes an aria-live loading fallback during language synchronization.
 - [Phase 01-baseline-stabilization]: For plan 01-01, retained existing package.json baseline state and regenerated package-lock.json to enforce deterministic installs.
+- [Phase 01-baseline-stabilization]: Legacy constants are preserved in src/legacy and removed from runtime constants exports.
+- [Phase 01-baseline-stabilization]: Active animation imports are standardized on motion/react for consistency.
 
 ### Pending Todos
 
@@ -83,6 +86,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-29T23:09:45.114Z
-Stopped at: Completed 01-01-PLAN.md
+Last session: 2026-03-29T23:20:19.227Z
+Stopped at: Completed 01-03-PLAN.md
 Resume file: None
