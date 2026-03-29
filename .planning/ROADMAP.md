@@ -10,7 +10,7 @@ This roadmap modernizes the existing portfolio through a controlled brownfield p
 - Integer phases (1, 2, 3): Planned milestone work
 - Decimal phases (2.1, 2.2): Urgent insertions (marked with INSERTED)
 
-- [ ] **Phase 1: Baseline Stabilization** - Lock environment, routing continuity, and migration guardrails.
+- [x] **Phase 1: Baseline Stabilization** - Lock environment, routing continuity, and migration guardrails.
 - [ ] **Phase 2: Design System and Core UX Migration** - Establish shadcn foundation and migrate shell and key sections.
 - [ ] **Phase 3: Section Completion and Quality Hardening** - Complete section migration, validation, testing, and accessibility.
 - [ ] **Phase 4: Final Polish and Release Readiness** - Tune final UX quality, performance, and documentation.
@@ -28,9 +28,9 @@ This roadmap modernizes the existing portfolio through a controlled brownfield p
 **Plans**: 3 plans
 
 Plans:
-- [ ] 01-01: Resolve dependency and build baseline issues.
-- [ ] 01-02: Normalize routing and language source-of-truth behavior.
-- [ ] 01-03: Remove debug and dead-code blockers in active paths.
+- [x] 01-01: Resolve dependency and build baseline issues.
+- [x] 01-02: Normalize routing and language source-of-truth behavior.
+- [x] 01-03: Remove debug and dead-code blockers in active paths.
 
 ### Phase 2: Design System and Core UX Migration
 **Goal**: Build shared design system foundation and deliver high-impact UX migration.  
@@ -87,7 +87,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Baseline Stabilization | 2/3 | In Progress|  |
+| 1. Baseline Stabilization | 3/3 | Complete | 2026-03-29 |
 | 2. Design System and Core UX Migration | 0/4 | Not started | - |
 | 3. Section Completion and Quality Hardening | 0/4 | Not started | - |
 | 4. Final Polish and Release Readiness | 0/2 | Not started | - |
