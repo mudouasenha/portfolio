@@ -28,6 +28,7 @@ export const LanguageSwitcher = () => {
 
   const handleLanguageChange = (langCode: string) => {
     i18n.changeLanguage(langCode);
+    localStorage.setItem('portfolio.lang', langCode);
     // Split the path and replace the first segment with the new language code
     const segments = location.pathname.split('/');
     if (segments[1] && LANGUAGES.some(l => l.code === segments[1])) {
