@@ -28,8 +28,11 @@ export default function LangRouter({ children }: { children: React.ReactNode }) 
   }
 
   if (!ready) {
-    // Optionally, show a loading spinner here
-    return null;
+    return (
+      <div aria-live="polite" role="status">
+        Loading language...
+      </div>
+    );
   }
 
   return <>{children}</>;
