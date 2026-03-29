@@ -43,6 +43,18 @@ npm run lint
 npm run preview
 ```
 
+## Build Baseline Recovery
+
+Use this deterministic recovery flow if local dependencies drift or build checks fail:
+
+```bash
+rm -rf node_modules package-lock.json
+npm install
+npm run verify:baseline
+```
+
+This is the required Phase 1 baseline flow before marking work as done.
+
 ## Technology Stack
 
 - **Framework:** React 18
