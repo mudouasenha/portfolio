@@ -87,7 +87,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Baseline Stabilization | 0/3 | Not started | - |
+| 1. Baseline Stabilization | 2/3 | In Progress|  |
 | 2. Design System and Core UX Migration | 0/4 | Not started | - |
 | 3. Section Completion and Quality Hardening | 0/4 | Not started | - |
 | 4. Final Polish and Release Readiness | 0/2 | Not started | - |

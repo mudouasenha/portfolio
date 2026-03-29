@@ -28,7 +28,7 @@
 
 ### Localization and Routing
 
-- [ ] **I18N-01**: Language-prefixed routing (`/:lang/*`) remains stable for `en` and `pt`.
+- [x] **I18N-01**: Language-prefixed routing (`/:lang/*`) remains stable for `en` and `pt`.
 - [ ] **I18N-02**: Language switching updates both URL and rendered localized content reliably.
 - [ ] **I18N-03**: Translation parity is maintained for all user-visible updated sections.
 
@@ -37,7 +37,7 @@
 - [ ] **QAV-01**: Lint and type checks pass after migration changes.
 - [ ] **QAV-02**: Integration tests cover critical route and i18n continuity behavior.
 - [ ] **QAV-03**: Accessibility checks pass for critical user flows and core sections.
-- [ ] **QAV-04**: Build process is stable and free from current optional dependency blocking issues.
+- [x] **QAV-04**: Build process is stable and free from current optional dependency blocking issues.
 
 ## v2 Requirements
 
@@ -71,13 +71,13 @@
 | QLTY-02 | Phase 3 | Pending |
 | QLTY-03 | Phase 3 | Pending |
 | QLTY-04 | Phase 1 | Pending |
-| I18N-01 | Phase 1 | Pending |
+| I18N-01 | Phase 1 | Complete |
 | I18N-02 | Phase 3 | Pending |
 | I18N-03 | Phase 3 | Pending |
 | QAV-01 | Phase 3 | Pending |
 | QAV-02 | Phase 3 | Pending |
 | QAV-03 | Phase 3 | Pending |
-| QAV-04 | Phase 1 | Pending |
+| QAV-04 | Phase 1 | Complete |
 
 **Coverage:**
 - v1 requirements: 19 total
