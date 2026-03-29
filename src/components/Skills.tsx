@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import Tag from "./Tag";
 import { SkillSet } from "../models/SkillSet";
 import { useTranslation } from 'react-i18next';

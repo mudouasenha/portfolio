@@ -1,5 +1,4 @@
-import { Variants } from "framer-motion";
-import { motion } from "framer-motion";
+import { motion, Variants } from "motion/react";
 import { DiMsqlServer, DiRedis } from "react-icons/di";
 import { GrGraphQl } from "react-icons/gr";
 import { SiTypescript } from "react-icons/si";
