@@ -10,12 +10,12 @@
 - [x] **DSYS-01**: Application uses a shadcn-based component foundation with semantic design tokens.
 - [x] **DSYS-02**: Design contract is enforced by using preset `b1Z5ezr60`, or Vega style fallback when preset is unavailable.
 - [x] **DSYS-03**: Shared UI primitives are centralized and reused across all migrated sections.
-- [ ] **DSYS-04**: Hardcoded legacy color classes in migrated components are replaced by token-based styling.
+- [x] **DSYS-04**: Hardcoded legacy color classes in migrated components are replaced by token-based styling.
 
 ### User Experience
 
-- [ ] **UX-01**: Navigation and section hierarchy are clear and consistent on desktop and mobile.
-- [ ] **UX-02**: Hero and section layouts communicate key value and project credibility with stronger visual hierarchy.
+- [x] **UX-01**: Navigation and section hierarchy are clear and consistent on desktop and mobile.
+- [x] **UX-02**: Hero and section layouts communicate key value and project credibility with stronger visual hierarchy.
 - [ ] **UX-03**: Motion is purposeful, consistent, and respects reduced-motion preferences.
 - [ ] **UX-04**: Contact and external project actions are visible and actionable.
 
@@ -62,9 +62,9 @@
 | DSYS-01 | Phase 2 | Complete |
 | DSYS-02 | Phase 2 | Complete |
 | DSYS-03 | Phase 2 | Complete |
-| DSYS-04 | Phase 2 | Pending |
-| UX-01 | Phase 2 | Pending |
-| UX-02 | Phase 2 | Pending |
+| DSYS-04 | Phase 2 | Complete |
+| UX-01 | Phase 2 | Complete |
+| UX-02 | Phase 2 | Complete |
 | UX-03 | Phase 2 | Pending |
 | UX-04 | Phase 3 | Pending |
 | QLTY-01 | Phase 1 | Complete |
