@@ -15,13 +15,14 @@ A fast, polished, and trustworthy portfolio experience that clearly communicates
 - [x] Language-prefixed routing works for `en` and `pt` - existing
 - [x] Portfolio sections (hero, about, skills, experience, projects, certifications, contact) render in a single-page flow - existing
 - [x] Tailwind-based responsive SPA foundation is in place with Vite and TypeScript - existing
+- [x] shadcn foundation and semantic token architecture are integrated for migrated core surfaces.
+- [x] Core shell, navigation, and hero now use centralized primitives with mobile/desktop parity.
+- [x] Preset decision policy was executed and terminal Vega fallback was locked with canonical documentation.
 
 ### Active
 
-- [ ] Migrate UI foundation to shadcn and modern Tailwind token architecture.
 - [ ] Refactor frontend implementation for maintainability, consistency, and testability.
-- [ ] Redesign UI and UX with modern patterns while preserving content clarity and i18n behavior.
-- [ ] Enforce design contract: use shadcn preset `b1Z5ezr60`; fallback to Vega style if preset cannot be resolved.
+- [ ] Complete remaining section migration and hardening tests/accessibility gates.
 
 ### Out of Scope
 
@@ -35,8 +36,9 @@ The current portfolio already works functionally but has fragmented styling conv
 
 ## Current State
 
-Phase 01 complete — baseline build/routing stability and dead/debug blocker cleanup are verified.
+Phase 02 complete — design-system foundation and core UX migration are verified, including reduced-motion safeguards.
 Validated in Phase 01: QLTY-01, QLTY-04, I18N-01, QAV-04.
+Validated in Phase 02: DSYS-01, DSYS-02, DSYS-03, DSYS-04, UX-01, UX-02, UX-03.
 
 ## Constraints
 
@@ -56,4 +58,4 @@ Validated in Phase 01: QLTY-01, QLTY-04, I18N-01, QAV-04.
 | Design preset fallback defined up front (`b1Z5ezr60` -> Vega) | Prevents project blocking on preset resolution ambiguity | Good |
 
 ---
-*Last updated: 2026-03-29 after Phase 01 completion*
+*Last updated: 2026-03-30 after Phase 02 completion*
