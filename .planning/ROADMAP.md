@@ -11,7 +11,7 @@ This roadmap modernizes the existing portfolio through a controlled brownfield p
 - Decimal phases (2.1, 2.2): Urgent insertions (marked with INSERTED)
 
 - [x] **Phase 1: Baseline Stabilization** - Lock environment, routing continuity, and migration guardrails.
-- [ ] **Phase 2: Design System and Core UX Migration** - Establish shadcn foundation and migrate shell and key sections.
+- [x] **Phase 2: Design System and Core UX Migration** - Establish shadcn foundation and migrate shell and key sections. (completed 2026-03-30)
 - [ ] **Phase 3: Section Completion and Quality Hardening** - Complete section migration, validation, testing, and accessibility.
 - [ ] **Phase 4: Final Polish and Release Readiness** - Tune final UX quality, performance, and documentation.
 
@@ -88,6 +88,6 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Baseline Stabilization | 3/3 | Complete | 2026-03-29 |
-| 2. Design System and Core UX Migration | 0/4 | Not started | - |
+| 2. Design System and Core UX Migration | 4/4 | Complete   | 2026-03-30 |
 | 3. Section Completion and Quality Hardening | 0/4 | Not started | - |
 | 4. Final Polish and Release Readiness | 0/2 | Not started | - |
