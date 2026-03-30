@@ -29,6 +29,12 @@ Build the shared design-system foundation and migrate the highest-impact UX surf
 - Vega interpretation for this repo: **stronger gradients and bolder visual treatment** (`B`) while preserving clarity.
 - If preset partially applies with mismatches, proceed in Phase 2 with **manual token overrides** (`yes`).
 
+#### 2026-03-30 Execution Outcome
+- Single attempt executed with `npm exec shadcn@latest -- init --preset b1Z5ezr60 ...`.
+- Attempt halted at existing `components.json` overwrite gate in non-interactive execution and was treated as unresolved (no retry performed).
+- **Final locked decision for Phase 2:** use **Vega fallback** and proceed with manual token overrides.
+- Applied fallback profile by strengthening cyan/teal semantic token values in `src/index.css` while keeping semantic token usage and Inter typography intact.
+
 ### Shell and Navigation Migration Behavior
 - Navbar behavior: **sticky on scroll** (`A`).
 - Desktop nav density: **mixed layout** (`B`) (logo + section links + actions).
