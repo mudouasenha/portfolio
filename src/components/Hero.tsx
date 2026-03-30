@@ -1,21 +1,23 @@
-import { motion } from "motion/react";
+import { motion, useReducedMotion } from "motion/react";
 import profilePic from "../assets/MatheusGomesProfile.jpg";
 import { useTranslation } from "react-i18next";
 
 import { Button } from "@/components/ui/button";
 
-const container = (delay: number) => ({
-    hidden: { x: -100, opacity: 0 },
+const container = (delay: number, reduceMotion: boolean) => ({
+    hidden: { y: reduceMotion ? 0 : 18, opacity: 0 },
     visible: {
-        x: 0,
+        y: 0,
         opacity: 1,
-        transition: { duration: 0.5, delay: delay },
+        transition: { duration: reduceMotion ? 0 : 0.5, delay: reduceMotion ? 0 : delay },
     },
 });
 
 const Hero = () => {
     const { t } = useTranslation();
     const heroContent = t("hero.content");
+    const reduceMotion = useReducedMotion();
+    const shouldReduceMotion = reduceMotion ?? false;
 
     return (
         <section className="border-b border-border pb-10 sm:pb-14 lg:pb-20">
@@ -23,7 +25,7 @@ const Hero = () => {
                 <div>
                     <div className="flex flex-col items-start">
                         <motion.h1
-                            variants={container(0)}
+                            variants={container(0, shouldReduceMotion)}
                             initial="hidden"
                             animate="visible"
                             className="pt-2 text-4xl font-semibold tracking-tight text-foreground sm:pt-8 sm:text-5xl lg:pt-16 lg:text-6xl"
@@ -31,7 +33,7 @@ const Hero = () => {
                             Matheus Gomes
                         </motion.h1>
                         <motion.span
-                            variants={container(0.2)}
+                            variants={container(0.15, shouldReduceMotion)}
                             initial="hidden"
                             animate="visible"
                             className="mt-3 inline-flex items-center rounded-full border border-border bg-accent px-3 py-1 text-sm font-semibold tracking-wide text-accent-foreground"
@@ -39,7 +41,7 @@ const Hero = () => {
                             Backend Developer
                         </motion.span>
                         <motion.p
-                            variants={container(0.4)}
+                            variants={container(0.25, shouldReduceMotion)}
                             initial="hidden"
                             animate="visible"
                             className="mt-6 max-w-2xl text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg"
@@ -47,7 +49,7 @@ const Hero = () => {
                             {heroContent}
                         </motion.p>
                         <motion.div
-                            variants={container(0.6)}
+                            variants={container(0.35, shouldReduceMotion)}
                             initial="hidden"
                             animate="visible"
                             className="mt-8 flex flex-wrap gap-3"
@@ -60,7 +62,7 @@ const Hero = () => {
                             </Button>
                         </motion.div>
                         <motion.div
-                            variants={container(0.8)}
+                            variants={container(0.45, shouldReduceMotion)}
                             initial="hidden"
                             animate="visible"
                             className="mt-8 flex flex-wrap gap-4 text-sm text-muted-foreground"
@@ -74,9 +76,9 @@ const Hero = () => {
                 <div className="w-full lg:p-4">
                     <div className="flex justify-center lg:justify-end">
                         <motion.img
-                            initial={{ x: 100, opacity: 0 }}
+                            initial={reduceMotion ? { opacity: 1 } : { x: 72, opacity: 0 }}
                             animate={{ x: 0, opacity: 1 }}
-                            transition={{ duration: 1, delay: 1.2 }}
+                            transition={reduceMotion ? { duration: 0 } : { duration: 0.7, delay: 0.45, ease: "easeOut" }}
                             src={profilePic}
                             alt="Matheus Gomes"
                             className="w-full max-w-sm rounded-2xl border border-border bg-card object-cover p-2 shadow-sm sm:max-w-md"

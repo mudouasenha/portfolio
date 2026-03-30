@@ -1,3 +1,5 @@
+import { motion, useReducedMotion } from "motion/react";
+
 import About from "./components/About";
 import Certifications from "./components/Certifications";
 import Contact from "./components/Contact";
@@ -9,13 +11,20 @@ import Skills from "./components/Skills";
 import Technologies from "./components/Technologies";
 
 function App() {
+    const reduceMotion = useReducedMotion();
+
     return (
         <div id="top" className="min-h-screen overflow-x-hidden bg-background text-foreground antialiased selection:bg-primary/25 selection:text-foreground">
             <div className="pointer-events-none fixed inset-0 -z-10">
                 <div className="absolute inset-x-0 top-0 h-[26rem] opacity-25 [background:radial-gradient(circle_at_top,var(--primary)_0%,transparent_70%)]" />
                 <div className="absolute bottom-0 left-0 h-[20rem] w-[24rem] opacity-30 [background:radial-gradient(circle,var(--accent)_0%,transparent_72%)]" />
             </div>
-            <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <motion.main
+                initial={reduceMotion ? { opacity: 1 } : { opacity: 0, y: 14 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={reduceMotion ? { duration: 0 } : { duration: 0.45, ease: "easeOut" }}
+                className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
+            >
                 <Navbar />
                 <Hero />
                 <section id="about" className="scroll-mt-28">
@@ -39,7 +48,7 @@ function App() {
                 <section id="contact" className="scroll-mt-28">
                     <Contact />
                 </section>
-            </div>
+            </motion.main>
         </div>
     );
 }

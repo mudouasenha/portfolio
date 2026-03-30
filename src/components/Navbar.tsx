@@ -1,3 +1,6 @@
+import { motion, useMotionValueEvent, useReducedMotion, useScroll } from "motion/react";
+import { useState } from "react";
+
 import { Menu } from "lucide-react";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
@@ -45,8 +48,25 @@ const SOCIAL_ITEMS = [
 ];
 
 const Navbar = () => {
+    const reduceMotion = useReducedMotion();
+    const { scrollY } = useScroll();
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useMotionValueEvent(scrollY, "change", (value) => {
+        setIsScrolled(value > 20);
+    });
+
     return (
-        <header className="sticky top-0 z-40 mb-16 border-b border-border/70 bg-background/90 backdrop-blur-sm supports-[backdrop-filter]:bg-background/75">
+        <motion.header
+            initial={reduceMotion ? { opacity: 1 } : { y: -10, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={reduceMotion ? { duration: 0 } : { duration: 0.35, ease: "easeOut" }}
+            className={`sticky top-0 z-40 mb-16 border-b backdrop-blur-sm supports-[backdrop-filter]:bg-background/75 ${
+                isScrolled
+                    ? "border-border/90 bg-background/95 shadow-sm"
+                    : "border-border/70 bg-background/90"
+            }`}
+        >
             <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
                 <a href="#top" className="flex flex-shrink-0 items-center gap-3">
                     <img className="h-10 w-10 rounded-md border border-border object-cover" src={logo} alt="Matheus Gomes logo" />
@@ -134,7 +154,7 @@ const Navbar = () => {
                     </Sheet>
                 </div>
             </nav>
-        </header>
+        </motion.header>
     );
 };
 
