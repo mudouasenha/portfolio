@@ -7,9 +7,9 @@
 
 ### Design System
 
-- [ ] **DSYS-01**: Application uses a shadcn-based component foundation with semantic design tokens.
+- [x] **DSYS-01**: Application uses a shadcn-based component foundation with semantic design tokens.
 - [ ] **DSYS-02**: Design contract is enforced by using preset `b1Z5ezr60`, or Vega style fallback when preset is unavailable.
-- [ ] **DSYS-03**: Shared UI primitives are centralized and reused across all migrated sections.
+- [x] **DSYS-03**: Shared UI primitives are centralized and reused across all migrated sections.
 - [ ] **DSYS-04**: Hardcoded legacy color classes in migrated components are replaced by token-based styling.
 
 ### User Experience
@@ -59,9 +59,9 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| DSYS-01 | Phase 2 | Pending |
+| DSYS-01 | Phase 2 | Complete |
 | DSYS-02 | Phase 2 | Pending |
-| DSYS-03 | Phase 2 | Pending |
+| DSYS-03 | Phase 2 | Complete |
 | DSYS-04 | Phase 2 | Pending |
 | UX-01 | Phase 2 | Pending |
 | UX-02 | Phase 2 | Pending |
