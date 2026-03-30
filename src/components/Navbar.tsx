@@ -53,6 +53,10 @@ const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
 
     useMotionValueEvent(scrollY, "change", (value) => {
+        if (reduceMotion) {
+            setIsScrolled(false);
+            return;
+        }
         setIsScrolled(value > 20);
     });
 
