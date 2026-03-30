@@ -1,6 +1,7 @@
 # Phase 2: Design System and Core UX Migration - Research
 
 **Researched:** 2026-03-30
+**Reasoning Pass:** High (rerun, artifact reuse)
 **Domain:** shadcn/ui foundation + semantic token architecture + core UX shell/nav/hero migration
 **Confidence:** HIGH
 
@@ -72,6 +73,31 @@ Phase 2 should be planned as a strict foundation-first migration: initialize sha
 The highest planning risk is not visual design itself but migration consistency: partial tokenization, mixed old/new nav patterns, and motion behavior drifting from reduced-motion expectations. The phase plan should enforce sequence gates: foundation setup, preset attempt + fallback decision capture, primitive assembly, then UX migration.
 
 **Primary recommendation:** Plan Phase 2 as 4 waves aligned to existing roadmap plans (02-01..02-04) with explicit file-level acceptance checks for token purity, shadcn primitive use, and reduced-motion behavior.
+
+## High-Reasoning Rerun Delta
+
+This pass reuses existing context/research artifacts and tightens assumptions and execution gates instead of redefining scope.
+
+### Dependency and Assumption Tightening
+- Treat registry versions as advisory snapshots; execution should pin and verify against the local lockfile before applying shadcn-generated changes.
+- If shadcn CLI output shape differs from prior expectations, preserve shadcn architecture intent (primitives + semantic tokens) instead of forcing exact file templates.
+- Keep `motion/react` as the only animation path in touched files; regressions are flagged at plan level, not deferred.
+
+### Sequencing Risk Controls
+- Enforce a hard gate between 02-01 and 02-03: no shell/nav/hero migration before primitives and token contract are established.
+- Enforce a hard gate in 02-02: exactly one preset attempt, then immediate Vega fallback if unresolved; no retry loops.
+- Enforce a hard gate in 02-04: reduced-motion behavior must be manually verified in both `en` and `pt` routes.
+
+### Requirement-to-Plan Mapping (Execution Contract)
+| Requirement | Primary Plan | Gate |
+|---|---|---|
+| DSYS-01 | 02-01 | shadcn foundation initialized and buildable |
+| DSYS-02 | 02-02 | one-attempt preset path resolved, decision documented |
+| DSYS-03 | 02-01, 02-03 | shared primitives are consumed by migrated shell/nav/hero |
+| DSYS-04 | 02-03 | token-only styling in migrated files, hardcoded color scan clean |
+| UX-01 | 02-03 | sticky mixed desktop nav + mobile sheet behavior verified |
+| UX-02 | 02-03 | credibility-first hero + explicit CTA hierarchy verified |
+| UX-03 | 02-04 | consistent motion with reduced-motion safeguards verified |
 
 ## Standard Stack
 
