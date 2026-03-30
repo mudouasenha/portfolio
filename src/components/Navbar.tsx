@@ -1,10 +1,6 @@
-import {
-    Github,
-    Instagram,
-    Linkedin,
-    Menu,
-    X,
-} from "lucide-react";
+import { Menu } from "lucide-react";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
 
 import logo from "../assets/MgLogo.png";
 import { LanguageSwitcher } from "./LanguageSwitcher";
@@ -29,22 +25,22 @@ const SOCIAL_ITEMS = [
     {
         href: "https://www.linkedin.com/in/matheus-gomes-98823b185",
         label: "LinkedIn",
-        icon: Linkedin,
+        icon: FaLinkedin,
     },
     {
         href: "https://github.com/mudouasenha",
         label: "GitHub",
-        icon: Github,
+        icon: FaGithub,
     },
     {
         href: "https://www.instagram.com/matheusmtgomes/",
         label: "Instagram",
-        icon: Instagram,
+        icon: FaInstagram,
     },
     {
         href: "https://x.com/MatheusmtgGomes",
         label: "X",
-        icon: X,
+        icon: FaSquareXTwitter,
     },
 ];
 

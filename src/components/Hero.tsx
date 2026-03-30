@@ -1,6 +1,8 @@
 import { motion } from "motion/react";
 import profilePic from "../assets/MatheusGomesProfile.jpg";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
+
+import { Button } from "@/components/ui/button";
 
 const container = (delay: number) => ({
     hidden: { x: -100, opacity: 0 },
@@ -13,52 +15,76 @@ const container = (delay: number) => ({
 
 const Hero = () => {
     const { t } = useTranslation();
-    const hero_content = t("hero.content");
-    
+    const heroContent = t("hero.content");
+
     return (
-        <div className="border-b border-neutral-900 pb-4 lg:mb-35">
-            <div className="flex flex-wrap">
-                <div className="w-full lg:w-1/2">
-                    <div className="flex flex-col items-center lg:items-start">
+        <section className="border-b border-border pb-10 sm:pb-14 lg:pb-20">
+            <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+                <div>
+                    <div className="flex flex-col items-start">
                         <motion.h1
                             variants={container(0)}
                             initial="hidden"
                             animate="visible"
-                            className="pb-16 text-6xl font-thin tracking-tight lg:mt-16 lg:text-8xl"
+                            className="pt-2 text-4xl font-semibold tracking-tight text-foreground sm:pt-8 sm:text-5xl lg:pt-16 lg:text-6xl"
                         >
                             Matheus Gomes
                         </motion.h1>
                         <motion.span
-                            variants={container(0.5)}
+                            variants={container(0.2)}
                             initial="hidden"
                             animate="visible"
-                            className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-3xl tracking-tight text-transparent"
+                            className="mt-3 inline-flex items-center rounded-full border border-border bg-accent px-3 py-1 text-sm font-semibold tracking-wide text-accent-foreground"
                         >
                             Backend Developer
                         </motion.span>
                         <motion.p
-                            variants={container(1)}
+                            variants={container(0.4)}
                             initial="hidden"
                             animate="visible"
-                            className="my-2 max-w-xl py-6 font-light tracking-tighter text-justify leading-relaxed"
+                            className="mt-6 max-w-2xl text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg"
                         >
-                            {hero_content}
+                            {heroContent}
                         </motion.p>
+                        <motion.div
+                            variants={container(0.6)}
+                            initial="hidden"
+                            animate="visible"
+                            className="mt-8 flex flex-wrap gap-3"
+                        >
+                            <Button asChild size="lg">
+                                <a href="#contact">Start a conversation</a>
+                            </Button>
+                            <Button asChild variant="outline" size="lg">
+                                <a href="#projects">See featured projects</a>
+                            </Button>
+                        </motion.div>
+                        <motion.div
+                            variants={container(0.8)}
+                            initial="hidden"
+                            animate="visible"
+                            className="mt-8 flex flex-wrap gap-4 text-sm text-muted-foreground"
+                        >
+                            <span className="rounded-md border border-border bg-background px-3 py-2">TypeScript + .NET focus</span>
+                            <span className="rounded-md border border-border bg-background px-3 py-2">Production API architecture</span>
+                            <span className="rounded-md border border-border bg-background px-3 py-2">Bilingual delivery (EN/PT)</span>
+                        </motion.div>
                     </div>
                 </div>
-                <div className="w-full lg:w-1/2 lg:p-8">
-                    <div className="flex justify-center">
+                <div className="w-full lg:p-4">
+                    <div className="flex justify-center lg:justify-end">
                         <motion.img
                             initial={{ x: 100, opacity: 0 }}
                             animate={{ x: 0, opacity: 1 }}
                             transition={{ duration: 1, delay: 1.2 }}
                             src={profilePic}
                             alt="Matheus Gomes"
+                            className="w-full max-w-sm rounded-2xl border border-border bg-card object-cover p-2 shadow-sm sm:max-w-md"
                         />
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

@@ -10,20 +10,35 @@ import Technologies from "./components/Technologies";
 
 function App() {
     return (
-        <div className="overflow-x-hidden text-neutral-300 antialised selection:bg-cyan-300 selection:text-cyan-900">
-            <div className="fixed top-0 -z-10 h-full w-full">
-                <div className="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+        <div id="top" className="min-h-screen overflow-x-hidden bg-background text-foreground antialiased selection:bg-primary/25 selection:text-foreground">
+            <div className="pointer-events-none fixed inset-0 -z-10">
+                <div className="absolute inset-x-0 top-0 h-[26rem] opacity-25 [background:radial-gradient(circle_at_top,var(--primary)_0%,transparent_70%)]" />
+                <div className="absolute bottom-0 left-0 h-[20rem] w-[24rem] opacity-30 [background:radial-gradient(circle,var(--accent)_0%,transparent_72%)]" />
             </div>
-            <div className="container mx-auto px-8">
+            <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <Navbar />
                 <Hero />
-                <About />
-                <Technologies />
-                <Skills />
-                <Certifications />
-                <Experience />
-                <Projects />
-                <Contact />
+                <section id="about" className="scroll-mt-28">
+                    <About />
+                </section>
+                <section id="technologies" className="scroll-mt-28">
+                    <Technologies />
+                </section>
+                <section id="skills" className="scroll-mt-28">
+                    <Skills />
+                </section>
+                <section id="certifications" className="scroll-mt-28">
+                    <Certifications />
+                </section>
+                <section id="experience" className="scroll-mt-28">
+                    <Experience />
+                </section>
+                <section id="projects" className="scroll-mt-28">
+                    <Projects />
+                </section>
+                <section id="contact" className="scroll-mt-28">
+                    <Contact />
+                </section>
             </div>
         </div>
     );
