@@ -16,7 +16,7 @@
 
 - [x] **UX-01**: Navigation and section hierarchy are clear and consistent on desktop and mobile.
 - [x] **UX-02**: Hero and section layouts communicate key value and project credibility with stronger visual hierarchy.
-- [ ] **UX-03**: Motion is purposeful, consistent, and respects reduced-motion preferences.
+- [x] **UX-03**: Motion is purposeful, consistent, and respects reduced-motion preferences.
 - [ ] **UX-04**: Contact and external project actions are visible and actionable.
 
 ### Code Quality
@@ -65,7 +65,7 @@
 | DSYS-04 | Phase 2 | Complete |
 | UX-01 | Phase 2 | Complete |
 | UX-02 | Phase 2 | Complete |
-| UX-03 | Phase 2 | Pending |
+| UX-03 | Phase 2 | Complete |
 | UX-04 | Phase 3 | Pending |
 | QLTY-01 | Phase 1 | Complete |
 | QLTY-02 | Phase 3 | Pending |
