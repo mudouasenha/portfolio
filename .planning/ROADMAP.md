@@ -61,10 +61,10 @@ Plans:
 **Plans**: 4 plans
 
 Plans:
-- [ ] 03-01: Migrate remaining sections to shared primitives.
-- [ ] 03-02: Add content adapter validation for translation objects.
-- [ ] 03-03: Add integration tests for route and language continuity.
-- [ ] 03-04: Add accessibility verification and resolve findings.
+- [ ] 03-01-PLAN.md — Migrate remaining sections to shared primitives and enforce action visibility contract.
+- [ ] 03-02-PLAN.md — Add runtime schema adapters for translation-derived structured payloads.
+- [ ] 03-03-PLAN.md — Add integration tests for route/language continuity and locale parity.
+- [ ] 03-04-PLAN.md — Add automated accessibility verification and strict phase quality gate.
 
 ### Phase 4: Final Polish and Release Readiness
 **Goal**: Finalize presentation quality and complete release documentation updates.  
