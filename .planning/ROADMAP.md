@@ -61,7 +61,7 @@ Plans:
 **Plans**: 5 plans
 
 Plans:
-- [ ] 03-01-PLAN.md — Migrate remaining sections to shared primitives and enforce action visibility contract.
+- [x] 03-01-PLAN.md — Migrate remaining sections to shared primitives and enforce action visibility contract. (completed 2026-03-31)
 - [ ] 03-02-PLAN.md — Establish schema/adapter/parity foundations for translation-derived structured payloads.
 - [ ] 03-05-PLAN.md — Wire section components and locale fallback/parity behavior to the i18n adapter layer.
 - [ ] 03-03-PLAN.md — Add integration tests for route/language continuity and locale parity.
@@ -90,5 +90,5 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 |-------|----------------|--------|-----------|
 | 1. Baseline Stabilization | 3/3 | Complete | 2026-03-29 |
 | 2. Design System and Core UX Migration | 4/4 | Complete   | 2026-03-30 |
-| 3. Section Completion and Quality Hardening | 0/4 | Not started | - |
+| 3. Section Completion and Quality Hardening | 1/5 | In Progress | - |
 | 4. Final Polish and Release Readiness | 0/2 | Not started | - |

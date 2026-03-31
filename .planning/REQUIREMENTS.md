@@ -17,13 +17,13 @@
 - [x] **UX-01**: Navigation and section hierarchy are clear and consistent on desktop and mobile.
 - [x] **UX-02**: Hero and section layouts communicate key value and project credibility with stronger visual hierarchy.
 - [x] **UX-03**: Motion is purposeful, consistent, and respects reduced-motion preferences.
-- [ ] **UX-04**: Contact and external project actions are visible and actionable.
+- [x] **UX-04**: Contact and external project actions are visible and actionable.
 
 ### Code Quality
 
 - [x] **QLTY-01**: Mixed animation library usage is consolidated into one approved motion implementation.
 - [ ] **QLTY-02**: Translation-derived structured data is validated before rendering.
-- [ ] **QLTY-03**: Section components follow consistent architecture and naming conventions.
+- [x] **QLTY-03**: Section components follow consistent architecture and naming conventions.
 - [x] **QLTY-04**: Legacy dead code and obvious debug artifacts are removed from active paths.
 
 ### Localization and Routing
@@ -66,10 +66,10 @@
 | UX-01 | Phase 2 | Complete |
 | UX-02 | Phase 2 | Complete |
 | UX-03 | Phase 2 | Complete |
-| UX-04 | Phase 3 | Pending |
+| UX-04 | Phase 3 | Complete |
 | QLTY-01 | Phase 1 | Complete |
 | QLTY-02 | Phase 3 | Pending |
-| QLTY-03 | Phase 3 | Pending |
+| QLTY-03 | Phase 3 | Complete |
 | QLTY-04 | Phase 1 | Complete |
 | I18N-01 | Phase 1 | Complete |
 | I18N-02 | Phase 3 | Pending |
