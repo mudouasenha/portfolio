@@ -11,7 +11,9 @@
     "verify:baseline": "npm run lint && npm run build",
     "test:integration": "vitest run tests/integration --config vitest.config.ts",
     "test:a11y": "playwright test tests/a11y --config playwright.config.ts",
-    "verify:phase3": "npm run lint && npm run build && npm run test:integration && npm run test:a11y"
+    "verify:phase3": "npm run lint && npm run build && npm run test:integration && npm run test:a11y",
+    "a11y:install-deps": "playwright install --with-deps chromium",
+    "verify:phase3:full": "npm run a11y:install-deps && npm run verify:phase3"
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.2.8",

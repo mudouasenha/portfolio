@@ -43,6 +43,16 @@ npm run lint
 npm run preview
 ```
 
+## Accessibility Runtime Dependencies
+
+Linux host libraries must be installed before a11y scans can launch Playwright Chromium.
+
+```bash
+rtk npm run a11y:install-deps
+rtk npm run test:a11y
+rtk npm run verify:phase3
+```
+
 ## Build Baseline Recovery
 
 Use this deterministic recovery flow if local dependencies drift or build checks fail:
