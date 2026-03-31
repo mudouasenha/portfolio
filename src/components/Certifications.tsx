@@ -1,6 +1,10 @@
 import { motion } from "motion/react";
-import { useTranslation } from 'react-i18next';
-import { Certification } from '../models/Certification';
+import { useTranslation } from "react-i18next";
+
+import SectionCard from "@/components/sections/SectionCard";
+import SectionHeader from "@/components/sections/SectionHeader";
+import SectionShell from "@/components/sections/SectionShell";
+import { Certification } from "../models/Certification";
 import microsoft_certified_fundamentals_badge from "../assets/certifications/microsoft_certified_fundamentals_badge.svg";
 
 const formatDate = (date: string) => {
@@ -12,76 +16,57 @@ const formatDate = (date: string) => {
     }).format(new Date(date));
   };
 
-  const cardHoverEffect = {
-    hover: {
-      scale: 1.07,
-      boxShadow: "0px 8px 22px rgba(255, 255, 255, 0.15)",
-      backgroundColor: "rgba(30, 30, 35, 0.85)",
-      borderColor: "rgba(34, 211, 238, 1)",
-      transition: { duration: 0.3 },
-  },
-};
-
 const imagesMap: Record<string, string> = {
-  'azure-fundamentals': microsoft_certified_fundamentals_badge,
+  "azure-fundamentals": microsoft_certified_fundamentals_badge,
 };
 
 const Certifications = () => {
     const { t } = useTranslation();
   
-  const rawCerts = t('certifications', { returnObjects: true }) as Certification[] || [];
-  const certifications = rawCerts.map(cert => {
+  const rawCerts = (t("certifications", { returnObjects: true }) as Certification[]) || [];
+  const certifications = rawCerts.map((cert) => {
     const c = new Certification(cert);
-    c.image = imagesMap[c.id] || '';
+    c.image = imagesMap[c.id] || "";
     return c;
   });
 
 
     return (
-        <div className="border-b border-neutral-800 pb-20 border-width-6">
-            <motion.h1
-                whileInView={{ opacity: 1, y: 0 }}
-                initial={{ opacity: 0, y: -100 }}
-                transition={{ duration: 0.5 }}
-                className="my-10 text-center text-4xl"
-            >
-                Certifications
-            </motion.h1>
-            <div className="flex flex-wrap justify-center gap-6">
+        <SectionShell className="pt-4">
+            <SectionHeader className="mb-12 text-center">Certifications</SectionHeader>
+            <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
             {certifications.map((certification, index) => (
-              <a 
+              <motion.a
               key={certification.id}
               href={certification.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full max-w-sm lg:max-w-md"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.45, delay: index * 0.06, ease: "easeOut" }}
+              whileHover={{ scale: 1.02 }}
+              className="block rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
               >
-                  <motion.div
-                      key={index}
-                      whileHover="hover"
-                      initial={{ opacity: 0, y: 50 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5 }}
-                      variants={cardHoverEffect}
-                      className="rounded-xl border border-neutral-700 bg-neutral-900/70 p-6 text-center shadow-lg transition-all duration-100"
-                  >
-                      <h4 className="mb-4 text-lg font-semibold text-neutral-200">{certification.name}</h4>
+                  <SectionCard className="h-full p-6 text-center">
+                      <h4 className="mb-4 text-lg font-semibold text-foreground">{certification.name}</h4>
                       <div className="flex justify-center">
                           <img
                               src={certification.image}
                               alt={certification.name}
-                              className="mb-4 h-32 w-auto rounded-lg"
+                              className="mb-4 h-32 w-auto rounded-lg border border-border p-2"
                           />
                       </div>
-                      <p className="text-sm text-neutral-400">
-                          <span className="font-semibold text-cyan-400">Issued by:</span> {certification.issued_by} on <strong>{formatDate(certification.date)}</strong>
+                      <p className="text-sm text-muted-foreground">
+                          <span className="font-semibold text-primary">Issued by:</span> {certification.issued_by} on{" "}
+                          <strong className="text-foreground">{formatDate(certification.date)}</strong>
                       </p>
-                      <p className="mt-2 text-sm text-neutral-500">{certification.description}</p>
-                  </motion.div>
-              </a>
+                      <p className="mt-2 text-sm text-muted-foreground">{certification.description}</p>
+                  </SectionCard>
+              </motion.a>
             ))}
             </div>
-        </div>
+        </SectionShell>
     );
 };
 

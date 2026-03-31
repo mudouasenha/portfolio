@@ -1,65 +1,60 @@
-import { motion, Variants } from "motion/react";
+import { motion, useReducedMotion } from "motion/react";
 import { DiMsqlServer, DiRedis } from "react-icons/di";
 import { GrGraphQl } from "react-icons/gr";
 import { SiTypescript } from "react-icons/si";
 import { TbBrandCSharp } from "react-icons/tb";
 import { VscAzure } from "react-icons/vsc";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
-const iconVariants = (duration: number): Variants => ({
-    initial: { y: -10 },
-    animate: {
-        y: [10, -10],
-        transition: {
-            duration: duration,
-            ease: "linear",
-            repeat: Infinity,
-            repeatType: "reverse",
-        },
-    },
-});
+import SectionCard from "@/components/sections/SectionCard";
+import SectionHeader from "@/components/sections/SectionHeader";
+import SectionShell from "@/components/sections/SectionShell";
+
+const technologies = [
+    { id: "csharp", label: "C#", Icon: TbBrandCSharp },
+    { id: "sqlserver", label: "MS SQL Server", Icon: DiMsqlServer },
+    { id: "azure", label: "Azure", Icon: VscAzure },
+    { id: "typescript", label: "TypeScript", Icon: SiTypescript },
+    { id: "graphql", label: "GraphQL", Icon: GrGraphQl },
+    { id: "redis", label: "Redis", Icon: DiRedis },
+];
 
 const Technologies = () => {
     const { t } = useTranslation();
+    const reduceMotion = useReducedMotion();
+    const shouldReduceMotion = reduceMotion ?? false;
 
     return (
-        <div className="border-b border-neutral-900 pb-24">
-            <motion.h1
+        <SectionShell className="pt-4">
+            <SectionHeader className="mb-12 text-center">{t("technologies")}</SectionHeader>
+            <motion.ul
+                initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                initial={{ opacity: 0, y: -100 }}
-                transition={{ duration: 1.5 }}
-                className="my-20 text-center text-4xl"
+                viewport={{ once: true, amount: 0.25 }}
+                transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.45, ease: "easeOut" }}
+                className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6"
             >
-                {t('technologies')}
-            </motion.h1>
-
-            <motion.div
-                whileInView={{ opacity: 1, x: 0 }}
-                initial={{ opacity: 0, x: -100 }}
-                transition={{ duration: 1.5 }}
-                className="flex flex-wrap items-center justify-center gap-6"
-            >
-                {[ 
-                    { icon: <TbBrandCSharp className="text-7xl text-purple-400" />, delay: 2.5 },
-                    { icon: <DiMsqlServer className="text-7xl text-red-400" />, delay: 5 },
-                    { icon: <VscAzure className="text-7xl text-blue-400" />, delay: 3 },
-                    { icon: <SiTypescript className="text-7xl text-blue-400" />, delay: 2 },
-                    { icon: <GrGraphQl className="text-7xl text-pink-500" />, delay: 6 },
-                    { icon: <DiRedis className="text-7xl text-red-600" />, delay: 4 },
-                ].map((tech, index) => (
-                    <motion.div
-                        key={index}
-                        variants={iconVariants(tech.delay)}
-                        initial="initial"
-                        animate="animate"
-                        whileHover="hover"
-                        className="flex h-24 w-24 items-center justify-center rounded-2xl border-4 border-neutral-800 p-4"
+                {technologies.map((tech, index) => (
+                    <motion.li
+                        key={tech.id}
+                        initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 18 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        transition={
+                            shouldReduceMotion
+                                ? { duration: 0 }
+                                : { duration: 0.35, delay: index * 0.05, ease: "easeOut" }
+                        }
+                        whileHover={shouldReduceMotion ? undefined : { scale: 1.03 }}
                     >
-                        {tech.icon}
-                    </motion.div>
+                        <SectionCard className="flex h-full flex-col items-center gap-3 p-5 text-center">
+                            <tech.Icon className="text-5xl text-primary" aria-hidden />
+                            <span className="text-sm font-medium text-muted-foreground">{tech.label}</span>
+                        </SectionCard>
+                    </motion.li>
                 ))}
-            </motion.div>
-        </div>
+            </motion.ul>
+        </SectionShell>
     );
 };
 

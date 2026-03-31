@@ -1,57 +1,58 @@
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
+
+import SectionCard from "@/components/sections/SectionCard";
+import SectionHeader from "@/components/sections/SectionHeader";
+import SectionShell from "@/components/sections/SectionShell";
+import { ExperienceItem } from "../models/ExperienceItem";
 import Tag from "./Tag";
-import { useTranslation } from 'react-i18next';
-import { ExperienceItem } from '../models/ExperienceItem';
 
 const Experience = () => {
     const { t } = useTranslation();
 
-    const experiences = t('experiences', { returnObjects: true }) as ExperienceItem[];
+    const experiences = t("experiences", { returnObjects: true }) as ExperienceItem[];
 
     return (
-        <div className="border-b border-neutral-900 pb-4">
-            <motion.h1
-                whileInView={{ opacity: 1, y: 0 }}
-                initial={{ opacity: 0, y: -100 }}
-                transition={{ duration: 0.5 }}
-                className="my-20 text-center text-4xl"
-            >
-                {t('experience')} 
-            </motion.h1>
-            <div>
-                {experiences.map((experience, index) => (
-                    <div key={index} className="mb-8 flex flex-wrap lg:justify-center">
-                        <motion.div
-                            whileInView={{ opacity: 1, x: 0 }}
-                            initial={{ opacity: 0, x: -100 }}
-                            transition={{ duration: 1 }}
-                            className="w-full lg:w-1/4"
-                        >
-                            <p className="mb-2 text-sm text-neutral-400">{experience.date}</p>
-                        </motion.div>
-                        <motion.div
-                            whileInView={{ opacity: 1, x: 0 }}
-                            initial={{ opacity: 0, x: 100 }}
-                            transition={{ duration: 1 }}
-                            className="w-full max-w-xl lg:w-3/4"
-                        >
-                            <h6 className="mb-2 font-semibold">
-                                {experience.role} -{" "}
-                                <span className="text-sm text-purple-100">
-                                    {experience.company}
-                                </span>
-                            </h6>
-                            <p className="mb-1 text-neutral-400">{experience.description}</p>
-                            <div className="flex flex-wrap">
-                                {experience.technologies.map((tech, index) => (
-                                    <Tag key={index} tagKey={index} text={tech} />
-                                ))}
+        <SectionShell className="pt-4">
+            <SectionHeader className="mb-12 text-center">{t("experience")}</SectionHeader>
+            <div className="space-y-5">
+                {experiences.map((experience, index) => {
+                    const displayPeriod = (experience as ExperienceItem & { year?: string }).year ?? experience.date;
+
+                    return (
+                    <motion.div
+                        key={`${experience.role}-${experience.company}`}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.15 }}
+                        transition={{ duration: 0.4, delay: index * 0.03, ease: "easeOut" }}
+                    >
+                        <SectionCard className="p-6 sm:p-7">
+                            <div className="grid gap-4 lg:grid-cols-[180px_1fr] lg:gap-8">
+                                <p className="text-sm font-medium text-muted-foreground">
+                                    {displayPeriod}
+                                </p>
+                                <div>
+                                    <h3 className="text-lg font-semibold text-foreground">
+                                        {experience.role}
+                                        <span className="ml-2 text-sm font-medium text-muted-foreground">
+                                            {experience.company}
+                                        </span>
+                                    </h3>
+                                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{experience.description}</p>
+                                    <div className="mt-2 flex flex-wrap">
+                                        {experience.technologies.map((tech, techIndex) => (
+                                            <Tag key={`${experience.role}-${tech}`} tagKey={techIndex} text={tech} />
+                                        ))}
+                                    </div>
+                                </div>
                             </div>
-                        </motion.div>
-                    </div>
-                ))}
+                        </SectionCard>
+                    </motion.div>
+                    );
+                })}
             </div>
-        </div>
+        </SectionShell>
     );
 };
 

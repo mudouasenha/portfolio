@@ -1,82 +1,81 @@
 import { motion } from "motion/react";
-import Tag from "./Tag";
-import { useTranslation } from 'react-i18next';
-import { Project } from '../models/Project';
+import { useTranslation } from "react-i18next";
+
+import SectionCard from "@/components/sections/SectionCard";
+import SectionHeader from "@/components/sections/SectionHeader";
+import SectionShell from "@/components/sections/SectionShell";
+import { Project } from "../models/Project";
 import cachara from "../assets/projects/cachara.jpg";
 import ufsc_brasao from "../assets/projects/ufsc_brasao.jpg";
 import portfolio from "../assets/projects/portfolio.jpg";
+import Tag from "./Tag";
 
 const Projects = () => {
     const { t } = useTranslation();
 
     const imagesMap: Record<string, string> = {
-  'monography-data-serialization': ufsc_brasao,
-  'cachara-social-platform': cachara,
-  'cachara-ai-image-classifier': cachara,
-  'portfolio-website': portfolio,
-};
+        "monography-data-serialization": ufsc_brasao,
+        "cachara-social-platform": cachara,
+        "cachara-ai-image-classifier": cachara,
+        "portfolio-website": portfolio,
+    };
 
-      const rawProjects = t('projectsList', { returnObjects: true }) as Project[] || [];
-      const projects = rawProjects.map(cert => {
+    const outboundUrls: Record<string, string> = {
+        "cachara-social-platform": "https://github.com/mudouasenha",
+        "cachara-ai-image-classifier": "https://github.com/mudouasenha",
+        "portfolio-website": "https://portfolio-matheus-miranda-torres-gomes-projects.vercel.app/",
+        "monography-data-serialization": "https://github.com/mudouasenha",
+    };
+
+    const rawProjects = (t("projectsList", { returnObjects: true }) as Project[]) || [];
+    const projects = rawProjects.map((cert) => {
         const c = new Project(cert);
-        c.image = imagesMap[c.id] || '';
+        c.image = imagesMap[c.id] || "";
+        c.url = outboundUrls[c.id] || c.url;
         return c;
-      });
+    });
 
     return (
-        <div className="border-b border-neutral-900 pb-4">
-            <motion.h1
-                whileInView={{ opacity: 1, y: 0 }}
-                initial={{ opacity: 0, y: -100 }}
-                transition={{ duration: 0.5 }}
-                className="my-20 text-center text-4xl"
-            >
-                {t('projects')}
-            </motion.h1>
-            <div>
+        <SectionShell className="pt-4">
+            <SectionHeader className="mb-12 text-center">{t("projects")}</SectionHeader>
+            <div className="space-y-5">
                 {projects.map((project, index) => (
-                      <a 
-                      key={index}
-                      href={project.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-full max-w-sm lg:max-w-md"
+                    <motion.a
+                        key={project.id}
+                        href={project.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        transition={{ duration: 0.45, delay: index * 0.05, ease: "easeOut" }}
+                        whileHover={{ scale: 1.02 }}
+                        className="block rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                     >
-                    <div  className="mb-8 flex flex-wrap lg:justify-center">
-                        <motion.div
-                            whileInView={{ opacity: 1, x: 0 }}
-                            initial={{ opacity: 0, x: -100 }}
-                            transition={{ duration: 1 }}
-                            className="w-full lg:w-1/4"
-                        >
-                            <img
-                                src={project.image}
-                                width={300}
-                                height={250}
-                                alt={project.title}
-                                className="mb-6 rounded"
-                            />
-                        </motion.div>
-                        <motion.div
-                            whileInView={{ opacity: 1, x: 0 }}
-                            initial={{ opacity: 0, x: 100 }}
-                            transition={{ duration: 1 }}
-                            className="w-full max-w-xl lg:w-3/4"
-                        >
-                            <h6 className="mb-2 font-semibold">{project.title}</h6>
-                            <p className="mb-1 text-neutral-400">{project.description}</p>
-                            <div className="flex flex-wrap">
-                                {project.technologies.map((tech, index) => (
-                                    <Tag key={index} tagKey={index} text={tech} />
-                                ))}
+                        <SectionCard className="overflow-hidden p-5 sm:p-6">
+                            <div className="grid gap-5 lg:grid-cols-[220px_1fr]">
+                                <img
+                                    src={project.image}
+                                    width={300}
+                                    height={250}
+                                    alt={project.title}
+                                    className="h-40 w-full rounded-lg border border-border object-cover"
+                                />
+                                <div>
+                                    <h3 className="text-lg font-semibold text-foreground">{project.title}</h3>
+                                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{project.description}</p>
+                                    <div className="mt-2 flex flex-wrap">
+                                        {project.technologies.map((tech, techIndex) => (
+                                            <Tag key={`${project.id}-${tech}`} tagKey={techIndex} text={tech} />
+                                        ))}
+                                    </div>
+                                </div>
                             </div>
-                        </motion.div>
-                    </div>
-                    </a>
+                        </SectionCard>
+                    </motion.a>
                 ))}
-                <div></div>
             </div>
-        </div>
+        </SectionShell>
     );
 };
 
