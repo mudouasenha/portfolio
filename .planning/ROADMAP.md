@@ -12,7 +12,7 @@ This roadmap modernizes the existing portfolio through a controlled brownfield p
 
 - [x] **Phase 1: Baseline Stabilization** - Lock environment, routing continuity, and migration guardrails.
 - [x] **Phase 2: Design System and Core UX Migration** - Establish shadcn foundation and migrate shell and key sections. (completed 2026-03-30)
-- [x] **Phase 3: Section Completion and Quality Hardening** - Complete section migration, validation, testing, and accessibility. (completed 2026-03-31)
+- [ ] **Phase 3: Section Completion and Quality Hardening** - Complete section migration, validation, testing, and accessibility.
 - [ ] **Phase 4: Final Polish and Release Readiness** - Tune final UX quality, performance, and documentation.
 
 ## Phase Details
@@ -58,7 +58,7 @@ Plans:
   2. Translation-derived structured data is validated before rendering.
   3. Language switching and translation parity remain correct.
   4. Lint, typecheck, integration tests, and accessibility checks pass.
-**Plans**: 5 plans
+**Plans**: 6 plans
 
 Plans:
 - [x] 03-01-PLAN.md — Migrate remaining sections to shared primitives and enforce action visibility contract. (completed 2026-03-31)
@@ -66,6 +66,7 @@ Plans:
 - [x] 03-05-PLAN.md — Wire section components and locale fallback/parity behavior to the i18n adapter layer. (completed 2026-03-31)
 - [x] 03-03-PLAN.md — Add integration tests for route/language continuity and locale parity. (completed 2026-03-31)
 - [x] 03-04-PLAN.md — Add automated accessibility verification and strict phase quality gate. (completed 2026-03-31)
+- [ ] 03-06-PLAN.md — Close Playwright runtime dependency gaps and re-green strict Phase 3 verification gate.
 
 ### Phase 4: Final Polish and Release Readiness
 **Goal**: Finalize presentation quality and complete release documentation updates.  
@@ -90,5 +91,5 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 |-------|----------------|--------|-----------|
 | 1. Baseline Stabilization | 3/3 | Complete | 2026-03-29 |
 | 2. Design System and Core UX Migration | 4/4 | Complete   | 2026-03-30 |
-| 3. Section Completion and Quality Hardening | 5/5 | Complete | 2026-03-31 |
+| 3. Section Completion and Quality Hardening | 5/6 | In progress | - |
 | 4. Final Polish and Release Readiness | 0/2 | Not started | - |
