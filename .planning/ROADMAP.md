@@ -58,11 +58,12 @@ Plans:
   2. Translation-derived structured data is validated before rendering.
   3. Language switching and translation parity remain correct.
   4. Lint, typecheck, integration tests, and accessibility checks pass.
-**Plans**: 4 plans
+**Plans**: 5 plans
 
 Plans:
 - [ ] 03-01-PLAN.md — Migrate remaining sections to shared primitives and enforce action visibility contract.
-- [ ] 03-02-PLAN.md — Add runtime schema adapters for translation-derived structured payloads.
+- [ ] 03-02-PLAN.md — Establish schema/adapter/parity foundations for translation-derived structured payloads.
+- [ ] 03-05-PLAN.md — Wire section components and locale fallback/parity behavior to the i18n adapter layer.
 - [ ] 03-03-PLAN.md — Add integration tests for route/language continuity and locale parity.
 - [ ] 03-04-PLAN.md — Add automated accessibility verification and strict phase quality gate.
 
