@@ -30,7 +30,7 @@
 
 - [x] **I18N-01**: Language-prefixed routing (`/:lang/*`) remains stable for `en` and `pt`.
 - [ ] **I18N-02**: Language switching updates both URL and rendered localized content reliably.
-- [ ] **I18N-03**: Translation parity is maintained for all user-visible updated sections.
+- [x] **I18N-03**: Translation parity is maintained for all user-visible updated sections.
 
 ### Verification and Delivery
 
@@ -73,7 +73,7 @@
 | QLTY-04 | Phase 1 | Complete |
 | I18N-01 | Phase 1 | Complete |
 | I18N-02 | Phase 3 | Pending |
-| I18N-03 | Phase 3 | Pending |
+| I18N-03 | Phase 3 | Complete |
 | QAV-01 | Phase 3 | Pending |
 | QAV-02 | Phase 3 | Pending |
 | QAV-03 | Phase 3 | Pending |
