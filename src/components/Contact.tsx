@@ -5,12 +5,14 @@ import { Button } from "@/components/ui/button";
 import SectionCard from "@/components/sections/SectionCard";
 import SectionHeader from "@/components/sections/SectionHeader";
 import SectionShell from "@/components/sections/SectionShell";
-import { ContactInfo } from "../models/ContactInfo";
+import { adaptContact } from "@/features/i18n/contentAdapters";
 
 const Contact = () => {
     const { t } = useTranslation();
   
-    const contact = t("contact", { returnObjects: true }) as ContactInfo;
+    const { items: contacts, invalidCount } = adaptContact(t("contact", { returnObjects: true }));
+    const contact = contacts[0];
+    const showFallback = contacts.length === 0 || invalidCount > 0;
     
     return (
         <SectionShell className="pt-4">
@@ -23,8 +25,17 @@ const Contact = () => {
                 className="mx-auto max-w-3xl"
             >
                 <SectionCard className="p-7 text-center">
-                    <p className="text-base text-muted-foreground">{contact.address}</p>
-                    <p className="mt-3 text-base text-muted-foreground">{contact.phoneNo}</p>
+                    {showFallback ? (
+                        <p role="status" data-validation-fallback="contact" className="text-base text-muted-foreground">
+                            {t("validationFallback.contact")}
+                        </p>
+                    ) : null}
+                    {contact ? (
+                        <>
+                            <p className="text-base text-muted-foreground">{contact.address}</p>
+                            <p className="mt-3 text-base text-muted-foreground">{contact.phoneNo}</p>
+                        </>
+                    ) : null}
                     <div className="mt-6 flex flex-col items-center gap-3">
                         <Button asChild size="lg">
                             <a

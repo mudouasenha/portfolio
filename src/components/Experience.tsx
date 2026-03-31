@@ -4,20 +4,26 @@ import { useTranslation } from "react-i18next";
 import SectionCard from "@/components/sections/SectionCard";
 import SectionHeader from "@/components/sections/SectionHeader";
 import SectionShell from "@/components/sections/SectionShell";
-import { ExperienceItem } from "../models/ExperienceItem";
+import { adaptExperiences } from "@/features/i18n/contentAdapters";
 import Tag from "./Tag";
 
 const Experience = () => {
     const { t } = useTranslation();
 
-    const experiences = t("experiences", { returnObjects: true }) as ExperienceItem[];
+    const { items: experiences, invalidCount } = adaptExperiences(t("experiences", { returnObjects: true }));
+    const showFallback = experiences.length === 0 || invalidCount > 0;
 
     return (
         <SectionShell className="pt-4">
             <SectionHeader className="mb-12 text-center">{t("experience")}</SectionHeader>
+            {showFallback ? (
+                <p role="status" data-validation-fallback="experience" className="mb-4 text-sm text-muted-foreground">
+                    {t("validationFallback.experience")}
+                </p>
+            ) : null}
             <div className="space-y-5">
                 {experiences.map((experience, index) => {
-                    const displayPeriod = (experience as ExperienceItem & { year?: string }).year ?? experience.date;
+                    const displayPeriod = experience.date;
 
                     return (
                     <motion.div

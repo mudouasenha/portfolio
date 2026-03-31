@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import SectionCard from "@/components/sections/SectionCard";
 import SectionHeader from "@/components/sections/SectionHeader";
 import SectionShell from "@/components/sections/SectionShell";
+import { adaptProjects } from "@/features/i18n/contentAdapters";
 import { Project } from "../models/Project";
 import cachara from "../assets/projects/cachara.jpg";
 import ufsc_brasao from "../assets/projects/ufsc_brasao.jpg";
@@ -27,17 +28,23 @@ const Projects = () => {
         "monography-data-serialization": "https://github.com/mudouasenha",
     };
 
-    const rawProjects = (t("projectsList", { returnObjects: true }) as Project[]) || [];
-    const projects = rawProjects.map((cert) => {
+    const { items: adaptedProjects, invalidCount } = adaptProjects(t("projectsList", { returnObjects: true }));
+    const projects = adaptedProjects.map((cert) => {
         const c = new Project(cert);
         c.image = imagesMap[c.id] || "";
         c.url = outboundUrls[c.id] || c.url;
         return c;
     });
+    const showFallback = projects.length === 0 || invalidCount > 0;
 
     return (
         <SectionShell className="pt-4">
             <SectionHeader className="mb-12 text-center">{t("projects")}</SectionHeader>
+            {showFallback ? (
+                <p role="status" data-validation-fallback="projects" className="mb-4 text-sm text-muted-foreground">
+                    {t("validationFallback.projects")}
+                </p>
+            ) : null}
             <div className="space-y-5">
                 {projects.map((project, index) => (
                     <motion.a

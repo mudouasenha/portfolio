@@ -4,17 +4,23 @@ import { useTranslation } from "react-i18next";
 import SectionCard from "@/components/sections/SectionCard";
 import SectionHeader from "@/components/sections/SectionHeader";
 import SectionShell from "@/components/sections/SectionShell";
-import { SkillSet } from "../models/SkillSet";
+import { adaptSkills } from "@/features/i18n/contentAdapters";
 import Tag from "./Tag";
 
 const Skills = () => {
     const { t } = useTranslation();
 
-    const skills = t("skills", { returnObjects: true }) as SkillSet[];
+    const { items: skills, invalidCount } = adaptSkills(t("skills", { returnObjects: true }));
+    const showFallback = skills.length === 0 || invalidCount > 0;
 
     return (
         <SectionShell className="pt-4">
             <SectionHeader className="mb-12 text-center">Skills</SectionHeader>
+            {showFallback ? (
+                <p role="status" data-validation-fallback="skills" className="mb-4 text-sm text-muted-foreground">
+                    {t("validationFallback.skills")}
+                </p>
+            ) : null}
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}

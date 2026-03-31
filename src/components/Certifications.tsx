@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import SectionCard from "@/components/sections/SectionCard";
 import SectionHeader from "@/components/sections/SectionHeader";
 import SectionShell from "@/components/sections/SectionShell";
+import { adaptCertifications } from "@/features/i18n/contentAdapters";
 import { Certification } from "../models/Certification";
 import microsoft_certified_fundamentals_badge from "../assets/certifications/microsoft_certified_fundamentals_badge.svg";
 
@@ -23,17 +24,23 @@ const imagesMap: Record<string, string> = {
 const Certifications = () => {
     const { t } = useTranslation();
   
-  const rawCerts = (t("certifications", { returnObjects: true }) as Certification[]) || [];
-  const certifications = rawCerts.map((cert) => {
+  const { items: adaptedCertifications, invalidCount } = adaptCertifications(t("certifications", { returnObjects: true }));
+  const certifications = adaptedCertifications.map((cert) => {
     const c = new Certification(cert);
     c.image = imagesMap[c.id] || "";
     return c;
   });
+  const showFallback = certifications.length === 0 || invalidCount > 0;
 
 
     return (
         <SectionShell className="pt-4">
             <SectionHeader className="mb-12 text-center">Certifications</SectionHeader>
+            {showFallback ? (
+              <p role="status" data-validation-fallback="certifications" className="mb-4 text-sm text-muted-foreground">
+                {t("validationFallback.certifications")}
+              </p>
+            ) : null}
             <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
             {certifications.map((certification, index) => (
               <motion.a
