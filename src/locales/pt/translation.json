@@ -4,6 +4,13 @@
   "projects": "Projetos",
   "technologies": "Tecnologias",
   "getInTouch":  "Entre em Contato",
+  "validationFallback": {
+    "skills": "Alguns itens de habilidades não puderam ser exibidos.",
+    "projects": "Alguns itens de projetos não puderam ser exibidos.",
+    "experience": "Alguns itens de experiência não puderam ser exibidos.",
+    "certifications": "Alguns itens de certificações não puderam ser exibidos.",
+    "contact": "Alguns dados de contato não puderam ser exibidos."
+  },
   "hero": {
     "content": "Sou um desenvolvedor .NET com experiência profissional em desenvolvimento de software desde 2020, especializado em C#, .NET, MS SQL, Azure e tecnologias relacionadas. Tenho uma forte paixão por criar soluções limpas, escaláveis e fáceis de manter, sempre priorizando código conciso e legível.\n\nExperiente em ambientes ágeis, destaco-me na colaboração com equipes diversas para entregar software de alta qualidade de forma eficiente. Sou fluente em inglês, adaptável a novos desafios e atualmente aprimorando minha expertise em microserviços, Azure, Domain-Driven Design (DDD) e programação de IA para entregar soluções ainda mais robustas e modernas."
   },

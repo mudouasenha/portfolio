@@ -4,6 +4,13 @@
   "projects": "Projects",
   "technologies": "Technologies",
   "getInTouch":  "Get In Touch",
+  "validationFallback": {
+    "skills": "Some skill entries could not be displayed.",
+    "projects": "Some project entries could not be displayed.",
+    "experience": "Some experience entries could not be displayed.",
+    "certifications": "Some certification entries could not be displayed.",
+    "contact": "Some contact details could not be displayed."
+  },
   "hero": {
     "content": "I am a .NET developer with professional software development experience since 2020, specializing in C#, .NET, MS SQL, Azure, and related technologies. I have a strong passion for creating clean, scalable, and maintainable solutions, always prioritizing concise and readable code.\n\nExperienced in agile environments, I excel at collaborating with diverse teams to deliver high-quality software efficiently. I am fluent in English, adaptable to new challenges, and currently enhancing my expertise in microservices, Azure, Domain-Driven Design (DDD), and AI programming to deliver even more robust and modern solutions."
   },

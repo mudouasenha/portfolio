@@ -21,10 +21,6 @@ const PARITY_WARNING_PREFIX = '[i18n-schema][parity]';
 
 export const structuredLocaleParity = validateStructuredLocaleParity(enLocale, ptLocale);
 
-structuredLocaleParity.requiredShapeMismatches.forEach((message) => {
-  console.warn(message.startsWith(PARITY_WARNING_PREFIX) ? message : `${PARITY_WARNING_PREFIX} ${message}`);
-});
-
 structuredLocaleParity.unknownKeyWarnings.forEach((message) => {
   console.warn(message.startsWith(PARITY_WARNING_PREFIX) ? message : `${PARITY_WARNING_PREFIX} ${message}`);
 });
