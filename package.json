@@ -9,7 +9,9 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "verify:baseline": "npm run lint && npm run build",
-    "test:integration": "vitest run tests/integration --config vitest.config.ts"
+    "test:integration": "vitest run tests/integration --config vitest.config.ts",
+    "test:a11y": "playwright test tests/a11y --config playwright.config.ts",
+    "verify:phase3": "npm run lint && npm run build && npm run test:integration && npm run test:a11y"
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.2.8",
@@ -33,10 +35,12 @@
     "zod": "^3.25.76"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.11.1",
+    "@eslint/js": "^9.17.0",
+    "@playwright/test": "^1.58.2",
     "@testing-library/jest-dom": "^6.8.0",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^14.6.1",
-    "@eslint/js": "^9.17.0",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
     "@vitejs/plugin-react-swc": "^3.5.0",
