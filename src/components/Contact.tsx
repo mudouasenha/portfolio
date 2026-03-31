@@ -42,6 +42,7 @@ const Contact = () => {
                                 href="https://www.linkedin.com/in/matheus-gomes-98823b185"
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                aria-label="Contact on LinkedIn (opens in a new tab)"
                             >
                                 Contact on LinkedIn
                             </a>
@@ -50,6 +51,7 @@ const Contact = () => {
                             href="https://github.com/mudouasenha"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="GitHub profile (opens in a new tab)"
                             className="text-sm font-medium text-primary hover:underline"
                         >
                             GitHub (opens in a new tab)
@@ -58,6 +60,7 @@ const Contact = () => {
                             href="mailto:contact.me@linkedin"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="Email contact.me@linkedin (opens in a new tab)"
                             className="text-sm font-medium text-primary hover:underline"
                         >
                             Email (opens in a new tab)

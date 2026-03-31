@@ -104,7 +104,12 @@ const Navbar = () => {
                         const Icon = item.icon;
                         return (
                             <Button key={item.href} variant="ghost" size="icon-sm" asChild>
-                                <a href={item.href} target="_blank" rel="noopener noreferrer" aria-label={item.label}>
+                                <a
+                                    href={item.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label={`${item.label} (opens in a new tab)`}
+                                >
                                     <Icon className="size-4" />
                                 </a>
                             </Button>
@@ -146,7 +151,12 @@ const Navbar = () => {
                                         const Icon = item.icon;
                                         return (
                                             <Button key={item.href} variant="ghost" size="icon-sm" asChild>
-                                                <a href={item.href} target="_blank" rel="noopener noreferrer" aria-label={item.label}>
+                                                <a
+                                                    href={item.href}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    aria-label={`${item.label} (opens in a new tab)`}
+                                                >
                                                     <Icon className="size-4" />
                                                 </a>
                                             </Button>

@@ -52,6 +52,7 @@ const Projects = () => {
                         href={project.url}
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label={`View project: ${project.title} (opens in a new tab)`}
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, amount: 0.2 }}
@@ -65,7 +66,7 @@ const Projects = () => {
                                     src={project.image}
                                     width={300}
                                     height={250}
-                                    alt={project.title}
+                                    alt={`${project.title} preview`}
                                     className="h-40 w-full rounded-lg border border-border object-cover"
                                 />
                                 <div>
