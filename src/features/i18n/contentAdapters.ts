@@ -1,5 +1,7 @@
 import type { ZodType } from 'zod';
 
+import enLocale from '@/locales/en/translation.json';
+import ptLocale from '@/locales/pt/translation.json';
 import {
   certificationsSchema,
   contactSchema,
@@ -12,8 +14,20 @@ import {
   type ProjectSchemaItem,
   type SkillSchemaItem,
 } from './contentSchemas';
+import { validateStructuredLocaleParity } from './localeParity';
 
 const WARNING_PREFIX = '[i18n-schema]';
+const PARITY_WARNING_PREFIX = '[i18n-schema][parity]';
+
+export const structuredLocaleParity = validateStructuredLocaleParity(enLocale, ptLocale);
+
+structuredLocaleParity.requiredShapeMismatches.forEach((message) => {
+  console.warn(message.startsWith(PARITY_WARNING_PREFIX) ? message : `${PARITY_WARNING_PREFIX} ${message}`);
+});
+
+structuredLocaleParity.unknownKeyWarnings.forEach((message) => {
+  console.warn(message.startsWith(PARITY_WARNING_PREFIX) ? message : `${PARITY_WARNING_PREFIX} ${message}`);
+});
 
 type SectionName = 'skills' | 'projectsList' | 'experiences' | 'certifications' | 'contact';
 
@@ -70,7 +84,7 @@ function adaptArray<TSchemaItem, TOutputItem = TSchemaItem>({
   allowedKeys,
   mapItem,
 }: ArrayAdapterOptions<TSchemaItem, TOutputItem>): AdapterResult<TOutputItem> {
-  const unknownKeyWarnings: string[] = [];
+  const unknownKeyWarnings: string[] = [...structuredLocaleParity.unknownKeyWarnings];
   const items: TOutputItem[] = [];
 
   if (!Array.isArray(raw)) {
@@ -104,7 +118,7 @@ function adaptArray<TSchemaItem, TOutputItem = TSchemaItem>({
       return;
     }
 
-    items.push(parsedItem.data as TOutputItem);
+    items.push(parsedItem.data as unknown as TOutputItem);
   });
 
   return {
@@ -158,7 +172,7 @@ export function adaptCertifications(raw: unknown): AdapterResult<CertificationSc
 }
 
 export function adaptContact(raw: unknown): AdapterResult<ContactSchemaItem> {
-  const unknownKeyWarnings: string[] = [];
+  const unknownKeyWarnings: string[] = [...structuredLocaleParity.unknownKeyWarnings];
 
   if (isRecord(raw)) {
     unknownKeysForRecord(raw, ['address', 'phoneNo', 'email']).forEach((unknownKey) => {
