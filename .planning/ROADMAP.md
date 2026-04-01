@@ -79,7 +79,7 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 04-01-PLAN.md — Final responsive, token, motion, and visual polish pass.
+- [x] 04-01-PLAN.md — Final responsive, token, motion, and visual polish pass. (completed 2026-04-01)
 - [ ] 04-02-PLAN.md — Release-readiness documentation refresh and evidence checklist closure.
 
 ## Progress
@@ -92,4 +92,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 | 1. Baseline Stabilization | 3/3 | Complete | 2026-03-29 |
 | 2. Design System and Core UX Migration | 4/4 | Complete   | 2026-03-30 |
 | 3. Section Completion and Quality Hardening | 6/6 | Complete | 2026-03-31 |
-| 4. Final Polish and Release Readiness | 0/2 | Not started | - |
+| 4. Final Polish and Release Readiness | 1/2 | In Progress|  |

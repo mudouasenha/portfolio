@@ -2,19 +2,14 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-current_phase: 03
-current_phase_name: section-completion-and-quality-hardening
-current_plan: 5
-status: verifying
-stopped_at: Completed 03-04-PLAN.md
-last_updated: "2026-03-31T04:58:54.488Z"
-last_activity: 2026-03-31
+status: unknown
+stopped_at: Completed 04-final-polish-and-release-readiness-01-PLAN.md
+last_updated: "2026-04-01T18:00:56.895Z"
 progress:
   total_phases: 4
-  completed_phases: 3
-  total_plans: 12
-  completed_plans: 12
-  percent: 100
+  completed_phases: 2
+  total_plans: 15
+  completed_plans: 13
 ---
 
 # Project State
@@ -24,21 +19,12 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-30)
 
 **Core value:** A fast, polished, and trustworthy portfolio experience that clearly communicates professional credibility across desktop and mobile.  
-**Current focus:** Phase 03 — section-completion-and-quality-hardening
+**Current focus:** Phase 04 — final-polish-and-release-readiness
 
 ## Current Position
 
-Phase: 03 (section-completion-and-quality-hardening) — EXECUTING
-Plan: 1 of 5
-
-**Current Phase:** 03
-**Current Phase Name:** section-completion-and-quality-hardening
-**Current Plan:** 5
-**Total Plans in Phase:** 5
-**Status:** Phase complete — ready for verification
-**Last Activity:** 2026-03-31
-**Last Activity Description:** Completed 03-01-PLAN.md
-**Progress:** [██████████] 100%
+Phase: 04 (final-polish-and-release-readiness) — EXECUTING
+Plan: 2 of 2
 
 ## Performance Metrics
 
@@ -71,6 +57,7 @@ Plan: 1 of 5
 | Phase 03-section-completion-and-quality-hardening P05 | 15min | 2 tasks | 8 files |
 | Phase 03 P03 | 8min | 3 tasks | 7 files |
 | Phase 03 P04 | 59min | 3 tasks | 10 files |
+| Phase 04-final-polish-and-release-readiness P01 | 11min | 3 tasks | 8 files |
 
 ## Accumulated Context
 
@@ -99,6 +86,9 @@ Recent decisions affecting current work:
 - [Phase 03-section-completion-and-quality-hardening]: Adapter bootstrap continues warning-only parity signaling for unknown-key drift via [i18n-schema][parity] prefix.
 - [Phase 03]: Kept route continuity assertions coupled to both URL changes and localized render output in one integration scenario.
 - [Phase 03]: Added explicit outbound link purpose labels across Navbar, Projects, and Contact for accessibility clarity.
+- [Phase 04-final-polish-and-release-readiness]: Motion tokens are defined in CSS and consumed in runtime transitions by parsing CSS custom properties with stable fallbacks.
+- [Phase 04-final-polish-and-release-readiness]: Reduced-motion branches keep explicit duration=0 and remove non-essential slide transforms in app shell, hero image, and navbar.
+- [Phase 04-final-polish-and-release-readiness]: Mobile drawer action prominence is improved via an in-drawer primary CTA while preserving existing sheet architecture.
 
 ### Pending Todos
 
@@ -112,6 +102,6 @@ currently.
 
 ## Session Continuity
 
-Last session: 2026-03-31T04:58:54.474Z
-Stopped at: Completed 03-04-PLAN.md
+Last session: 2026-04-01T18:00:56.880Z
+Stopped at: Completed 04-final-polish-and-release-readiness-01-PLAN.md
 Resume file: None
