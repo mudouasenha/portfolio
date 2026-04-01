@@ -12,7 +12,7 @@ This roadmap modernizes the existing portfolio through a controlled brownfield p
 
 - [x] **Phase 1: Baseline Stabilization** - Lock environment, routing continuity, and migration guardrails.
 - [x] **Phase 2: Design System and Core UX Migration** - Establish shadcn foundation and migrate shell and key sections. (completed 2026-03-30)
-- [ ] **Phase 3: Section Completion and Quality Hardening** - Complete section migration, validation, testing, and accessibility.
+- [x] **Phase 3: Section Completion and Quality Hardening** - Complete section migration, validation, testing, and accessibility. (completed 2026-03-31)
 - [ ] **Phase 4: Final Polish and Release Readiness** - Tune final UX quality, performance, and documentation.
 
 ## Phase Details
@@ -66,7 +66,7 @@ Plans:
 - [x] 03-05-PLAN.md — Wire section components and locale fallback/parity behavior to the i18n adapter layer. (completed 2026-03-31)
 - [x] 03-03-PLAN.md — Add integration tests for route/language continuity and locale parity. (completed 2026-03-31)
 - [x] 03-04-PLAN.md — Add automated accessibility verification and strict phase quality gate. (completed 2026-03-31)
-- [ ] 03-06-PLAN.md — Close Playwright runtime dependency gaps and re-green strict Phase 3 verification gate.
+- [x] 03-06-PLAN.md — Close Playwright runtime dependency gaps and re-green strict Phase 3 verification gate. (completed 2026-03-31)
 
 ### Phase 4: Final Polish and Release Readiness
 **Goal**: Finalize presentation quality and complete release documentation updates.  
@@ -79,8 +79,8 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 04-01: Final responsive, motion, and visual polish pass.
-- [ ] 04-02: Update docs and release readiness checklist.
+- [ ] 04-01-PLAN.md — Final responsive, token, motion, and visual polish pass.
+- [ ] 04-02-PLAN.md — Release-readiness documentation refresh and evidence checklist closure.
 
 ## Progress
 
@@ -91,5 +91,5 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 |-------|----------------|--------|-----------|
 | 1. Baseline Stabilization | 3/3 | Complete | 2026-03-29 |
 | 2. Design System and Core UX Migration | 4/4 | Complete   | 2026-03-30 |
-| 3. Section Completion and Quality Hardening | 5/6 | In progress | - |
+| 3. Section Completion and Quality Hardening | 6/6 | Complete | 2026-03-31 |
 | 4. Final Polish and Release Readiness | 0/2 | Not started | - |
