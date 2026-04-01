@@ -19,18 +19,18 @@ created: 2026-04-01
 |----------|-------|
 | **Framework** | Vitest + Playwright + axe-core/playwright |
 | **Config file** | `vitest.config.ts`, `playwright.config.ts` |
-| **Quick run command** | `npm run test:integration` |
+| **Quick run command** | `npm run lint` + `npm run test:integration` |
 | **Full suite command** | `npm run verify:phase3` |
-| **Estimated runtime** | ~180 seconds |
+| **Estimated runtime** | ~30-60 seconds smoke / ~180 seconds full gate |
 
 ---
 
 ## Sampling Rate
 
-- **After every task commit:** Run `npm run test:integration`
-- **After every plan wave:** Run `npm run verify:phase3`
-- **Before `$gsd-verify-work`:** Full suite must be green
-- **Max feedback latency:** 180 seconds
+- **After every task commit:** Run smoke checks (`npm run lint` and/or targeted `npm run test:integration`)
+- **After every plan wave:** Run smoke checks only; defer Playwright/full gate
+- **Before checkpoint/phase sign-off (`$gsd-verify-work`):** Run `npm run test:a11y` and `npm run verify:phase3`
+- **Target smoke feedback latency:** 30-60 seconds
 
 ---
 
@@ -39,8 +39,8 @@ created: 2026-04-01
 | Task ID | Plan | Wave | Requirement | Test Type | Automated Command | File Exists | Status |
 |---------|------|------|-------------|-----------|-------------------|-------------|--------|
 | 04-01-01 | 01 | 1 | SC-1 (responsive consistency) | integration | `npm run test:integration` | ✅ | ⬜ pending |
-| 04-01-02 | 01 | 1 | SC-2 (interaction quality) | a11y | `npm run test:a11y` | ✅ | ⬜ pending |
-| 04-02-01 | 02 | 2 | SC-3 (docs reflect shipped architecture) | docs + gate | `npm run verify:phase3` | ✅ | ⬜ pending |
+| 04-01-02 | 01 | 1 | SC-2 (interaction quality) | code smoke | `rg token/motion checks` + `npm run test:integration` | ✅ | ⬜ pending |
+| 04-02-01 | 02 | 2 | SC-3 (docs reflect shipped architecture) | docs smoke | `rg docs/checklist linkage checks` | ✅ | ⬜ pending |
 | 04-02-02 | 02 | 2 | SC-3 (release checklist evidence) | manual+docs | checklist verification | ❌ W0 | ⬜ pending |
 
 *Status: ⬜ pending · ✅ green · ❌ red · ⚠️ flaky*
@@ -64,13 +64,21 @@ created: 2026-04-01
 
 ---
 
+## Phase Checkpoint Gates (Non-Routine)
+
+- `npm run test:a11y`
+- `npm run verify:phase3`
+- Use these only at phase checkpoints/sign-off, not as per-task/per-wave routine checks.
+
+---
+
 ## Validation Sign-Off
 
 - [ ] All tasks have `<automated>` verify or Wave 0 dependencies
 - [ ] Sampling continuity: no 3 consecutive tasks without automated verify
 - [ ] Wave 0 covers all MISSING references
 - [ ] No watch-mode flags
-- [ ] Feedback latency < 180s
+- [ ] Smoke feedback latency <= 60s
 - [ ] `nyquist_compliant: true` set in frontmatter
 
 **Approval:** pending
