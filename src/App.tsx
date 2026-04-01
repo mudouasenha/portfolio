@@ -70,7 +70,7 @@ function App() {
                 initial={reduceMotion ? { opacity: 1 } : { opacity: 0, y: 14 }}
                 animate={reduceMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
                 transition={reduceMotion ? { duration: 0 } : { duration: motionDurationMedium, ease: motionEaseStandard }}
-                className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
+                className="container mx-auto max-w-7xl px-4 pt-2 sm:px-6 sm:pt-0 lg:px-8"
             >
                 <Navbar />
                 <Hero />

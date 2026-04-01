@@ -74,15 +74,15 @@ const Hero = () => {
     const motionEaseStandard = getMotionEaseStandard();
 
     return (
-        <section className="border-b border-border pb-10 sm:pb-14 lg:pb-20">
-            <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+        <section className="border-b border-border pb-10 pt-2 sm:pb-14 sm:pt-4 lg:pb-20 lg:pt-8">
+            <div className="grid gap-8 sm:gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
                 <div>
                     <div className="flex flex-col items-start">
                         <motion.h1
                             variants={container(0, shouldReduceMotion, motionDurationMedium, motionEaseStandard)}
                             initial="hidden"
                             animate="visible"
-                            className="pt-2 text-4xl font-semibold tracking-tight text-foreground sm:pt-8 sm:text-5xl lg:pt-16 lg:text-6xl"
+                            className="pt-0 text-4xl font-semibold tracking-tight text-foreground sm:pt-6 sm:text-5xl lg:pt-12 lg:text-6xl"
                         >
                             Matheus Gomes
                         </motion.h1>
@@ -106,7 +106,7 @@ const Hero = () => {
                             variants={container(0.35, shouldReduceMotion, motionDurationMedium, motionEaseStandard)}
                             initial="hidden"
                             animate="visible"
-                            className="mt-8 flex flex-wrap gap-3"
+                            className="mt-7 flex w-full flex-col gap-3 sm:mt-8 sm:w-auto sm:flex-row sm:flex-wrap"
                         >
                             <Button asChild size="lg">
                                 <a href="#contact">Start a conversation</a>
@@ -119,7 +119,7 @@ const Hero = () => {
                             variants={container(0.45, shouldReduceMotion, motionDurationMedium, motionEaseStandard)}
                             initial="hidden"
                             animate="visible"
-                            className="mt-8 flex flex-wrap gap-4 text-sm text-foreground"
+                            className="mt-6 flex flex-wrap gap-4 text-sm text-foreground sm:mt-8"
                         >
                             <span className="rounded-md border border-border bg-background px-3 py-2">TypeScript + .NET focus</span>
                             <span className="rounded-md border border-border bg-background px-3 py-2">Production API architecture</span>

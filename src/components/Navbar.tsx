@@ -192,6 +192,13 @@ const Navbar = () => {
                                     </SheetClose>
                                 ))}
                             </div>
+                            <div className="px-4 pb-4">
+                                <SheetClose asChild>
+                                    <Button asChild className="w-full">
+                                        <a href="#contact">Let's talk</a>
+                                    </Button>
+                                </SheetClose>
+                            </div>
                             <div className="mt-auto border-t border-border px-4 pb-4 pt-4">
                                 <div className="grid grid-cols-4 gap-2">
                                     {SOCIAL_ITEMS.map((item) => {
