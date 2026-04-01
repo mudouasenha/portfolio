@@ -9,10 +9,10 @@ const About = () => {
     const about = t("about.text");
 
     return (
-        <div className="border-b border-neutral-800 pb-4">
+        <div className="border-b border-border pb-4">
             <h1 className="my-20 text-center text-4xl">
                 <Trans i18nKey="aboutMe" defaults="About <1>Me</1>">
-                    About <span className="text-neutral-500">Me</span>
+                    About <span className="text-muted-foreground">Me</span>
                 </Trans>
             </h1>
             <div className="flex flex-wrap">
@@ -23,7 +23,9 @@ const About = () => {
                     className="w-full lg:w-1/2 lg:p-8"
                 >
                     <div className="flex items-center justify-center">
-                        <img className="rounded-2xl" src={aboutImg} alt="about" />
+                        <div className="rounded-2xl border border-border bg-card p-2 shadow-sm ring-1 ring-primary/20">
+                            <img className="w-full max-w-sm rounded-xl object-cover sm:max-w-md" src={aboutImg} alt="about" />
+                        </div>
                     </div>
                 </motion.div>
                 <motion.div
@@ -33,7 +35,7 @@ const About = () => {
                     className="w-full lg:w-1/2"
                 >
                     <div className="flex justify-center lg:justify-start">
-                    <div className="my-2 max-w-xl py-6 font-light text-justify leading-relaxed tracking-tighter">
+                    <div className="my-2 max-w-xl py-6 text-justify font-light leading-relaxed tracking-tighter text-muted-foreground">
                         <ReactMarkdown>{about}</ReactMarkdown>
                     </div>
                     </div>
