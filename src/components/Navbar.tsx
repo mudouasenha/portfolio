@@ -47,8 +47,55 @@ const SOCIAL_ITEMS = [
     },
 ];
 
+const DEFAULT_MOTION_DURATION_MEDIUM = 0.45;
+const DEFAULT_MOTION_EASE_STANDARD: [number, number, number, number] = [0.25, 0.1, 0.25, 1];
+
+const getMotionDurationMedium = () => {
+    if (typeof window === "undefined") {
+        return DEFAULT_MOTION_DURATION_MEDIUM;
+    }
+
+    const tokenValue = getComputedStyle(document.documentElement)
+        .getPropertyValue("--motion-duration-medium")
+        .trim();
+    const parsedValue = Number.parseFloat(tokenValue);
+
+    if (!Number.isFinite(parsedValue)) {
+        return DEFAULT_MOTION_DURATION_MEDIUM;
+    }
+
+    return tokenValue.endsWith("ms") ? parsedValue / 1000 : parsedValue;
+};
+
+const getMotionEaseStandard = (): [number, number, number, number] => {
+    if (typeof window === "undefined") {
+        return DEFAULT_MOTION_EASE_STANDARD;
+    }
+
+    const tokenValue = getComputedStyle(document.documentElement)
+        .getPropertyValue("--motion-ease-standard")
+        .trim();
+
+    if (!tokenValue.startsWith("cubic-bezier(") || !tokenValue.endsWith(")")) {
+        return DEFAULT_MOTION_EASE_STANDARD;
+    }
+
+    const segments = tokenValue
+        .slice("cubic-bezier(".length, -1)
+        .split(",")
+        .map((segment) => Number.parseFloat(segment.trim()));
+
+    if (segments.length !== 4 || segments.some((segment) => !Number.isFinite(segment))) {
+        return DEFAULT_MOTION_EASE_STANDARD;
+    }
+
+    return [segments[0], segments[1], segments[2], segments[3]];
+};
+
 const Navbar = () => {
     const reduceMotion = useReducedMotion();
+    const motionDurationMedium = getMotionDurationMedium();
+    const motionEaseStandard = getMotionEaseStandard();
     const { scrollY } = useScroll();
     const [isScrolled, setIsScrolled] = useState(false);
 
@@ -63,8 +110,8 @@ const Navbar = () => {
     return (
         <motion.header
             initial={reduceMotion ? { opacity: 1 } : { y: -10, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={reduceMotion ? { duration: 0 } : { duration: 0.35, ease: "easeOut" }}
+            animate={reduceMotion ? { opacity: 1 } : { y: 0, opacity: 1 }}
+            transition={reduceMotion ? { duration: 0 } : { duration: motionDurationMedium, ease: motionEaseStandard }}
             className={`sticky top-0 z-40 mb-16 border-b backdrop-blur-sm supports-[backdrop-filter]:bg-background/75 ${
                 isScrolled
                     ? "border-border/90 bg-background/95 shadow-sm"

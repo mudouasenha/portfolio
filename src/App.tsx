@@ -10,8 +10,55 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Technologies from "./components/Technologies";
 
+const DEFAULT_MOTION_DURATION_MEDIUM = 0.45;
+const DEFAULT_MOTION_EASE_STANDARD: [number, number, number, number] = [0.25, 0.1, 0.25, 1];
+
+const getMotionDurationMedium = () => {
+    if (typeof window === "undefined") {
+        return DEFAULT_MOTION_DURATION_MEDIUM;
+    }
+
+    const tokenValue = getComputedStyle(document.documentElement)
+        .getPropertyValue("--motion-duration-medium")
+        .trim();
+    const parsedValue = Number.parseFloat(tokenValue);
+
+    if (!Number.isFinite(parsedValue)) {
+        return DEFAULT_MOTION_DURATION_MEDIUM;
+    }
+
+    return tokenValue.endsWith("ms") ? parsedValue / 1000 : parsedValue;
+};
+
+const getMotionEaseStandard = (): [number, number, number, number] => {
+    if (typeof window === "undefined") {
+        return DEFAULT_MOTION_EASE_STANDARD;
+    }
+
+    const tokenValue = getComputedStyle(document.documentElement)
+        .getPropertyValue("--motion-ease-standard")
+        .trim();
+
+    if (!tokenValue.startsWith("cubic-bezier(") || !tokenValue.endsWith(")")) {
+        return DEFAULT_MOTION_EASE_STANDARD;
+    }
+
+    const segments = tokenValue
+        .slice("cubic-bezier(".length, -1)
+        .split(",")
+        .map((segment) => Number.parseFloat(segment.trim()));
+
+    if (segments.length !== 4 || segments.some((segment) => !Number.isFinite(segment))) {
+        return DEFAULT_MOTION_EASE_STANDARD;
+    }
+
+    return [segments[0], segments[1], segments[2], segments[3]];
+};
+
 function App() {
     const reduceMotion = useReducedMotion();
+    const motionDurationMedium = getMotionDurationMedium();
+    const motionEaseStandard = getMotionEaseStandard();
 
     return (
         <div id="top" className="min-h-screen overflow-x-hidden bg-background text-foreground antialiased selection:bg-primary/25 selection:text-foreground">
@@ -21,8 +68,8 @@ function App() {
             </div>
             <motion.main
                 initial={reduceMotion ? { opacity: 1 } : { opacity: 0, y: 14 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={reduceMotion ? { duration: 0 } : { duration: 0.45, ease: "easeOut" }}
+                animate={reduceMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
+                transition={reduceMotion ? { duration: 0 } : { duration: motionDurationMedium, ease: motionEaseStandard }}
                 className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
             >
                 <Navbar />

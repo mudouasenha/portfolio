@@ -19,9 +19,9 @@ describe("phase 04-01 task 2 motion token contracts", () => {
     const heroSource = readSource("src/components/Hero.tsx");
     const navbarSource = readSource("src/components/Navbar.tsx");
 
-    expect(appSource).toMatch(/var\(--motion-duration-medium\)|var\(--motion-ease-standard\)/);
-    expect(heroSource).toMatch(/var\(--motion-duration-medium\)|var\(--motion-ease-standard\)/);
-    expect(navbarSource).toMatch(/var\(--motion-duration-medium\)|var\(--motion-ease-standard\)/);
+    expect(appSource).toMatch(/--motion-duration-medium|--motion-ease-standard/);
+    expect(heroSource).toMatch(/--motion-duration-medium|--motion-ease-standard/);
+    expect(navbarSource).toMatch(/--motion-duration-medium|--motion-ease-standard/);
   });
 
   it("keeps reduced-motion hooks in Hero and Navbar", () => {
