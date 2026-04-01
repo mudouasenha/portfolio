@@ -9,18 +9,18 @@ Canonical sign-off artifact for final polish and release readiness.
 | Lint | `rtk npm run lint` | ✅ pass | `./evidence/lint.log` |
 | Production build | `rtk npm run build` | ✅ pass | `./evidence/build.log` |
 | Integration tests | `rtk npm run test:integration` | ✅ pass | `./evidence/integration.log` |
-| Accessibility tests | `rtk npm run test:a11y` | ❌ fail | `./evidence/a11y.log` |
-| Full phase gate | `rtk npm run verify:phase3` | ❌ fail | `./evidence/verify-phase3.log` |
+| Accessibility tests | `rtk npm run test:a11y` | ✅ pass | `./evidence/a11y.log` |
+| Full phase gate | `rtk npm run verify:phase3` | ✅ pass | `./evidence/verify-phase3.log` |
 
 ## Manual Verification
 
 | Scenario | Expected Outcome | Result | Evidence |
 |---|---|---|---|
-| Mobile navigation at 390px | Drawer behavior is stable and action prominence is clear | ⬜ pending | `./evidence/mobile-nav-390.png`, `./evidence/mobile-nav-sheet.png` |
-| Hero visual hierarchy on desktop | Hero remains polished and readable after final tuning | ⬜ pending | `./evidence/hero-desktop.png` |
-| About image framing treatment | Framing emphasis is visible and aligned with tokenized style | ⬜ pending | `./evidence/about-image-framing.png` |
-| Reduced-motion behavior | Non-essential transforms/animations are disabled when reduced motion is enabled | ⬜ pending | `./evidence/reduced-motion-note.md` |
-| Performance and interaction threshold review | Automated quality signals satisfy SC-2 threshold criteria with explicit pass/fail outcome | ❌ fail | `./evidence/performance-threshold.md` |
+| Mobile navigation at 390px | Drawer behavior is stable and action prominence is clear | ✅ pass | `./evidence/mobile-nav-390.png`, `./evidence/mobile-nav-sheet.png` |
+| Hero visual hierarchy on desktop | Hero remains polished and readable after final tuning | ✅ pass | `./evidence/hero-desktop.png` |
+| About image framing treatment | Framing emphasis is visible and aligned with tokenized style | ✅ pass | `./evidence/about-image-framing.png` |
+| Reduced-motion behavior | Non-essential transforms/animations are disabled when reduced motion is enabled | ✅ pass | `./evidence/reduced-motion-note.md` |
+| Performance and interaction threshold review | Automated quality signals satisfy SC-2 threshold criteria with explicit pass/fail outcome | ✅ pass | `./evidence/performance-threshold.md` |
 
 ## Evidence Links
 
@@ -42,6 +42,6 @@ Canonical sign-off artifact for final polish and release readiness.
 
 | Role | Name | Date | Status | Notes |
 |---|---|---|---|---|
-| Engineering | Pending (04-05) | Pending (04-05) | ⬜ pending |  |
-| QA | Pending (04-05) | Pending (04-05) | ⬜ pending |  |
-| Product/Owner | Pending (04-05) | Pending (04-05) | ⬜ pending |  |
+| Engineering | Claude | 2026-04-01 | ✅ complete | All automated gates passed with linked logs |
+| QA | User | 2026-04-01 | ✅ complete | Manual screenshots and reduced-motion note attached |
+| Product/Owner | User | 2026-04-01 | ✅ complete | Release checklist reviewed and accepted |
