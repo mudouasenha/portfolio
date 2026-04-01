@@ -16,29 +16,32 @@ Canonical sign-off artifact for final polish and release readiness.
 
 | Scenario | Expected Outcome | Result | Evidence |
 |---|---|---|---|
-| Mobile navigation at 390px | Drawer behavior is stable and action prominence is clear | ⬜ pending | `mobile-nav-390.png`, `mobile-nav-sheet.png` |
-| Hero visual hierarchy on desktop | Hero remains polished and readable after final tuning | ⬜ pending | `hero-desktop.png` |
-| About image framing treatment | Framing emphasis is visible and aligned with tokenized style | ⬜ pending | `about-image-framing.png` |
-| Reduced-motion behavior | Non-essential transforms/animations are disabled when reduced motion is enabled | ⬜ pending | Link to recording or QA note |
+| Mobile navigation at 390px | Drawer behavior is stable and action prominence is clear | ⬜ pending | `./evidence/mobile-nav-390.png`, `./evidence/mobile-nav-sheet.png` |
+| Hero visual hierarchy on desktop | Hero remains polished and readable after final tuning | ⬜ pending | `./evidence/hero-desktop.png` |
+| About image framing treatment | Framing emphasis is visible and aligned with tokenized style | ⬜ pending | `./evidence/about-image-framing.png` |
+| Reduced-motion behavior | Non-essential transforms/animations are disabled when reduced motion is enabled | ⬜ pending | `./evidence/reduced-motion-note.md` |
+| Performance and interaction threshold review | Automated quality signals satisfy SC-2 threshold criteria with explicit pass/fail outcome | ⬜ pending | `./evidence/performance-threshold.md` |
 
 ## Evidence Links
 
 - Command logs:
-  - `rtk npm run lint`: TODO
-  - `rtk npm run build`: TODO
-  - `rtk npm run test:integration`: TODO
-  - `rtk npm run test:a11y`: TODO
-  - `rtk npm run verify:phase3`: TODO
+  - `rtk npm run lint`: `./evidence/lint.log`
+  - `rtk npm run build`: `./evidence/build.log`
+  - `rtk npm run test:integration`: `./evidence/integration.log`
+  - `rtk npm run test:a11y`: `./evidence/a11y.log`
+  - `rtk npm run verify:phase3`: `./evidence/verify-phase3.log`
 - Screenshots:
-  - `mobile-nav-390.png`: TODO
-  - `mobile-nav-sheet.png`: TODO
-  - `hero-desktop.png`: TODO
-  - `about-image-framing.png`: TODO
+  - `mobile-nav-390.png`: `./evidence/mobile-nav-390.png`
+  - `mobile-nav-sheet.png`: `./evidence/mobile-nav-sheet.png`
+  - `hero-desktop.png`: `./evidence/hero-desktop.png`
+  - `about-image-framing.png`: `./evidence/about-image-framing.png`
+  - `reduced-motion-note.md`: `./evidence/reduced-motion-note.md`
+  - `performance-threshold.md`: `./evidence/performance-threshold.md`
 
 ## Sign-off
 
 | Role | Name | Date | Status | Notes |
 |---|---|---|---|---|
-| Engineering | TODO | TODO | ⬜ pending |  |
-| QA | TODO | TODO | ⬜ pending |  |
-| Product/Owner | TODO | TODO | ⬜ pending |  |
+| Engineering | Pending (04-05) | Pending (04-05) | ⬜ pending |  |
+| QA | Pending (04-05) | Pending (04-05) | ⬜ pending |  |
+| Product/Owner | Pending (04-05) | Pending (04-05) | ⬜ pending |  |
