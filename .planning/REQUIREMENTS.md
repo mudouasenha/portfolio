@@ -39,6 +39,12 @@
 - [x] **QAV-03**: Accessibility checks pass for critical user flows and core sections.
 - [x] **QAV-04**: Build process is stable and free from current optional dependency blocking issues.
 
+### Phase 4 Completion Criteria
+
+- [x] **SC-1**: Mobile and desktop experiences are polished and consistent.
+- [x] **SC-2**: Performance and interaction quality are within acceptable thresholds.
+- [x] **SC-3**: Documentation and planning artifacts reflect shipped architecture.
+
 ## v2 Requirements
 
 ### Extended Platform
@@ -78,6 +84,9 @@
 | QAV-02 | Phase 3 | Complete |
 | QAV-03 | Phase 3 | Complete |
 | QAV-04 | Phase 1 | Complete |
+| SC-1 | Phase 4 | Complete |
+| SC-2 | Phase 4 | Complete |
+| SC-3 | Phase 4 | Complete |
 
 **Coverage:**
 - v1 requirements: 19 total
