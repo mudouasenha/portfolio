@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-stopped_at: Completed 04-final-polish-and-release-readiness-03-PLAN.md
-last_updated: "2026-04-01T19:35:40.302Z"
+stopped_at: Completed 04-final-polish-and-release-readiness-04-PLAN.md
+last_updated: "2026-04-01T19:39:45.692Z"
 progress:
   total_phases: 4
   completed_phases: 2
   total_plans: 18
-  completed_plans: 15
+  completed_plans: 16
 ---
 
 # Project State
@@ -60,6 +60,7 @@ Plan: 4 of 5
 | Phase 04-final-polish-and-release-readiness P01 | 11min | 3 tasks | 8 files |
 | Phase 04-final-polish-and-release-readiness P02 | 4m | 2 tasks | 6 files |
 | Phase 04-final-polish-and-release-readiness P03 | 2min | 2 tasks | 2 files |
+| Phase 04-final-polish-and-release-readiness P04 | 6min | 2 tasks | 8 files |
 
 ## Accumulated Context
 
@@ -95,6 +96,8 @@ Recent decisions affecting current work:
 - [Phase 04-final-polish-and-release-readiness]: Testing and concerns docs now describe current reality only; stale no-test posture was removed.
 - [Phase 04-final-polish-and-release-readiness]: Added SC-1/SC-2/SC-3 under v1 requirements to preserve existing plan references instead of remapping prior plans.
 - [Phase 04-final-polish-and-release-readiness]: Updated only the ARCHITECTURE logging sentence to source-aligned wording, leaving validation/authentication lines unchanged.
+- [Phase 04-final-polish-and-release-readiness]: SC-2 threshold status is derived only from fresh automated gate logs in this plan run.
+- [Phase 04-final-polish-and-release-readiness]: Evidence logs are force-added under the scoped evidence folder despite global *.log ignore rules.
 
 ### Pending Todos
 
@@ -108,6 +111,6 @@ currently.
 
 ## Session Continuity
 
-Last session: 2026-04-01T19:35:40.291Z
-Stopped at: Completed 04-final-polish-and-release-readiness-03-PLAN.md
+Last session: 2026-04-01T19:39:45.676Z
+Stopped at: Completed 04-final-polish-and-release-readiness-04-PLAN.md
 Resume file: None
