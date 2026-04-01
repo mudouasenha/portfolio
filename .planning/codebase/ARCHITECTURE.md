@@ -11,6 +11,17 @@
 - Route-driven language selection (`/:lang/*`) that synchronizes i18next language with the URL (see `src/MainRoutes.tsx`, `src/LangRouter.tsx`).
 - Page composed as a single long “section stack” (navbar + multiple sections) rendered by `src/App.tsx`.
 
+## Phase 4 Final Polish Note (2026-04-01)
+
+- Final polish surfaces were completed in:
+  - `src/components/About.tsx`
+  - `src/components/Tag.tsx`
+  - `src/components/Hero.tsx`
+  - `src/components/Navbar.tsx`
+  - `src/App.tsx`
+  - `src/index.css`
+- Continuity constraint preserved: section order and anchor behavior in `App.tsx` were kept stable to avoid regressions in existing integration coverage.
+
 ## Layers
 
 **Build/Runtime Layer:**
@@ -115,4 +126,3 @@
 ---
 
 *Architecture analysis: 2026-03-28*
-

@@ -43,6 +43,21 @@ npm run lint
 npm run preview
 ```
 
+## Release Readiness
+
+Final sign-off instructions and evidence placeholders are tracked in:
+
+- `.planning/phases/04-final-polish-and-release-readiness/RELEASE-CHECKLIST.md`
+
+Verification command suite:
+
+```bash
+rtk npm run lint
+rtk npm run build
+rtk npm run test:integration
+rtk npm run test:a11y
+```
+
 ## Accessibility Runtime Dependencies
 
 Linux host libraries must be installed before a11y scans can launch Playwright Chromium.
