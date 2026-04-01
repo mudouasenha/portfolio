@@ -119,7 +119,7 @@
 
 ## Cross-Cutting Concerns
 
-**Logging:** Direct `console.log` present in `src/components/Projects.tsx`.
+**Logging:** No direct `console.log` calls are present in `src/components/Projects.tsx`; runtime warning output is limited to i18n parity warning pathways.
 **Validation:** Route param validation for `lang` in `src/LangRouter.tsx`.
 **Authentication:** Not detected.
 
