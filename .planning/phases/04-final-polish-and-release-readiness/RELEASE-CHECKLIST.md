@@ -6,11 +6,11 @@ Canonical sign-off artifact for final polish and release readiness.
 
 | Check | Command | Result | Evidence |
 |---|---|---|---|
-| Lint | `rtk npm run lint` | ⬜ pending | Link to terminal output/log |
-| Production build | `rtk npm run build` | ⬜ pending | Link to terminal output/log |
-| Integration tests | `rtk npm run test:integration` | ⬜ pending | Link to terminal output/log |
-| Accessibility tests | `rtk npm run test:a11y` | ⬜ pending | Link to terminal output/log |
-| Full phase gate | `rtk npm run verify:phase3` | ⬜ pending | Link to terminal output/log |
+| Lint | `rtk npm run lint` | ✅ pass | `./evidence/lint.log` |
+| Production build | `rtk npm run build` | ✅ pass | `./evidence/build.log` |
+| Integration tests | `rtk npm run test:integration` | ✅ pass | `./evidence/integration.log` |
+| Accessibility tests | `rtk npm run test:a11y` | ❌ fail | `./evidence/a11y.log` |
+| Full phase gate | `rtk npm run verify:phase3` | ❌ fail | `./evidence/verify-phase3.log` |
 
 ## Manual Verification
 
@@ -20,7 +20,7 @@ Canonical sign-off artifact for final polish and release readiness.
 | Hero visual hierarchy on desktop | Hero remains polished and readable after final tuning | ⬜ pending | `./evidence/hero-desktop.png` |
 | About image framing treatment | Framing emphasis is visible and aligned with tokenized style | ⬜ pending | `./evidence/about-image-framing.png` |
 | Reduced-motion behavior | Non-essential transforms/animations are disabled when reduced motion is enabled | ⬜ pending | `./evidence/reduced-motion-note.md` |
-| Performance and interaction threshold review | Automated quality signals satisfy SC-2 threshold criteria with explicit pass/fail outcome | ⬜ pending | `./evidence/performance-threshold.md` |
+| Performance and interaction threshold review | Automated quality signals satisfy SC-2 threshold criteria with explicit pass/fail outcome | ❌ fail | `./evidence/performance-threshold.md` |
 
 ## Evidence Links
 

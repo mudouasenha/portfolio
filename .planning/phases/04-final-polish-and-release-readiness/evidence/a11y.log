@@ -1,0 +1,2 @@
+> playwright test tests/a11y --config playwright.config.ts
+Error: Process from config.webServer was not able to start. Exit code: 1
