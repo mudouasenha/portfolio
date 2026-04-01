@@ -13,7 +13,7 @@ This roadmap modernizes the existing portfolio through a controlled brownfield p
 - [x] **Phase 1: Baseline Stabilization** - Lock environment, routing continuity, and migration guardrails.
 - [x] **Phase 2: Design System and Core UX Migration** - Establish shadcn foundation and migrate shell and key sections. (completed 2026-03-30)
 - [x] **Phase 3: Section Completion and Quality Hardening** - Complete section migration, validation, testing, and accessibility. (completed 2026-03-31)
-- [ ] **Phase 4: Final Polish and Release Readiness** - Tune final UX quality, performance, and documentation.
+- [x] **Phase 4: Final Polish and Release Readiness** - Tune final UX quality, performance, and documentation. (completed 2026-04-01)
 
 ## Phase Details
 
@@ -76,14 +76,14 @@ Plans:
   1. Mobile and desktop experiences are polished and consistent.
   2. Performance and interaction quality are within acceptable thresholds.
   3. Documentation and planning artifacts reflect shipped architecture.
-**Plans**: 4/5 plans complete
+**Plans**: 5/5 plans complete
 
 Plans:
 - [x] 04-01-PLAN.md — Final responsive, token, motion, and visual polish pass. (completed 2026-04-01)
 - [x] 04-02-PLAN.md — Release-readiness documentation refresh and evidence checklist closure. (completed 2026-04-01)
 - [x] 04-03-PLAN.md — Close Phase 04 documentation traceability and architecture sync verification gaps. (completed 2026-04-01)
 - [x] 04-04-PLAN.md — Converge release checklist placeholders to concrete evidence and SC-2 threshold artifacts. (completed 2026-04-01)
-- [ ] 04-05-PLAN.md — Capture manual evidence bundle and complete final release sign-off.
+- [x] 04-05-PLAN.md — Capture manual evidence bundle and complete final release sign-off. (completed 2026-04-01)
 
 ## Progress
 
@@ -95,4 +95,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 | 1. Baseline Stabilization | 3/3 | Complete | 2026-03-29 |
 | 2. Design System and Core UX Migration | 4/4 | Complete   | 2026-03-30 |
 | 3. Section Completion and Quality Hardening | 6/6 | Complete | 2026-03-31 |
-| 4. Final Polish and Release Readiness | 4/5 | In Progress | - |
+| 4. Final Polish and Release Readiness | 5/5 | Complete | 2026-04-01 |

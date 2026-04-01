@@ -21,8 +21,7 @@ A fast, polished, and trustworthy portfolio experience that clearly communicates
 
 ### Active
 
-- [ ] Refactor frontend implementation for maintainability, consistency, and testability.
-- [ ] Complete remaining section migration and hardening tests/accessibility gates.
+- [ ] Prepare post-v1.0 roadmap and follow-up enhancements.
 
 ### Out of Scope
 
@@ -36,9 +35,11 @@ The current portfolio already works functionally but has fragmented styling conv
 
 ## Current State
 
-Phase 02 complete — design-system foundation and core UX migration are verified, including reduced-motion safeguards.
+Phase 04 complete — final polish and release readiness are verified with full checklist sign-off and evidence.
 Validated in Phase 01: QLTY-01, QLTY-04, I18N-01, QAV-04.
 Validated in Phase 02: DSYS-01, DSYS-02, DSYS-03, DSYS-04, UX-01, UX-02, UX-03.
+Validated in Phase 03: UX-04, QLTY-02, QLTY-03, I18N-02, I18N-03, QAV-01, QAV-02, QAV-03.
+Validated in Phase 04: SC-1, SC-2, SC-3.
 
 ## Constraints
 
@@ -58,4 +59,4 @@ Validated in Phase 02: DSYS-01, DSYS-02, DSYS-03, DSYS-04, UX-01, UX-02, UX-03.
 | Design preset fallback defined up front (`b1Z5ezr60` -> Vega) | Prevents project blocking on preset resolution ambiguity | Good |
 
 ---
-*Last updated: 2026-03-30 after Phase 02 completion*
+*Last updated: 2026-04-01 after Phase 04 completion*
