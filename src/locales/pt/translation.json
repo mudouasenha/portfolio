@@ -16,8 +16,8 @@
   "certificationsOn": "em",
   "navigation": {
     "menu": "Navegar",
-    "cta": "Vamos conversar",
-    "role": ".NET + Sistemas de IA"
+    "cta": "Contato",
+    "role": "Backend, Plataforma, Sistemas de IA"
   },
   "validationFallback": {
     "skills": "Alguns itens de habilidades não puderam ser exibidos.",
@@ -27,22 +27,37 @@
     "contact": "Alguns dados de contato não puderam ser exibidos."
   },
   "hero": {
-    "subtitle": "Engenheiro Fullstack com Foco em Backend .NET | Sistemas de IA",
+    "eyebrow": "Perfil pronto para recrutadores",
+    "title": "Engenheiro de backend e sistemas de IA que transforma restrições de produção em entrega limpa.",
+    "subtitle": "Backend .NET, engenharia de plataforma e IA aplicada",
+    "lead": "Construo APIs, pipelines de entrega e workflows com IA voltados para produção, com foco forte em confiabilidade, clareza e resultado mensurável.",
     "primaryCta": "Iniciar conversa",
-    "secondaryCta": "Ver sistemas de IA",
+    "secondaryCta": "Ver trabalhos selecionados",
+    "highlights": [
+      "Entrega de software em produção desde 2020",
+      "Contexto de backend com 11k+ faturas/mês",
+      "Redução de R$4k/mês em infraestrutura"
+    ],
     "proofStrip": [
-      "Desenvolvimento de software desde 2020",
       ".NET / C# + APIs + arquitetura em nuvem",
       "DevOps: Kubernetes, Azure DevOps e Google Cloud",
-      "Contexto de pipeline de faturas: 11k+ faturas/mês",
       "Liderança em práticas internas de IA agentiva",
-      "Redução de R$4k/mês em infra"
+      "Foco para recrutamento: backend, plataforma, sistemas de IA"
     ],
-    "content": "Sou um engenheiro fullstack com foco em backend .NET, com experiência profissional em desenvolvimento desde 2020, especializado em C#, .NET, SQL Server/PostgreSQL, serviços em nuvem e CI/CD.\n\nMinha base é entrega de backend em produção e execução DevOps: APIs escaláveis, decisões de arquitetura, deploys em Kubernetes, pipelines no Azure DevOps, workloads em Google Cloud e infraestrutura com foco em custo.\n\nO foco atual estende essa base para IA: sistemas agentivos, execução orientada por specs, enablement interno de Claude Code e workflows de IA integrados ao CI/CD."
+    "portraitLabel": "Foco atual",
+    "portraitCaption": "Construindo sistemas resilientes de backend e entrega com IA em produção."
   },
   "about": {
+    "kicker": "Perfil editorial",
+    "summary": "Engenharia com mentalidade de produção, atenção à infraestrutura, disciplina de arquitetura e execução prática com IA.",
     "text": "Construo sistemas de backend e IA com forte mindset de produção, priorizando **confiabilidade, clareza e resultado mensurável**.\n\nNo trabalho atual, lidero e estruturo processos de **desenvolvimento de IA agentiva**, usando **desenvolvimento orientado por specs** para alinhar requisitos, implementação e validação. Também desenho tooling interno reutilizável para **uso de Claude Code**, crio **skills e workflows** compartilháveis e faço mentoria do time em práticas de entrega com IA.\n\nEstou construindo um **Agente de IA para leitura de faturas** com foco em produção e integrando **code review assistido por IA** ao CI/CD com etapas de validação humana. O objetivo é aumentar velocidade e qualidade de entrega sem perder padrão técnico.\n\nTambém atuo em frentes de DevOps, incluindo **Kubernetes**, **Azure DevOps** e **Google Cloud**, conectando entrega de aplicação com confiabilidade de infraestrutura.\n\nStack principal: **.NET / C#**, **PostgreSQL e SQL Server**, **Azure e Google Cloud**, automação de CI/CD e integrações com APIs de IA (incluindo projetos pessoais com transformação de imagens via Gemini)."
   },
+  "experienceKicker": "Trajetória",
+  "experienceSummary": "Papéis e resultados que mostram a evolução de execução para ownership em backend e entrega de plataforma.",
+  "experienceCurrentRole": "Cargo atual",
+  "projectsKicker": "Trabalhos selecionados",
+  "projectsSummary": "Projetos que melhor representam meu perfil em backend, sistemas de IA e qualidade de entrega.",
+  "projectsFeaturedLabel": "Caso em destaque",
   "certifications": [
     {
       "id": "ai-for-devs-branas",
@@ -62,9 +77,17 @@
     }
   ],
   "contact": {
+    "kicker": "Conversas de contratação",
+    "summary": "O melhor encaixe é para vagas de backend, plataforma ou sistemas de IA onde qualidade de entrega realmente importa.",
+    "title": "Disponível para conversar com recrutadores e gestores de contratação.",
+    "body": "Se você está contratando para backend, plataforma ou sistemas de IA aplicada, o LinkedIn é a forma mais rápida de falar comigo. Eu respondo com contexto, não com buzzwords.",
+    "locationLabel": "Localização",
+    "responseLabel": "Contato preferencial",
+    "linkedinCta": "Chamar no LinkedIn",
+    "githubCta": "Ver GitHub",
     "address": "Florianópolis, SC, Brasil",
-    "phoneNo": "Telefone: Contate-me pelo LinkedIn",
-    "email": "Email: contact.me@linkedin"
+    "phoneNo": "Resposta mais rápida pelo LinkedIn",
+    "email": "Disponível sob solicitação"
   },
   "languages": {
     "Portuguese": "Nativo",

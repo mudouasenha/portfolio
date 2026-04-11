@@ -21,7 +21,17 @@ const Experience = () => {
 
     return (
         <SectionShell className="pt-4">
-            <SectionHeader className="mb-12 text-center">{t("experience")}</SectionHeader>
+            <div className="mb-12 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+                <div>
+                    <p className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-muted-foreground">
+                        {t("experienceKicker")}
+                    </p>
+                    <SectionHeader>{t("experience")}</SectionHeader>
+                </div>
+                <p className="max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+                    {t("experienceSummary")}
+                </p>
+            </div>
             {showFallback ? (
                 <p role="status" data-validation-fallback="experience" className="mb-4 text-sm text-muted-foreground">
                     {t("validationFallback.experience")}
@@ -39,20 +49,25 @@ const Experience = () => {
                             viewport={{ once: true, amount: 0.15 }}
                             transition={{ duration: 0.4, delay: index * 0.03, ease: "easeOut" }}
                         >
-                            <SectionCard className="p-6 sm:p-7">
+                            <SectionCard className={index === 0 ? "border-primary/20 bg-primary/[0.045] p-6 sm:p-7" : "p-6 sm:p-7"}>
                                 <div className="grid gap-4 lg:grid-cols-[180px_1fr] lg:gap-8">
-                                    <p className="text-sm font-medium text-muted-foreground">{displayPeriod}</p>
                                     <div>
-                                        <h3 className="text-lg font-semibold text-foreground">
-                                            {experience.role}
-                                            <span className="ml-2 text-sm font-medium text-muted-foreground">
-                                                {experience.company}
+                                        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-muted-foreground">{displayPeriod}</p>
+                                        {index === 0 ? (
+                                            <span className="mt-3 inline-flex rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
+                                                {t("experienceCurrentRole")}
                                             </span>
-                                        </h3>
-                                        <p className="mt-2 whitespace-pre-line text-sm leading-relaxed text-muted-foreground">
+                                        ) : null}
+                                    </div>
+                                    <div>
+                                        <h3 className="text-2xl font-semibold leading-none text-foreground">{experience.role}</h3>
+                                        <p className="mt-2 text-sm font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+                                            {experience.company}
+                                        </p>
+                                        <p className="mt-4 whitespace-pre-line text-sm leading-relaxed text-muted-foreground sm:text-[0.98rem]">
                                             {experience.description}
                                         </p>
-                                        <div className="mt-2 flex flex-wrap">
+                                        <div className="mt-4 flex flex-wrap">
                                             {experience.technologies.map((tech, techIndex) => (
                                                 <Tag key={`${experience.role}-${tech}`} tagKey={techIndex} text={tech} />
                                             ))}

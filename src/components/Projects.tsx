@@ -36,55 +36,108 @@ const Projects = () => {
         return c;
     });
     const showFallback = projects.length === 0 || invalidCount > 0;
+    const [featuredProject, ...supportingProjects] = projects;
 
     return (
         <SectionShell className="pt-4">
-            <SectionHeader className="mb-12 text-center">{t("projects")}</SectionHeader>
+            <div className="mb-12 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+                <div>
+                    <p className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-muted-foreground">
+                        {t("projectsKicker")}
+                    </p>
+                    <SectionHeader>{t("projects")}</SectionHeader>
+                </div>
+                <p className="max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+                    {t("projectsSummary")}
+                </p>
+            </div>
             {showFallback ? (
                 <p role="status" data-validation-fallback="projects" className="mb-4 text-sm text-muted-foreground">
                     {t("validationFallback.projects")}
                 </p>
             ) : null}
             <div className="space-y-5">
-                {projects.map((project, index) => (
+                {featuredProject ? (
                     <motion.a
-                        key={project.id}
-                        href={project.url}
+                        key={featuredProject.id}
+                        href={featuredProject.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        aria-label={`View project: ${project.title} (opens in a new tab)`}
+                        aria-label={`View project: ${featuredProject.title} (opens in a new tab)`}
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, amount: 0.2 }}
-                        transition={{ duration: 0.45, delay: index * 0.05, ease: "easeOut" }}
-                        whileHover={{ scale: 1.02 }}
-                        className="block rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                        transition={{ duration: 0.45, ease: "easeOut" }}
+                        whileHover={{ scale: 1.01 }}
+                        className="block rounded-[1.4rem] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                     >
-                        <SectionCard className="overflow-hidden p-5 sm:p-6">
-                            <div className="grid gap-5 lg:grid-cols-[220px_1fr]">
+                        <SectionCard className="overflow-hidden border-primary/15 bg-primary/[0.045] p-5 sm:p-6">
+                            <div className="grid gap-6 lg:grid-cols-[320px_1fr] lg:items-center">
                                 <img
-                                    src={project.image}
+                                    src={featuredProject.image}
                                     width={300}
                                     height={250}
-                                    alt={`${project.title} preview`}
-                                    className="h-40 w-full rounded-lg border border-border object-cover"
+                                    alt={`${featuredProject.title} preview`}
+                                    className="h-52 w-full rounded-[1.2rem] border border-border object-cover"
                                 />
                                 <div>
-                                    <h3 className="text-lg font-semibold text-foreground">{project.title}</h3>
-                                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{project.description}</p>
-                                    <p className="mt-3 text-sm font-medium text-primary">
+                                    <span className="inline-flex rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
+                                        {t("projectsFeaturedLabel")}
+                                    </span>
+                                    <h3 className="mt-4 text-3xl font-semibold leading-none text-foreground">{featuredProject.title}</h3>
+                                    <p className="mt-4 text-base leading-relaxed text-muted-foreground">{featuredProject.description}</p>
+                                    <p className="mt-5 text-sm font-semibold uppercase tracking-[0.16em] text-primary">
                                         {t("projectsViewProject")}
                                     </p>
-                                    <div className="mt-2 flex flex-wrap">
-                                        {project.technologies.map((tech, techIndex) => (
-                                            <Tag key={`${project.id}-${tech}`} tagKey={techIndex} text={tech} />
+                                    <div className="mt-3 flex flex-wrap">
+                                        {featuredProject.technologies.map((tech, techIndex) => (
+                                            <Tag key={`${featuredProject.id}-${tech}`} tagKey={techIndex} text={tech} />
                                         ))}
                                     </div>
                                 </div>
                             </div>
                         </SectionCard>
                     </motion.a>
-                ))}
+                ) : null}
+                <div className="grid gap-5 lg:grid-cols-3">
+                    {supportingProjects.map((project, index) => (
+                        <motion.a
+                            key={project.id}
+                            href={project.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`View project: ${project.title} (opens in a new tab)`}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.2 }}
+                            transition={{ duration: 0.45, delay: index * 0.05, ease: "easeOut" }}
+                            whileHover={{ scale: 1.02 }}
+                            className="block rounded-[1.4rem] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                        >
+                            <SectionCard className="flex h-full flex-col overflow-hidden p-5">
+                                <img
+                                    src={project.image}
+                                    width={300}
+                                    height={250}
+                                    alt={`${project.title} preview`}
+                                    className="h-40 w-full rounded-[1rem] border border-border object-cover"
+                                />
+                                <div className="flex h-full flex-col">
+                                    <h3 className="mt-4 text-2xl font-semibold leading-none text-foreground">{project.title}</h3>
+                                    <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{project.description}</p>
+                                    <p className="mt-4 text-sm font-semibold uppercase tracking-[0.16em] text-primary">
+                                        {t("projectsViewProject")}
+                                    </p>
+                                    <div className="mt-3 flex flex-wrap">
+                                        {project.technologies.map((tech, techIndex) => (
+                                            <Tag key={`${project.id}-${tech}`} tagKey={techIndex} text={tech} />
+                                        ))}
+                                    </div>
+                                </div>
+                            </SectionCard>
+                        </motion.a>
+                    ))}
+                </div>
             </div>
         </SectionShell>
     );

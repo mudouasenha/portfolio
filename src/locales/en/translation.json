@@ -16,8 +16,8 @@
   "certificationsOn": "on",
   "navigation": {
     "menu": "Navigate",
-    "cta": "Let's talk",
-    "role": ".NET + AI Systems"
+    "cta": "Contact",
+    "role": "Backend, Platform, AI Systems"
   },
   "validationFallback": {
     "skills": "Some skill entries could not be displayed.",
@@ -27,22 +27,37 @@
     "contact": "Some contact details could not be displayed."
   },
   "hero": {
-    "subtitle": ".NET Backend-Focused Fullstack Engineer | AI Systems",
+    "eyebrow": "Recruiter-ready profile",
+    "title": "Backend and AI systems engineer turning production constraints into clean delivery.",
+    "subtitle": ".NET backend, platform engineering, and applied AI",
+    "lead": "I build production-grade APIs, delivery pipelines, and AI-enabled workflows with a strong bias toward reliability, clarity, and measurable business outcomes.",
     "primaryCta": "Start a conversation",
-    "secondaryCta": "See AI systems",
+    "secondaryCta": "Review selected work",
+    "highlights": [
+      "Production software delivery since 2020",
+      "11k+ invoices/month backend context",
+      "R$4k/month infrastructure cost reduction"
+    ],
     "proofStrip": [
-      "Software development since 2020",
       ".NET / C# + APIs + cloud architecture",
       "DevOps: Kubernetes, Azure DevOps, Google Cloud",
-      "Invoice pipeline context: 11k+ invoices/month experience",
       "Leading internal agentic AI practices",
-      "R$4k/month infra cost reduction"
+      "Recruiter focus: backend, platform, AI systems"
     ],
-    "content": "I am a .NET backend-focused fullstack engineer with professional software development experience since 2020, specialized in C#, .NET, SQL Server/PostgreSQL, cloud services, and CI/CD.\n\nMy foundation is production backend delivery and DevOps execution: scalable APIs, architecture decisions, Kubernetes deployments, Azure DevOps pipelines, Google Cloud workloads, and cost-aware infrastructure.\n\nCurrent focus extends that foundation into AI: agentic systems, spec-driven execution, internal Claude Code enablement, and AI workflows integrated into CI/CD."
+    "portraitLabel": "Current focus",
+    "portraitCaption": "Building resilient backend and AI delivery systems in production."
   },
   "about": {
+    "kicker": "Editorial profile",
+    "summary": "Production-minded engineering with infrastructure awareness, system design discipline, and practical AI execution.",
     "text": "I build backend and AI systems with a strong production mindset, focusing on **reliability, clarity, and measurable outcomes**.\n\nIn my current work, I lead and structure **agentic AI development processes**, using **spec-driven development** to align requirements, implementation, and validation. I also design reusable internal tooling for **Claude Code usage**, create shared AI **skills and workflows**, and mentor engineers on practical AI delivery patterns.\n\nI am building a production-oriented **AI Agent for bill parsing** and integrating **AI-assisted code review** into CI/CD with human validation gates. My goal is to improve engineering speed and quality without sacrificing ownership or standards.\n\nI also operate in DevOps-related domains, including **Kubernetes**, **Azure DevOps**, and **Google Cloud**, connecting application delivery with infrastructure reliability.\n\nCore stack: **.NET / C#**, **PostgreSQL and SQL Server**, **Azure and Google Cloud**, CI/CD automation, and AI API integrations (including personal projects with Gemini image transformation)."
   },
+  "experienceKicker": "Career record",
+  "experienceSummary": "Roles and outcomes that show a progression from execution to ownership in backend and platform delivery.",
+  "experienceCurrentRole": "Current role",
+  "projectsKicker": "Selected work",
+  "projectsSummary": "Projects that best represent my backend, AI systems, and delivery mindset.",
+  "projectsFeaturedLabel": "Featured case",
   "certifications": [
     {
       "id": "ai-for-devs-branas",
@@ -62,9 +77,17 @@
     }
   ],
   "contact": {
+    "kicker": "Hiring conversations",
+    "summary": "The strongest fit is backend, platform, or AI-systems work where delivery quality matters.",
+    "title": "Available for recruiter and hiring-manager conversations.",
+    "body": "If you are hiring for backend engineering, platform work, or applied AI systems, LinkedIn is the fastest way to reach me. I reply with context, not buzzwords.",
+    "locationLabel": "Location",
+    "responseLabel": "Preferred contact",
+    "linkedinCta": "Message on LinkedIn",
+    "githubCta": "Review GitHub",
     "address": "Florianopolis, SC, Brazil",
-    "phoneNo": "Phone number: Contact me at LinkedIn",
-    "email": "Email: contact.me@linkedin"
+    "phoneNo": "Fastest response on LinkedIn",
+    "email": "Available on request"
   },
   "languages": {
     "Portuguese": "Native",

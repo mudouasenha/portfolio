@@ -3,8 +3,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Menu } from "lucide-react";
-import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
-import { FaSquareXTwitter } from "react-icons/fa6";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 import logo from "../assets/MgLogo.png";
 import { LanguageSwitcher } from "./LanguageSwitcher";
@@ -27,16 +26,6 @@ const SOCIAL_ITEMS = [
         href: "https://github.com/mudouasenha",
         label: "GitHub",
         icon: FaGithub,
-    },
-    {
-        href: "https://www.instagram.com/matheusmtgomes/",
-        label: "Instagram",
-        icon: FaInstagram,
-    },
-    {
-        href: "https://x.com/MatheusmtgGomes",
-        label: "X",
-        icon: FaSquareXTwitter,
     },
 ];
 
@@ -115,18 +104,18 @@ const Navbar = () => {
             initial={reduceMotion ? { opacity: 1 } : { y: -10, opacity: 0 }}
             animate={reduceMotion ? { opacity: 1 } : { y: 0, opacity: 1 }}
             transition={reduceMotion ? { duration: 0 } : { duration: motionDurationMedium, ease: motionEaseStandard }}
-            className={`sticky top-0 z-40 mb-16 border-b backdrop-blur-sm supports-[backdrop-filter]:bg-background/75 ${
+            className={`sticky top-0 z-40 mb-14 border-b border-border/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/70 ${
                 isScrolled
-                    ? "border-border/90 bg-background/95 shadow-sm"
-                    : "border-border/70 bg-background/90"
+                    ? "bg-background/95 shadow-[0_20px_60px_-40px_rgba(31,38,56,0.45)]"
+                    : "bg-background/80"
             }`}
         >
             <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
                 <a href="#top" className="flex flex-shrink-0 items-center gap-3">
-                    <img className="h-10 w-10 rounded-md border border-border object-cover" src={logo} alt="Matheus Gomes logo" />
+                    <img className="h-11 w-11 rounded-full border border-border/80 object-cover p-1" src={logo} alt="Matheus Gomes logo" />
                     <div className="hidden sm:block">
-                        <p className="text-sm font-semibold text-foreground">Matheus Gomes</p>
-                        <p className="text-xs text-muted-foreground">{t("navigation.role")}</p>
+                        <p className="text-sm font-semibold uppercase tracking-[0.22em] text-foreground">Matheus Gomes</p>
+                        <p className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground">{t("navigation.role")}</p>
                     </div>
                 </a>
 
@@ -138,7 +127,7 @@ const Navbar = () => {
                                     <NavigationMenuLink asChild>
                                         <a
                                             href={item.href}
-                                            className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                                            className="rounded-full px-3 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground transition-colors hover:bg-card/80 hover:text-foreground"
                                         >
                                             {item.label}
                                         </a>
@@ -153,7 +142,7 @@ const Navbar = () => {
                     {SOCIAL_ITEMS.map((item) => {
                         const Icon = item.icon;
                         return (
-                            <Button key={item.href} variant="ghost" size="icon-sm" asChild>
+                            <Button key={item.href} variant="ghost" size="icon-sm" asChild className="rounded-full">
                                 <a
                                     href={item.href}
                                     target="_blank"
@@ -166,7 +155,7 @@ const Navbar = () => {
                         );
                     })}
                     <LanguageSwitcher />
-                    <Button asChild size="sm">
+                    <Button asChild size="sm" className="rounded-full px-4">
                         <a href="#contact">{t("navigation.cta")}</a>
                     </Button>
                 </div>
@@ -175,7 +164,7 @@ const Navbar = () => {
                     <LanguageSwitcher />
                     <Sheet>
                         <SheetTrigger asChild>
-                            <Button variant="outline" size="icon-sm" aria-label="Open navigation menu">
+                            <Button variant="outline" size="icon-sm" className="rounded-full" aria-label="Open navigation menu">
                                 <Menu className="size-4" />
                             </Button>
                         </SheetTrigger>
@@ -188,7 +177,7 @@ const Navbar = () => {
                                     <SheetClose key={item.href} asChild>
                                         <a
                                             href={item.href}
-                                            className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
+                                            className="rounded-full px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
                                         >
                                             {item.label}
                                         </a>
@@ -204,10 +193,10 @@ const Navbar = () => {
                             </div>
                             <div className="mt-auto border-t border-border px-4 pb-4 pt-4">
                                 <div className="grid grid-cols-4 gap-2">
-                                    {SOCIAL_ITEMS.map((item) => {
-                                        const Icon = item.icon;
-                                        return (
-                                            <Button key={item.href} variant="ghost" size="icon-sm" asChild>
+                                {SOCIAL_ITEMS.map((item) => {
+                                    const Icon = item.icon;
+                                    return (
+                                            <Button key={item.href} variant="ghost" size="icon-sm" asChild className="rounded-full">
                                                 <a
                                                     href={item.href}
                                                     target="_blank"
