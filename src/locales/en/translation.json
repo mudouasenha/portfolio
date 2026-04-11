@@ -58,6 +58,14 @@
   "projectsKicker": "Selected work",
   "projectsSummary": "Projects that best represent my backend, AI systems, and delivery mindset.",
   "projectsFeaturedLabel": "Featured case",
+  "skillsKicker": "Capability map",
+  "skillsSummary": "A structured view of the engineering areas I can contribute to immediately, from backend delivery to AI enablement.",
+  "skillsCountLabel": "signals",
+  "technologiesKicker": "Core stack",
+  "technologiesSummary": "The technologies I use most often in production work, not a generic list of tools I have tried.",
+  "technologiesLeadLabel": "Production tools",
+  "technologiesLeadTitle": "The stack behind backend delivery, platform work, and applied AI execution.",
+  "technologiesLeadBody": "These are the technologies that show up repeatedly in my day-to-day work: backend APIs, data systems, cloud infrastructure, and integration-heavy delivery environments.",
   "certifications": [
     {
       "id": "ai-for-devs-branas",
@@ -214,25 +222,25 @@
   {
     "id": "cachara-social-platform",
     "title": "AI Agent for Bill Parsing",
-    "description": "Production-oriented bill parsing agent for structured extraction, validation, and exception routing in an 11k+ invoices/month context.",
+    "description": "Production-oriented bill parsing agent designed for structured extraction, validation, and exception routing in an operation with 11k+ invoices per month and real reliability constraints.",
     "technologies": [".NET", "OpenAI", "Azure", "SQL Server"]
   },
   {
     "id": "cachara-ai-image-classifier",
     "title": "Internal Claude Code Enablement",
-    "description": "Built internal Claude Code onboarding with prompt scaffolds, reusable skills, and delivery guardrails for faster team adoption.",
+    "description": "Built internal Claude Code onboarding with reusable skills, prompt scaffolds, and delivery guardrails so engineers could adopt agentic workflows faster without lowering standards.",
     "technologies": ["Claude Code", "Enablement", "Prompting", "Documentation"]
   },
   {
     "id": "portfolio-website",
     "title": "AI Code Review in CI/CD",
-    "description": "Integrated AI review into CI/CD to summarize diffs, flag risky changes, and keep human approval in the loop.",
+    "description": "Integrated AI review into CI/CD to summarize diffs, surface risky changes earlier, and preserve human approval as the final gate for release decisions.",
     "technologies": ["CI/CD", "GitHub Actions", "AI Review", "Automation"]
   },
   {
     "id": "monography-data-serialization",
     "title": "Personal AI API Integrations",
-    "description": "Personal API experiments with Gemini and other tools, including image transformation workflows and rapid multimodal prototypes.",
+    "description": "Personal API experiments with Gemini and other tools, focused on image transformation workflows, multimodal prototyping, and fast validation of new AI capabilities.",
     "technologies": ["Gemini", "APIs", "Image Transformation", "TypeScript"]
   }
 ]

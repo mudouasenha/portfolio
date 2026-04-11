@@ -27,14 +27,43 @@ const Technologies = () => {
 
     return (
         <SectionShell className="pt-4">
-            <SectionHeader className="mb-12 text-center">{t("technologies")}</SectionHeader>
-            <motion.ul
-                initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.25 }}
-                transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.45, ease: "easeOut" }}
-                className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6"
-            >
+            <div className="mb-12 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+                <div>
+                    <p className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-muted-foreground">
+                        {t("technologiesKicker")}
+                    </p>
+                    <SectionHeader>{t("technologies")}</SectionHeader>
+                </div>
+                <p className="max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+                    {t("technologiesSummary")}
+                </p>
+            </div>
+            <div className="grid gap-5 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+                <motion.div
+                    initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.25 }}
+                    transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.45, ease: "easeOut" }}
+                >
+                    <SectionCard className="h-full p-6 sm:p-7">
+                        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-muted-foreground">
+                            {t("technologiesLeadLabel")}
+                        </p>
+                        <h3 className="mt-4 text-3xl font-semibold leading-none text-foreground">
+                            {t("technologiesLeadTitle")}
+                        </h3>
+                        <p className="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground">
+                            {t("technologiesLeadBody")}
+                        </p>
+                    </SectionCard>
+                </motion.div>
+                <motion.ul
+                    initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.25 }}
+                    transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.45, ease: "easeOut" }}
+                    className="grid grid-cols-2 gap-4 sm:grid-cols-3"
+                >
                 {technologies.map((tech, index) => (
                     <motion.li
                         key={tech.id}
@@ -48,13 +77,16 @@ const Technologies = () => {
                         }
                         whileHover={shouldReduceMotion ? undefined : { scale: 1.03 }}
                     >
-                        <SectionCard className="flex h-full flex-col items-center gap-3 p-5 text-center">
-                            <tech.Icon className="text-5xl text-primary" aria-hidden />
-                            <span className="text-sm font-medium text-muted-foreground">{tech.label}</span>
+                        <SectionCard className="flex h-full flex-col items-center gap-4 p-5 text-center">
+                            <div className="flex size-16 items-center justify-center rounded-full border border-primary/15 bg-primary/10">
+                                <tech.Icon className="text-4xl text-primary" aria-hidden />
+                            </div>
+                            <span className="text-sm font-semibold uppercase tracking-[0.12em] text-foreground">{tech.label}</span>
                         </SectionCard>
                     </motion.li>
                 ))}
-            </motion.ul>
+                </motion.ul>
+            </div>
         </SectionShell>
     );
 };

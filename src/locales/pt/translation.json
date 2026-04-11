@@ -58,6 +58,14 @@
   "projectsKicker": "Trabalhos selecionados",
   "projectsSummary": "Projetos que melhor representam meu perfil em backend, sistemas de IA e qualidade de entrega.",
   "projectsFeaturedLabel": "Caso em destaque",
+  "skillsKicker": "Mapa de capacidades",
+  "skillsSummary": "Uma visão estruturada das áreas em que consigo contribuir rapidamente, de entrega backend até enablement com IA.",
+  "skillsCountLabel": "sinais",
+  "technologiesKicker": "Stack principal",
+  "technologiesSummary": "Tecnologias que aparecem com frequência no meu trabalho em produção, e não uma lista genérica de ferramentas que já experimentei.",
+  "technologiesLeadLabel": "Ferramentas de produção",
+  "technologiesLeadTitle": "A stack por trás de entrega backend, trabalho de plataforma e execução prática com IA.",
+  "technologiesLeadBody": "Essas são as tecnologias que mais se repetem no meu dia a dia: APIs backend, sistemas de dados, infraestrutura em nuvem e ambientes de entrega com muitas integrações.",
   "certifications": [
     {
       "id": "ai-for-devs-branas",
@@ -214,25 +222,25 @@
   {
     "id": "cachara-social-platform",
     "title": "Agente de IA para Leitura de Faturas",
-    "description": "Agente de leitura de faturas orientado à produção para extração estruturada, validação e roteamento de exceções em contexto de 11k+ faturas/mês.",
+    "description": "Agente de leitura de faturas orientado à produção, pensado para extração estruturada, validação e roteamento de exceções em uma operação com 11k+ faturas por mês e restrições reais de confiabilidade.",
     "technologies": [".NET", "OpenAI", "Azure", "SQL Server"]
   },
   {
     "id": "cachara-ai-image-classifier",
     "title": "Enablement Interno do Claude Code",
-    "description": "Criei onboarding interno para Claude Code com scaffolds de prompt, skills reutilizáveis e guardrails de entrega para adoção rápida.",
+    "description": "Criei onboarding interno para Claude Code com skills reutilizáveis, scaffolds de prompt e guardrails de entrega para acelerar a adoção de workflows agentivos sem reduzir o padrão técnico.",
     "technologies": ["Claude Code", "Enablement", "Prompts", "Documentação"]
   },
   {
     "id": "portfolio-website",
     "title": "Code Review com IA no CI/CD",
-    "description": "Integrei review com IA no CI/CD para resumir diffs, sinalizar mudanças arriscadas e manter aprovação humana no fluxo.",
+    "description": "Integrei review com IA ao CI/CD para resumir diffs, antecipar mudanças arriscadas e manter a aprovação humana como etapa final das decisões de release.",
     "technologies": ["CI/CD", "GitHub Actions", "IA", "Automação"]
   },
   {
     "id": "monography-data-serialization",
     "title": "Integrações Pessoais com APIs de IA",
-    "description": "Experimentos pessoais com Gemini e outras APIs, incluindo transformação de imagens e protótipos multimodais rápidos.",
+    "description": "Experimentos pessoais com Gemini e outras APIs, com foco em transformação de imagens, prototipação multimodal e validação rápida de novas capacidades de IA.",
     "technologies": ["Gemini", "APIs", "Transformação de Imagens", "TypeScript"]
   }
 ]

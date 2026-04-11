@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import { Menu } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
-import logo from "../assets/MgLogo.png";
+import logo from "../assets/mg-mark.svg";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { Button } from "./ui/button";
 import {
@@ -110,24 +110,32 @@ const Navbar = () => {
                     : "bg-background/80"
             }`}
         >
-            <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
-                <a href="#top" className="flex flex-shrink-0 items-center gap-3">
-                    <img className="h-11 w-11 rounded-full border border-border/80 object-cover p-1" src={logo} alt="Matheus Gomes logo" />
-                    <div className="hidden sm:block">
-                        <p className="text-sm font-semibold uppercase tracking-[0.22em] text-foreground">Matheus Gomes</p>
-                        <p className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground">{t("navigation.role")}</p>
+            <nav className="mx-auto flex min-h-20 max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-6 xl:px-8">
+                <a href="#top" className="flex min-w-0 flex-shrink items-center gap-2.5">
+                    <img
+                        className="h-10 w-10 flex-none object-contain"
+                        src={logo}
+                        alt="Matheus Gomes logo"
+                    />
+                    <div className="hidden min-w-0 sm:block">
+                        <p className="truncate text-xs font-semibold uppercase tracking-[0.16em] text-foreground sm:text-sm sm:tracking-[0.2em]">
+                            Matheus Gomes
+                        </p>
+                        <p className="hidden max-w-[11rem] truncate text-[10px] uppercase tracking-[0.14em] text-muted-foreground lg:block xl:max-w-[15rem] xl:text-[11px] xl:tracking-[0.18em]">
+                            {t("navigation.role")}
+                        </p>
                     </div>
                 </a>
 
-                <div className="hidden flex-1 items-center justify-center lg:flex">
+                <div className="hidden min-w-0 flex-1 items-center justify-center px-4 xl:flex">
                     <NavigationMenu viewport={false}>
-                        <NavigationMenuList className="gap-1">
+                        <NavigationMenuList className="flex-wrap justify-center gap-1">
                             {navItems.map((item) => (
                                 <NavigationMenuItem key={item.href}>
                                     <NavigationMenuLink asChild>
                                         <a
                                             href={item.href}
-                                            className="rounded-full px-3 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground transition-colors hover:bg-card/80 hover:text-foreground"
+                                            className="whitespace-nowrap rounded-full px-2.5 py-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-muted-foreground transition-colors hover:bg-card/80 hover:text-foreground 2xl:px-3 2xl:text-xs 2xl:tracking-[0.16em]"
                                         >
                                             {item.label}
                                         </a>
@@ -138,7 +146,7 @@ const Navbar = () => {
                     </NavigationMenu>
                 </div>
 
-                <div className="hidden items-center gap-2 lg:flex">
+                <div className="hidden items-center gap-2 xl:flex">
                     {SOCIAL_ITEMS.map((item) => {
                         const Icon = item.icon;
                         return (
@@ -160,15 +168,18 @@ const Navbar = () => {
                     </Button>
                 </div>
 
-                <div className="flex items-center gap-2 lg:hidden">
+                <div className="flex items-center gap-2 xl:hidden">
                     <LanguageSwitcher />
+                    <Button asChild size="sm" className="hidden rounded-full px-3 sm:inline-flex lg:px-4">
+                        <a href="#contact">{t("navigation.cta")}</a>
+                    </Button>
                     <Sheet>
                         <SheetTrigger asChild>
                             <Button variant="outline" size="icon-sm" className="rounded-full" aria-label="Open navigation menu">
                                 <Menu className="size-4" />
                             </Button>
                         </SheetTrigger>
-                        <SheetContent side="right" className="w-[20rem]">
+                        <SheetContent side="right" className="w-[min(22rem,100vw)]">
                             <SheetHeader>
                                 <SheetTitle>{t("navigation.menu")}</SheetTitle>
                             </SheetHeader>
@@ -186,13 +197,13 @@ const Navbar = () => {
                             </div>
                             <div className="px-4 pb-4">
                                 <SheetClose asChild>
-                                    <Button asChild className="w-full">
+                                    <Button asChild className="w-full rounded-full">
                                         <a href="#contact">{t("navigation.cta")}</a>
                                     </Button>
                                 </SheetClose>
                             </div>
                             <div className="mt-auto border-t border-border px-4 pb-4 pt-4">
-                                <div className="grid grid-cols-4 gap-2">
+                                <div className="grid grid-cols-2 gap-2">
                                 {SOCIAL_ITEMS.map((item) => {
                                     const Icon = item.icon;
                                     return (
