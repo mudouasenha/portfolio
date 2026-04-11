@@ -15,7 +15,7 @@ const Skills = () => {
 
     return (
         <SectionShell className="pt-4">
-            <SectionHeader className="mb-12 text-center">Skills</SectionHeader>
+            <SectionHeader className="mb-12 text-center">{t("skillsTitle")}</SectionHeader>
             {showFallback ? (
                 <p role="status" data-validation-fallback="skills" className="mb-4 text-sm text-muted-foreground">
                     {t("validationFallback.skills")}

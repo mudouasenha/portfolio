@@ -36,12 +36,27 @@ It presents projects, skills, certifications, contact information, and professio
 # Build (TypeScript + Vite)
 npm run build
 
+# Generate skeleton bones once
+npm run bones:build
+
+# Re-capture bones while developing (CLI mode)
+npm run bones:watch
+
 # Lint
 npm run lint
 
 # Preview production build
 npm run preview
 ```
+
+## Boneyard Skeletons
+
+This project is integrated with `boneyard-js` for generated skeleton loading states.
+
+- Runtime import is loaded once at startup via `src/bones/registry.ts`.
+- `Skeleton` is used in `src/LangRouter.tsx` during language-route readiness.
+- Vite plugin (`boneyardPlugin()`) is enabled in `vite.config.ts` for automatic capture on dev server/HMR.
+- Optional CLI config lives in `boneyard.config.json`.
 
 ## Release Readiness
 

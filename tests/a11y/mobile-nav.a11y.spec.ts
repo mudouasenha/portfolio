@@ -3,7 +3,7 @@ import { expect, test } from "@playwright/test";
 
 const WCAG_TAGS = ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"];
 
-test.use({ viewport: { width: 390, height: 844 } });
+test.use({ viewport: { width: 390, height: 844 }, reducedMotion: "reduce" });
 
 test("mobile navigation open state has no serious or critical accessibility violations", async ({
   page,

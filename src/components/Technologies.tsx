@@ -1,8 +1,7 @@
 import { motion, useReducedMotion } from "motion/react";
 import { DiMsqlServer, DiRedis } from "react-icons/di";
 import { GrGraphQl } from "react-icons/gr";
-import { SiTypescript } from "react-icons/si";
-import { TbBrandCSharp } from "react-icons/tb";
+import { SiDotnet, SiGooglecloud, SiPostgresql, SiTypescript } from "react-icons/si";
 import { VscAzure } from "react-icons/vsc";
 import { useTranslation } from "react-i18next";
 
@@ -11,9 +10,11 @@ import SectionHeader from "@/components/sections/SectionHeader";
 import SectionShell from "@/components/sections/SectionShell";
 
 const technologies = [
-    { id: "csharp", label: "C#", Icon: TbBrandCSharp },
+    { id: "dotnet", label: ".NET", Icon: SiDotnet },
     { id: "sqlserver", label: "MS SQL Server", Icon: DiMsqlServer },
+    { id: "postgresql", label: "PostgreSQL", Icon: SiPostgresql },
     { id: "azure", label: "Azure", Icon: VscAzure },
+    { id: "google-cloud", label: "Google Cloud", Icon: SiGooglecloud },
     { id: "typescript", label: "TypeScript", Icon: SiTypescript },
     { id: "graphql", label: "GraphQL", Icon: GrGraphQl },
     { id: "redis", label: "Redis", Icon: DiRedis },

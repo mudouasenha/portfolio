@@ -1,5 +1,6 @@
 import { motion, useMotionValueEvent, useReducedMotion, useScroll } from "motion/react";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 import { Menu } from "lucide-react";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
@@ -15,14 +16,6 @@ import {
     NavigationMenuList,
 } from "./ui/navigation-menu";
 import { Sheet, SheetClose, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "./ui/sheet";
-
-const NAV_ITEMS = [
-    { href: "#about", label: "About" },
-    { href: "#technologies", label: "Technologies" },
-    { href: "#skills", label: "Skills" },
-    { href: "#projects", label: "Projects" },
-    { href: "#contact", label: "Contact" },
-];
 
 const SOCIAL_ITEMS = [
     {
@@ -93,11 +86,21 @@ const getMotionEaseStandard = (): [number, number, number, number] => {
 };
 
 const Navbar = () => {
+    const { t } = useTranslation();
     const reduceMotion = useReducedMotion();
     const motionDurationMedium = getMotionDurationMedium();
     const motionEaseStandard = getMotionEaseStandard();
     const { scrollY } = useScroll();
     const [isScrolled, setIsScrolled] = useState(false);
+    const navItems = [
+        { href: "#about", label: t("aboutNav") },
+        { href: "#experience", label: t("experience") },
+        { href: "#projects", label: t("projects") },
+        { href: "#technologies", label: t("technologies") },
+        { href: "#skills", label: t("skillsTitle") },
+        { href: "#certifications", label: t("certificationsTitle") },
+        { href: "#contact", label: t("getInTouch") },
+    ];
 
     useMotionValueEvent(scrollY, "change", (value) => {
         if (reduceMotion) {
@@ -123,14 +126,14 @@ const Navbar = () => {
                     <img className="h-10 w-10 rounded-md border border-border object-cover" src={logo} alt="Matheus Gomes logo" />
                     <div className="hidden sm:block">
                         <p className="text-sm font-semibold text-foreground">Matheus Gomes</p>
-                        <p className="text-xs text-muted-foreground">Backend Developer</p>
+                        <p className="text-xs text-muted-foreground">{t("navigation.role")}</p>
                     </div>
                 </a>
 
                 <div className="hidden flex-1 items-center justify-center lg:flex">
                     <NavigationMenu viewport={false}>
                         <NavigationMenuList className="gap-1">
-                            {NAV_ITEMS.map((item) => (
+                            {navItems.map((item) => (
                                 <NavigationMenuItem key={item.href}>
                                     <NavigationMenuLink asChild>
                                         <a
@@ -164,7 +167,7 @@ const Navbar = () => {
                     })}
                     <LanguageSwitcher />
                     <Button asChild size="sm">
-                        <a href="#contact">Let&apos;s talk</a>
+                        <a href="#contact">{t("navigation.cta")}</a>
                     </Button>
                 </div>
 
@@ -178,10 +181,10 @@ const Navbar = () => {
                         </SheetTrigger>
                         <SheetContent side="right" className="w-[20rem]">
                             <SheetHeader>
-                                <SheetTitle>Navigate</SheetTitle>
+                                <SheetTitle>{t("navigation.menu")}</SheetTitle>
                             </SheetHeader>
                             <div className="flex flex-col gap-2 px-4 pb-3">
-                                {NAV_ITEMS.map((item) => (
+                                {navItems.map((item) => (
                                     <SheetClose key={item.href} asChild>
                                         <a
                                             href={item.href}
@@ -195,7 +198,7 @@ const Navbar = () => {
                             <div className="px-4 pb-4">
                                 <SheetClose asChild>
                                     <Button asChild className="w-full">
-                                        <a href="#contact">Let's talk</a>
+                                        <a href="#contact">{t("navigation.cta")}</a>
                                     </Button>
                                 </SheetClose>
                             </div>

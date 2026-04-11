@@ -39,7 +39,7 @@ describe("i18n route continuity", () => {
     await waitFor(() => {
       expect(screen.getByTestId("location")).toHaveTextContent("/pt");
     });
-    expect(await screen.findByRole("heading", { name: "Projetos", level: 2 })).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { name: "Sistemas de IA e Projetos", level: 2 })).toBeInTheDocument();
   });
 
   it("redirects invalid language paths to /en fallback", async () => {
@@ -48,14 +48,14 @@ describe("i18n route continuity", () => {
     await waitFor(() => {
       expect(screen.getByTestId("location")).toHaveTextContent("/en/projects?from=test");
     });
-    expect(await screen.findByRole("heading", { name: "Projects", level: 2 })).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { name: "AI Systems & Projects", level: 2 })).toBeInTheDocument();
   });
 
   it("switching language updates both URL and localized content", async () => {
     const user = userEvent.setup();
     renderWithRoute("/en/projects");
 
-    expect(await screen.findByRole("heading", { name: "Projects", level: 2 })).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { name: "AI Systems & Projects", level: 2 })).toBeInTheDocument();
     expect(screen.getByTestId("location")).toHaveTextContent("/en/projects");
 
     const [switchToPtButton] = screen.getAllByRole("button", { name: "Switch language to PT" });
@@ -64,6 +64,6 @@ describe("i18n route continuity", () => {
     await waitFor(() => {
       expect(screen.getByTestId("location")).toHaveTextContent("/pt/projects");
     });
-    expect(await screen.findByRole("heading", { name: "Projetos", level: 2 })).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { name: "Sistemas de IA e Projetos", level: 2 })).toBeInTheDocument();
   });
 });

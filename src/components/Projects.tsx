@@ -73,7 +73,7 @@ const Projects = () => {
                                     <h3 className="text-lg font-semibold text-foreground">{project.title}</h3>
                                     <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{project.description}</p>
                                     <p className="mt-3 text-sm font-medium text-primary">
-                                        View project (opens in a new tab)
+                                        {t("projectsViewProject")}
                                     </p>
                                     <div className="mt-2 flex flex-wrap">
                                         {project.technologies.map((tech, techIndex) => (

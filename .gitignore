@@ -13,8 +13,6 @@ dist-ssr
 *.local
 playwright-report/
 test-results/
-.playwright-libs/
-*.deb
 
 # Editor directories and files
 .vscode/*

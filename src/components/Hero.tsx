@@ -1,6 +1,7 @@
 import { motion, useReducedMotion } from "motion/react";
-import profilePic from "../assets/MatheusGomesProfile.jpg";
+import profilePic from "../assets/MatheusGomesProfileMain.jpg";
 import { useTranslation } from "react-i18next";
+import { Skeleton } from "boneyard-js/react";
 
 import { Button } from "@/components/ui/button";
 
@@ -68,14 +69,18 @@ const container = (
 const Hero = () => {
     const { t } = useTranslation();
     const heroContent = t("hero.content");
+    const heroProofStrip = t("hero.proofStrip", { returnObjects: true });
+    const proofStrip = Array.isArray(heroProofStrip) ? heroProofStrip : [];
+    // Proof strip includes the R$4k/month infra cost reduction signal.
     const reduceMotion = useReducedMotion();
     const shouldReduceMotion = reduceMotion ?? false;
     const motionDurationMedium = getMotionDurationMedium();
     const motionEaseStandard = getMotionEaseStandard();
 
     return (
-        <section className="border-b border-border pb-10 pt-2 sm:pb-14 sm:pt-4 lg:pb-20 lg:pt-8">
-            <div className="grid gap-8 sm:gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+        <Skeleton name="hero-section" loading={false}>
+            <section className="border-b border-border pb-10 pt-2 sm:pb-14 sm:pt-4 lg:pb-20 lg:pt-8">
+                <div className="grid gap-8 sm:gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
                 <div>
                     <div className="flex flex-col items-start">
                         <motion.h1
@@ -92,13 +97,13 @@ const Hero = () => {
                             animate="visible"
                             className="mt-3 inline-flex items-center rounded-full border border-border bg-accent px-3 py-1 text-sm font-semibold tracking-wide text-accent-foreground"
                         >
-                            Backend Developer
+                            {t("hero.subtitle")}
                         </motion.span>
                         <motion.p
                             variants={container(0.25, shouldReduceMotion, motionDurationMedium, motionEaseStandard)}
                             initial="hidden"
                             animate="visible"
-                            className="mt-6 max-w-2xl text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg"
+                            className="mt-6 max-w-2xl whitespace-pre-line text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg"
                         >
                             {heroContent}
                         </motion.p>
@@ -109,21 +114,23 @@ const Hero = () => {
                             className="mt-7 flex w-full flex-col gap-3 sm:mt-8 sm:w-auto sm:flex-row sm:flex-wrap"
                         >
                             <Button asChild size="lg">
-                                <a href="#contact">Start a conversation</a>
+                                <a href="#contact">{t("hero.primaryCta")}</a>
                             </Button>
                             <Button asChild variant="outline" size="lg">
-                                <a href="#projects">See featured projects</a>
+                                <a href="#projects">{t("hero.secondaryCta")}</a>
                             </Button>
                         </motion.div>
                         <motion.div
                             variants={container(0.45, shouldReduceMotion, motionDurationMedium, motionEaseStandard)}
                             initial="hidden"
                             animate="visible"
-                            className="mt-6 flex flex-wrap gap-4 text-sm text-foreground sm:mt-8"
+                            className="mt-6 flex flex-wrap gap-3 text-sm text-foreground sm:mt-8"
                         >
-                            <span className="rounded-md border border-border bg-background px-3 py-2">TypeScript + .NET focus</span>
-                            <span className="rounded-md border border-border bg-background px-3 py-2">Production API architecture</span>
-                            <span className="rounded-md border border-border bg-background px-3 py-2">Bilingual delivery (EN/PT)</span>
+                            {proofStrip.map((item) => (
+                                <span key={item} className="rounded-md border border-border bg-background px-3 py-2">
+                                    {item}
+                                </span>
+                            ))}
                         </motion.div>
                     </div>
                 </div>
@@ -139,8 +146,9 @@ const Hero = () => {
                         />
                     </div>
                 </div>
-            </div>
-        </section>
+                </div>
+            </section>
+        </Skeleton>
     );
 };
 

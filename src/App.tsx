@@ -77,6 +77,12 @@ function App() {
                 <section id="about" className="scroll-mt-28">
                     <About />
                 </section>
+                <section id="experience" className="scroll-mt-28">
+                    <Experience />
+                </section>
+                <section id="projects" className="scroll-mt-28">
+                    <Projects />
+                </section>
                 <section id="technologies" className="scroll-mt-28">
                     <Technologies />
                 </section>
@@ -85,12 +91,6 @@ function App() {
                 </section>
                 <section id="certifications" className="scroll-mt-28">
                     <Certifications />
-                </section>
-                <section id="experience" className="scroll-mt-28">
-                    <Experience />
-                </section>
-                <section id="projects" className="scroll-mt-28">
-                    <Projects />
                 </section>
                 <section id="contact" className="scroll-mt-28">
                     <Contact />
