@@ -30,11 +30,30 @@ It presents projects, skills, certifications, contact information, and professio
 
 3. Open Vite local URL (default `http://localhost:5173`).
 
+## VS Code Debugging
+
+This repo includes a VS Code browser debugging setup for the Vite dev server.
+
+1. Open the repository root in VS Code.
+2. Go to `Run and Debug`.
+3. Select `Debug Portfolio (Chrome)` or `Debug Portfolio (Edge)`.
+4. Start debugging with `F5`.
+
+VS Code will start `npm run dev`, wait for Vite to come up on port `5173`, and open a Chrome debug session with source maps enabled for the React/TypeScript app.
+
+If you already started Chrome manually with remote debugging enabled, use `Attach Chrome To Portfolio` instead.
+
 ## Build & Test Commands
 
 ```bash
 # Build (TypeScript + Vite)
 npm run build
+
+# Run Storybook locally
+npm run storybook
+
+# Build static Storybook site
+npm run build-storybook
 
 # Generate skeleton bones once
 npm run bones:build
@@ -48,6 +67,20 @@ npm run lint
 # Preview production build
 npm run preview
 ```
+
+## Storybook
+
+This repo now includes Storybook for isolated component development and documentation.
+
+```bash
+# Start Storybook on http://localhost:6006
+rtk npm run storybook
+
+# Build the static Storybook output into storybook-static/
+rtk npm run build-storybook
+```
+
+Initial stories cover foundational UI and layout primitives under `src/components/ui/` and `src/components/sections/`.
 
 ## Boneyard Skeletons
 

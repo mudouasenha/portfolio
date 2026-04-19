@@ -46,6 +46,7 @@
 **Build System:**
 - Vite 6 - Dev server and production bundling (`package.json`, `vite.config.ts`)
 - `@vitejs/plugin-react-swc` - React + SWC transform plugin (`package.json`, `vite.config.ts`)
+- Storybook 10 (`storybook`, `@storybook/react-vite`) - Isolated component development and static story builds (`package.json`, `.storybook/main.ts`, `.storybook/preview.tsx`)
 
 **Type Checking:**
 - TypeScript project references build (`tsc -b`) (`package.json`, `tsconfig.json`, `tsconfig.app.json`, `tsconfig.node.json`)
