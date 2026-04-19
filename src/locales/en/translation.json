@@ -10,13 +10,13 @@
   "projects": "AI Systems & Projects",
   "projectsViewProject": "View project (opens in a new tab)",
   "technologies": "Technologies",
-  "getInTouch":  "Get In Touch",
+  "getInTouch": "Get In Touch",
   "certificationsTitle": "Certifications",
   "certificationsIssuedBy": "Issued by:",
   "certificationsOn": "on",
   "navigation": {
     "menu": "Navigate",
-    "cta": "Contact",
+    "cta": "View résumé",
     "role": "Backend, Platform, AI Systems"
   },
   "validationFallback": {
@@ -31,7 +31,7 @@
     "title": "Backend and AI systems engineer turning production constraints into clean delivery.",
     "subtitle": ".NET backend, platform engineering, and applied AI",
     "lead": "I build production-grade APIs, delivery pipelines, and AI-enabled workflows with a strong bias toward reliability, clarity, and measurable business outcomes.",
-    "primaryCta": "Start a conversation",
+    "primaryCta": "View résumé",
     "secondaryCta": "Review selected work",
     "highlights": [
       "Production software delivery since 2020",
@@ -45,7 +45,14 @@
       "Recruiter focus: backend, platform, AI systems"
     ],
     "portraitLabel": "Current focus",
-    "portraitCaption": "Building resilient backend and AI delivery systems in production."
+    "portraitCaption": "Building resilient backend and AI delivery systems in production.",
+    "recruiterSnapshotLabel": "Recruiter snapshot",
+    "recruiterSnapshot": [
+      "5+ years in software delivery and backend engineering",
+      "Best fit: backend, platform, and applied AI systems roles",
+      "Core stack: .NET / C#, SQL Server, Azure, Kubernetes, CI/CD",
+      "Strengths: production reliability, AI enablement, and pragmatic ownership"
+    ]
   },
   "about": {
     "kicker": "Editorial profile",
@@ -59,10 +66,10 @@
   "projectsSummary": "Projects that best represent my backend, AI systems, and delivery mindset.",
   "projectsFeaturedLabel": "Featured case",
   "skillsKicker": "Capability map",
-  "skillsSummary": "A structured view of the engineering areas I can contribute to immediately, from backend delivery to AI enablement.",
+  "skillsSummary": "Capability areas that complement the core stack: system design, AI enablement, backend delivery, and engineering execution.",
   "skillsCountLabel": "signals",
   "technologiesKicker": "Core stack",
-  "technologiesSummary": "The technologies I use most often in production work, not a generic list of tools I have tried.",
+  "technologiesSummary": "A compact view of the tools and platforms that appear repeatedly in production work, separate from broader engineering capabilities.",
   "technologiesLeadLabel": "Production tools",
   "technologiesLeadTitle": "The stack behind backend delivery, platform work, and applied AI execution.",
   "technologiesLeadBody": "These are the technologies that show up repeatedly in my day-to-day work: backend APIs, data systems, cloud infrastructure, and integration-heavy delivery environments.",
@@ -194,55 +201,98 @@
       "role": "Mid-Level Backend Developer",
       "company": "Way2 Technology",
       "description": "Shipped invoice collection and telemetry services exposing 11k+ invoices/month through Azure API Management.\n- Owned PRs, code reviews, QA, and deployment for release-ready delivery.\n- Applied DDD, Clean Architecture, and SOLID in production APIs and telemetry enrichment.",
-      "technologies": [".NET", "Azure", "EF Core", "SQL Server", "GraphQL", "CI/CD", "Testing"]
+      "technologies": [
+        ".NET",
+        "Azure",
+        "EF Core",
+        "SQL Server",
+        "GraphQL",
+        "CI/CD",
+        "Testing"
+      ]
     },
     {
       "year": "2020 - 2021",
       "role": "Backend Developer Intern",
       "company": "Way2 Technology",
       "description": "Built APIs, databases, and support services for product and out-of-roadmap requests.\n- Turned ad hoc work into stable delivery with clear handoffs.\n- Kept internal teams unblocked while the roadmap kept moving.",
-      "technologies": ["Node.js", "SQL Server", ".NET"]
+      "technologies": [
+        "Node.js",
+        "SQL Server",
+        ".NET"
+      ]
     },
     {
       "year": "2020 - 2020",
       "role": "Frontend Developer Intern",
       "company": "Pipz Platform",
       "description": "Built React and AngularJS features for a marketing automation SaaS platform.\n- Implemented contact segmentation and automation flows with Python and Flask.\n- Contributed across frontend, API, and data layers.",
-      "technologies": ["Python", "Flask", "React", "Angular.js", "Postgres"]
+      "technologies": [
+        "Python",
+        "Flask",
+        "React",
+        "Angular.js",
+        "Postgres"
+      ]
     },
     {
       "year": "2016 - 2020",
       "role": "Technical Support Analyst",
       "company": "Dígitro Technology",
       "description": "Supported high-security telephony systems using UNIX and PostgreSQL.\n- Automated repetitive operations with shell scripts.\n- Translated complex incidents for non-technical clients and minimized downtime.",
-      "technologies": ["UNIX", "PostgreSQL", "Shell Script"]
+      "technologies": [
+        "UNIX",
+        "PostgreSQL",
+        "Shell Script"
+      ]
     }
   ],
   "projectsList": [
-  {
-    "id": "cachara-social-platform",
-    "title": "AI Agent for Bill Parsing",
-    "description": "Production-oriented bill parsing agent designed for structured extraction, validation, and exception routing in an operation with 11k+ invoices per month and real reliability constraints.",
-    "technologies": [".NET", "OpenAI", "Azure", "SQL Server"]
-  },
-  {
-    "id": "cachara-ai-image-classifier",
-    "title": "Internal Claude Code Enablement",
-    "description": "Built internal Claude Code onboarding with reusable skills, prompt scaffolds, and delivery guardrails so engineers could adopt agentic workflows faster without lowering standards.",
-    "technologies": ["Claude Code", "Enablement", "Prompting", "Documentation"]
-  },
-  {
-    "id": "portfolio-website",
-    "title": "AI Code Review in CI/CD",
-    "description": "Integrated AI review into CI/CD to summarize diffs, surface risky changes earlier, and preserve human approval as the final gate for release decisions.",
-    "technologies": ["CI/CD", "GitHub Actions", "AI Review", "Automation"]
-  },
-  {
-    "id": "monography-data-serialization",
-    "title": "Personal AI API Integrations",
-    "description": "Personal API experiments with Gemini and other tools, focused on image transformation workflows, multimodal prototyping, and fast validation of new AI capabilities.",
-    "technologies": ["Gemini", "APIs", "Image Transformation", "TypeScript"]
-  }
-]
-
+    {
+      "id": "cachara-social-platform",
+      "title": "AI Agent for Bill Parsing",
+      "description": "Production-oriented bill parsing agent designed for structured extraction, validation, and exception routing in an operation with 11k+ invoices per month and real reliability constraints.",
+      "technologies": [
+        ".NET",
+        "OpenAI",
+        "Azure",
+        "SQL Server"
+      ]
+    },
+    {
+      "id": "cachara-ai-image-classifier",
+      "title": "Internal Claude Code Enablement",
+      "description": "Built internal Claude Code onboarding with reusable skills, prompt scaffolds, and delivery guardrails so engineers could adopt agentic workflows faster without lowering standards.",
+      "technologies": [
+        "Claude Code",
+        "Enablement",
+        "Prompting",
+        "Documentation"
+      ]
+    },
+    {
+      "id": "portfolio-website",
+      "title": "AI Code Review in CI/CD",
+      "description": "Integrated AI review into CI/CD to summarize diffs, surface risky changes earlier, and preserve human approval as the final gate for release decisions.",
+      "technologies": [
+        "CI/CD",
+        "GitHub Actions",
+        "AI Review",
+        "Automation"
+      ]
+    },
+    {
+      "id": "monography-data-serialization",
+      "title": "Personal AI API Integrations",
+      "description": "Personal API experiments with Gemini and other tools, focused on image transformation workflows, multimodal prototyping, and fast validation of new AI capabilities.",
+      "technologies": [
+        "Gemini",
+        "APIs",
+        "Image Transformation",
+        "TypeScript"
+      ]
+    }
+  ],
+  "certificationsKicker": "Supporting credentials",
+  "certificationsSummary": "Relevant certifications that reinforce applied cloud and AI learning, while experience and shipped work remain the main proof."
 }

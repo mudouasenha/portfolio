@@ -27,7 +27,7 @@ const Technologies = () => {
 
     return (
         <SectionShell className="pt-4">
-            <div className="mb-12 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+            <div className="mb-9 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
                 <div>
                     <p className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-muted-foreground">
                         {t("technologiesKicker")}
@@ -38,14 +38,14 @@ const Technologies = () => {
                     {t("technologiesSummary")}
                 </p>
             </div>
-            <div className="grid gap-5 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+            <div className="grid gap-4 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
                 <motion.div
                     initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.25 }}
                     transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.45, ease: "easeOut" }}
                 >
-                    <SectionCard className="h-full p-6 sm:p-7">
+                    <SectionCard className="h-full p-5 sm:p-6">
                         <p className="text-xs font-semibold uppercase tracking-[0.24em] text-muted-foreground">
                             {t("technologiesLeadLabel")}
                         </p>
@@ -62,7 +62,7 @@ const Technologies = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.25 }}
                     transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.45, ease: "easeOut" }}
-                    className="grid grid-cols-2 gap-4 sm:grid-cols-3"
+                    className="grid grid-cols-2 gap-3 sm:grid-cols-4"
                 >
                 {technologies.map((tech, index) => (
                     <motion.li
@@ -77,9 +77,9 @@ const Technologies = () => {
                         }
                         whileHover={shouldReduceMotion ? undefined : { scale: 1.03 }}
                     >
-                        <SectionCard className="flex h-full flex-col items-center gap-4 p-5 text-center">
-                            <div className="flex size-16 items-center justify-center rounded-full border border-primary/15 bg-primary/10">
-                                <tech.Icon className="text-4xl text-primary" aria-hidden />
+                        <SectionCard className="flex h-full flex-col items-center gap-3 p-4 text-center">
+                            <div className="flex size-14 items-center justify-center rounded-full border border-primary/15 bg-primary/10">
+                                <tech.Icon className="text-[1.75rem] text-primary" aria-hidden />
                             </div>
                             <span className="text-sm font-semibold uppercase tracking-[0.12em] text-foreground">{tech.label}</span>
                         </SectionCard>

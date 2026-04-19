@@ -9,25 +9,25 @@ const About = () => {
     const about = t("about.text");
 
     return (
-        <div className="border-b border-border/80 py-16 sm:py-20">
-            <div className="mb-12 grid gap-5 lg:grid-cols-[0.4fr_1fr] lg:items-end">
+        <div className="border-b border-border/80 py-14 sm:py-16">
+            <div className="mb-10 grid gap-5 lg:grid-cols-[0.4fr_1fr] lg:items-end">
                 <div>
                     <p className="text-xs font-semibold uppercase tracking-[0.28em] text-muted-foreground">
                         {t("about.kicker")}
                     </p>
                 </div>
                 <div>
-                    <h1 className="text-4xl font-semibold leading-none sm:text-5xl">
+                    <h2 className="text-4xl font-semibold leading-none sm:text-5xl">
                         <Trans i18nKey="aboutMe" defaults="About <1>Me</1>">
                             About <span className="text-muted-foreground">Me</span>
                         </Trans>
-                    </h1>
+                    </h2>
                     <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
                         {t("about.summary")}
                     </p>
                 </div>
             </div>
-            <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+            <div className="grid gap-7 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
                 <motion.div
                     whileInView={{ opacity: 1, x: 0 }}
                     initial={{ opacity: 0, x: -100 }}

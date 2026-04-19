@@ -16,7 +16,7 @@ const Contact = () => {
     
     return (
         <SectionShell className="pt-4">
-            <div className="mb-10 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+            <div className="mb-9 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
                 <div>
                     <p className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-muted-foreground">
                         {t("contact.kicker")}
@@ -32,9 +32,9 @@ const Contact = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.45, ease: "easeOut" }}
-                className="mx-auto max-w-4xl"
+                className="mx-auto max-w-5xl"
             >
-                <SectionCard className="p-7 sm:p-8">
+                <SectionCard className="p-5 sm:p-6">
                     {showFallback ? (
                         <p role="status" data-validation-fallback="contact" className="text-base text-muted-foreground">
                             {t("validationFallback.contact")}

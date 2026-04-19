@@ -29,6 +29,8 @@ const SOCIAL_ITEMS = [
     },
 ];
 
+const RESUME_URL = "https://docs.google.com/document/d/1Jg-Sh3dTa0GUqQ-YPFxiOGZY-79yrDN8Bqc7HcrYDD4/edit?usp=sharing";
+
 const DEFAULT_MOTION_DURATION_MEDIUM = 0.45;
 const DEFAULT_MOTION_EASE_STANDARD: [number, number, number, number] = [0.25, 0.1, 0.25, 1];
 
@@ -85,9 +87,6 @@ const Navbar = () => {
         { href: "#about", label: t("aboutNav") },
         { href: "#experience", label: t("experience") },
         { href: "#projects", label: t("projects") },
-        { href: "#technologies", label: t("technologies") },
-        { href: "#skills", label: t("skillsTitle") },
-        { href: "#certifications", label: t("certificationsTitle") },
         { href: "#contact", label: t("getInTouch") },
     ];
 
@@ -104,7 +103,7 @@ const Navbar = () => {
             initial={reduceMotion ? { opacity: 1 } : { y: -10, opacity: 0 }}
             animate={reduceMotion ? { opacity: 1 } : { y: 0, opacity: 1 }}
             transition={reduceMotion ? { duration: 0 } : { duration: motionDurationMedium, ease: motionEaseStandard }}
-            className={`sticky top-0 z-40 mb-14 border-b border-border/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/70 ${
+            className={`sticky top-0 z-40 mb-12 border-b border-border/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/70 ${
                 isScrolled
                     ? "bg-background/95 shadow-[0_20px_60px_-40px_rgba(31,38,56,0.45)]"
                     : "bg-background/80"
@@ -129,13 +128,13 @@ const Navbar = () => {
 
                 <div className="hidden min-w-0 flex-1 items-center justify-center px-4 xl:flex">
                     <NavigationMenu viewport={false}>
-                        <NavigationMenuList className="flex-wrap justify-center gap-1">
+                        <NavigationMenuList className="flex-wrap justify-center gap-1.5">
                             {navItems.map((item) => (
                                 <NavigationMenuItem key={item.href}>
                                     <NavigationMenuLink asChild>
                                         <a
                                             href={item.href}
-                                            className="whitespace-nowrap rounded-full px-2.5 py-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-muted-foreground transition-colors hover:bg-card/80 hover:text-foreground 2xl:px-3 2xl:text-xs 2xl:tracking-[0.16em]"
+                                            className="whitespace-nowrap rounded-full px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-muted-foreground transition-colors hover:bg-card/80 hover:text-foreground 2xl:text-xs 2xl:tracking-[0.16em]"
                                         >
                                             {item.label}
                                         </a>
@@ -146,11 +145,11 @@ const Navbar = () => {
                     </NavigationMenu>
                 </div>
 
-                <div className="hidden items-center gap-2 xl:flex">
+                <div className="hidden items-center gap-1.5 xl:flex">
                     {SOCIAL_ITEMS.map((item) => {
                         const Icon = item.icon;
                         return (
-                            <Button key={item.href} variant="ghost" size="icon-sm" asChild className="rounded-full">
+                            <Button key={item.href} variant="ghost" size="icon-sm" asChild className="rounded-full text-muted-foreground hover:text-foreground">
                                 <a
                                     href={item.href}
                                     target="_blank"
@@ -164,14 +163,14 @@ const Navbar = () => {
                     })}
                     <LanguageSwitcher />
                     <Button asChild size="sm" className="rounded-full px-4">
-                        <a href="#contact">{t("navigation.cta")}</a>
+                        <a href={RESUME_URL} target="_blank" rel="noopener noreferrer">{t("navigation.cta")}</a>
                     </Button>
                 </div>
 
                 <div className="flex items-center gap-2 xl:hidden">
                     <LanguageSwitcher />
                     <Button asChild size="sm" className="hidden rounded-full px-3 sm:inline-flex lg:px-4">
-                        <a href="#contact">{t("navigation.cta")}</a>
+                        <a href={RESUME_URL} target="_blank" rel="noopener noreferrer">{t("navigation.cta")}</a>
                     </Button>
                     <Sheet>
                         <SheetTrigger asChild>
@@ -198,7 +197,7 @@ const Navbar = () => {
                             <div className="px-4 pb-4">
                                 <SheetClose asChild>
                                     <Button asChild className="w-full rounded-full">
-                                        <a href="#contact">{t("navigation.cta")}</a>
+                                        <a href={RESUME_URL} target="_blank" rel="noopener noreferrer">{t("navigation.cta")}</a>
                                     </Button>
                                 </SheetClose>
                             </div>

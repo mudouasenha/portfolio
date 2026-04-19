@@ -10,13 +10,13 @@
   "projects": "Sistemas de IA e Projetos",
   "projectsViewProject": "Ver projeto (abre em uma nova aba)",
   "technologies": "Tecnologias",
-  "getInTouch":  "Entre em Contato",
+  "getInTouch": "Entre em Contato",
   "certificationsTitle": "Certificações",
   "certificationsIssuedBy": "Emitido por:",
   "certificationsOn": "em",
   "navigation": {
     "menu": "Navegar",
-    "cta": "Contato",
+    "cta": "Ver currículo",
     "role": "Backend, Plataforma, Sistemas de IA"
   },
   "validationFallback": {
@@ -31,7 +31,7 @@
     "title": "Engenheiro de backend e sistemas de IA que transforma restrições de produção em entrega limpa.",
     "subtitle": "Backend .NET, engenharia de plataforma e IA aplicada",
     "lead": "Construo APIs, pipelines de entrega e workflows com IA voltados para produção, com foco forte em confiabilidade, clareza e resultado mensurável.",
-    "primaryCta": "Iniciar conversa",
+    "primaryCta": "Ver currículo",
     "secondaryCta": "Ver trabalhos selecionados",
     "highlights": [
       "Entrega de software em produção desde 2020",
@@ -45,7 +45,14 @@
       "Foco para recrutamento: backend, plataforma, sistemas de IA"
     ],
     "portraitLabel": "Foco atual",
-    "portraitCaption": "Construindo sistemas resilientes de backend e entrega com IA em produção."
+    "portraitCaption": "Construindo sistemas resilientes de backend e entrega com IA em produção.",
+    "recruiterSnapshotLabel": "Resumo para recrutadores",
+    "recruiterSnapshot": [
+      "5+ anos em entrega de software e engenharia backend",
+      "Melhor encaixe: vagas de backend, plataforma e sistemas de IA aplicada",
+      "Stack principal: .NET / C#, SQL Server, Azure, Kubernetes e CI/CD",
+      "Pontos fortes: confiabilidade em produção, enablement com IA e ownership pragmático"
+    ]
   },
   "about": {
     "kicker": "Perfil editorial",
@@ -59,10 +66,10 @@
   "projectsSummary": "Projetos que melhor representam meu perfil em backend, sistemas de IA e qualidade de entrega.",
   "projectsFeaturedLabel": "Caso em destaque",
   "skillsKicker": "Mapa de capacidades",
-  "skillsSummary": "Uma visão estruturada das áreas em que consigo contribuir rapidamente, de entrega backend até enablement com IA.",
+  "skillsSummary": "Áreas de capacidade que complementam a stack principal: arquitetura, enablement com IA, entrega backend e execução de engenharia.",
   "skillsCountLabel": "sinais",
   "technologiesKicker": "Stack principal",
-  "technologiesSummary": "Tecnologias que aparecem com frequência no meu trabalho em produção, e não uma lista genérica de ferramentas que já experimentei.",
+  "technologiesSummary": "Uma visão compacta das ferramentas e plataformas que mais se repetem no trabalho em produção, separadas das capacidades mais amplas de engenharia.",
   "technologiesLeadLabel": "Ferramentas de produção",
   "technologiesLeadTitle": "A stack por trás de entrega backend, trabalho de plataforma e execução prática com IA.",
   "technologiesLeadBody": "Essas são as tecnologias que mais se repetem no meu dia a dia: APIs backend, sistemas de dados, infraestrutura em nuvem e ambientes de entrega com muitas integrações.",
@@ -194,54 +201,98 @@
       "role": "Desenvolvedor Backend Pleno",
       "company": "Way2 Technology",
       "description": "Entreguei serviços de coleta de faturas e telemetria com 11k+ faturas/mês via Azure API Management.\n- Assumi PRs, code review, QA e deploy para garantir entrega pronta para produção.\n- Apliquei DDD, Clean Architecture e SOLID em APIs e enriquecimento de telemetria.",
-      "technologies": [".NET", "Azure", "EF Core", "SQL Server", "GraphQL", "CI/CD", "Testes"]
+      "technologies": [
+        ".NET",
+        "Azure",
+        "EF Core",
+        "SQL Server",
+        "GraphQL",
+        "CI/CD",
+        "Testes"
+      ]
     },
     {
       "year": "2020 - 2021",
       "role": "Estagiário em Desenvolvimento Backend",
       "company": "Way2 Technology",
       "description": "Construí APIs, bancos de dados e serviços de apoio para demandas do produto e fora do roadmap.\n- Transformei demandas pontuais em entregas estáveis com handoffs claros.\n- Mantive times internos desobstruídos enquanto o roadmap seguia avançando.",
-      "technologies": ["Node.js", "SQL Server", ".NET"]
+      "technologies": [
+        "Node.js",
+        "SQL Server",
+        ".NET"
+      ]
     },
     {
       "year": "2020 - 2020",
       "role": "Estagiário em Desenvolvimento Frontend",
       "company": "Pipz Platform",
       "description": "Construí recursos em React e AngularJS para uma plataforma SaaS de automação de marketing.\n- Implementei segmentação de contatos e fluxos de automação com Python e Flask.\n- Contribuí em frontend, API e dados.",
-      "technologies": ["Python", "Flask", "React", "Angular.js", "Postgres"]
+      "technologies": [
+        "Python",
+        "Flask",
+        "React",
+        "Angular.js",
+        "Postgres"
+      ]
     },
     {
       "year": "2016 - 2020",
       "role": "Analista de Suporte Técnico",
       "company": "Dígitro Technology",
       "description": "Apoiei sistemas críticos de telefonia usando UNIX e PostgreSQL.\n- Automatizei operações repetitivas com Shell Script.\n- Traduzi incidentes complexos para clientes não técnicos e minimizei indisponibilidade.",
-      "technologies": ["UNIX", "PostgreSQL", "Shell Script"]
+      "technologies": [
+        "UNIX",
+        "PostgreSQL",
+        "Shell Script"
+      ]
     }
   ],
   "projectsList": [
-  {
-    "id": "cachara-social-platform",
-    "title": "Agente de IA para Leitura de Faturas",
-    "description": "Agente de leitura de faturas orientado à produção, pensado para extração estruturada, validação e roteamento de exceções em uma operação com 11k+ faturas por mês e restrições reais de confiabilidade.",
-    "technologies": [".NET", "OpenAI", "Azure", "SQL Server"]
-  },
-  {
-    "id": "cachara-ai-image-classifier",
-    "title": "Enablement Interno do Claude Code",
-    "description": "Criei onboarding interno para Claude Code com skills reutilizáveis, scaffolds de prompt e guardrails de entrega para acelerar a adoção de workflows agentivos sem reduzir o padrão técnico.",
-    "technologies": ["Claude Code", "Enablement", "Prompts", "Documentação"]
-  },
-  {
-    "id": "portfolio-website",
-    "title": "Code Review com IA no CI/CD",
-    "description": "Integrei review com IA ao CI/CD para resumir diffs, antecipar mudanças arriscadas e manter a aprovação humana como etapa final das decisões de release.",
-    "technologies": ["CI/CD", "GitHub Actions", "IA", "Automação"]
-  },
-  {
-    "id": "monography-data-serialization",
-    "title": "Integrações Pessoais com APIs de IA",
-    "description": "Experimentos pessoais com Gemini e outras APIs, com foco em transformação de imagens, prototipação multimodal e validação rápida de novas capacidades de IA.",
-    "technologies": ["Gemini", "APIs", "Transformação de Imagens", "TypeScript"]
-  }
-]
+    {
+      "id": "cachara-social-platform",
+      "title": "Agente de IA para Leitura de Faturas",
+      "description": "Agente de leitura de faturas orientado à produção, pensado para extração estruturada, validação e roteamento de exceções em uma operação com 11k+ faturas por mês e restrições reais de confiabilidade.",
+      "technologies": [
+        ".NET",
+        "OpenAI",
+        "Azure",
+        "SQL Server"
+      ]
+    },
+    {
+      "id": "cachara-ai-image-classifier",
+      "title": "Enablement Interno do Claude Code",
+      "description": "Criei onboarding interno para Claude Code com skills reutilizáveis, scaffolds de prompt e guardrails de entrega para acelerar a adoção de workflows agentivos sem reduzir o padrão técnico.",
+      "technologies": [
+        "Claude Code",
+        "Enablement",
+        "Prompts",
+        "Documentação"
+      ]
+    },
+    {
+      "id": "portfolio-website",
+      "title": "Code Review com IA no CI/CD",
+      "description": "Integrei review com IA ao CI/CD para resumir diffs, antecipar mudanças arriscadas e manter a aprovação humana como etapa final das decisões de release.",
+      "technologies": [
+        "CI/CD",
+        "GitHub Actions",
+        "IA",
+        "Automação"
+      ]
+    },
+    {
+      "id": "monography-data-serialization",
+      "title": "Integrações Pessoais com APIs de IA",
+      "description": "Experimentos pessoais com Gemini e outras APIs, com foco em transformação de imagens, prototipação multimodal e validação rápida de novas capacidades de IA.",
+      "technologies": [
+        "Gemini",
+        "APIs",
+        "Transformação de Imagens",
+        "TypeScript"
+      ]
+    }
+  ],
+  "certificationsKicker": "Credenciais de apoio",
+  "certificationsSummary": "Certificações relevantes que reforçam aprendizado aplicado em cloud e IA, enquanto experiência e trabalho entregue continuam sendo a principal prova."
 }

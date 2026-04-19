@@ -8,6 +8,20 @@ import SectionShell from "@/components/sections/SectionShell";
 import { adaptExperiences } from "@/features/i18n/contentAdapters";
 import Tag from "./Tag";
 
+const splitExperienceDescription = (description: string) => {
+    const lines = description
+        .split("\n")
+        .map((line) => line.trim())
+        .filter(Boolean);
+
+    const [summary = "", ...bulletLines] = lines;
+
+    return {
+        summary,
+        bullets: bulletLines.map((line) => line.replace(/^[-•]\s*/, "")),
+    };
+};
+
 const Experience = () => {
     const { t } = useTranslation();
     const [isExpanded, setIsExpanded] = useState(false);
@@ -21,7 +35,7 @@ const Experience = () => {
 
     return (
         <SectionShell className="pt-4">
-            <div className="mb-12 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+            <div className="mb-9 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
                 <div>
                     <p className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-muted-foreground">
                         {t("experienceKicker")}
@@ -40,6 +54,7 @@ const Experience = () => {
             <div className="space-y-5">
                 {visibleExperiences.map((experience, index) => {
                     const displayPeriod = experience.date;
+                    const { summary, bullets } = splitExperienceDescription(experience.description);
 
                     return (
                         <motion.div
@@ -49,8 +64,8 @@ const Experience = () => {
                             viewport={{ once: true, amount: 0.15 }}
                             transition={{ duration: 0.4, delay: index * 0.03, ease: "easeOut" }}
                         >
-                            <SectionCard className={index === 0 ? "border-primary/20 bg-primary/[0.045] p-6 sm:p-7" : "p-6 sm:p-7"}>
-                                <div className="grid gap-4 lg:grid-cols-[180px_1fr] lg:gap-8">
+                            <SectionCard className={index === 0 ? "border-primary/20 bg-primary/[0.045] p-5 sm:p-6" : "p-5 sm:p-6"}>
+                                <div className="grid gap-4 lg:grid-cols-[170px_1fr] lg:gap-6">
                                     <div>
                                         <p className="text-xs font-semibold uppercase tracking-[0.24em] text-muted-foreground">{displayPeriod}</p>
                                         {index === 0 ? (
@@ -64,9 +79,17 @@ const Experience = () => {
                                         <p className="mt-2 text-sm font-semibold uppercase tracking-[0.18em] text-muted-foreground">
                                             {experience.company}
                                         </p>
-                                        <p className="mt-4 whitespace-pre-line text-sm leading-relaxed text-muted-foreground sm:text-[0.98rem]">
-                                            {experience.description}
-                                        </p>
+                                        <p className="mt-4 text-sm leading-relaxed text-foreground/90 sm:text-[0.98rem]">{summary}</p>
+                                        {bullets.length > 0 ? (
+                                            <ul className="mt-4 space-y-2 text-sm leading-relaxed text-muted-foreground sm:text-[0.96rem]">
+                                                {bullets.map((bullet) => (
+                                                    <li key={bullet} className="flex gap-2">
+                                                        <span aria-hidden="true" className="mt-1.5 size-1.5 rounded-full bg-primary/70" />
+                                                        <span>{bullet}</span>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        ) : null}
                                         <div className="mt-4 flex flex-wrap">
                                             {experience.technologies.map((tech, techIndex) => (
                                                 <Tag key={`${experience.role}-${tech}`} tagKey={techIndex} text={tech} />

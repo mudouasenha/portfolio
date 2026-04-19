@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 type SectionShellProps = React.ComponentProps<"section">;
 
 const SectionShell = ({ className, ...props }: SectionShellProps) => {
-    return <section className={cn("border-b border-border pb-16 sm:pb-20", className)} {...props} />;
+    return <section className={cn("border-b border-border pb-14 sm:pb-16", className)} {...props} />;
 };
 
 export default SectionShell;

@@ -15,7 +15,7 @@ const Skills = () => {
 
     return (
         <SectionShell className="pt-4">
-            <div className="mb-12 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+            <div className="mb-9 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
                 <div>
                     <p className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-muted-foreground">
                         {t("skillsKicker")}
@@ -36,7 +36,7 @@ const Skills = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.45, ease: "easeOut" }}
-                className="mx-auto grid max-w-6xl grid-cols-1 gap-5 md:grid-cols-2"
+                className="mx-auto grid max-w-6xl grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3"
             >
                 {skills.map((category, index) => (
                     <motion.div
@@ -47,8 +47,8 @@ const Skills = () => {
                         transition={{ duration: 0.35, delay: index * 0.04, ease: "easeOut" }}
                         whileHover={{ scale: 1.02 }}
                     >
-                        <SectionCard className="h-full p-6 sm:p-7">
-                            <div className="mb-5 flex items-start justify-between gap-4">
+                        <SectionCard className="h-full p-5 sm:p-6">
+                            <div className="mb-4 flex items-start justify-between gap-4">
                                 <h3 className="text-2xl font-semibold leading-none text-foreground">{category.name}</h3>
                                 <span className="rounded-full border border-border/80 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
                                     {category.skills.length} {t("skillsCountLabel")}

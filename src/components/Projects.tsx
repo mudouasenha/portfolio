@@ -40,7 +40,7 @@ const Projects = () => {
 
     return (
         <SectionShell className="pt-4">
-            <div className="mb-12 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+            <div className="mb-9 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
                 <div>
                     <p className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-muted-foreground">
                         {t("projectsKicker")}
@@ -56,7 +56,7 @@ const Projects = () => {
                     {t("validationFallback.projects")}
                 </p>
             ) : null}
-            <div className="space-y-5">
+            <div className="space-y-4">
                 {featuredProject ? (
                     <motion.a
                         key={featuredProject.id}
@@ -71,14 +71,14 @@ const Projects = () => {
                         whileHover={{ scale: 1.01 }}
                         className="block rounded-[1.4rem] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                     >
-                        <SectionCard className="overflow-hidden border-primary/15 bg-primary/[0.045] p-5 sm:p-6">
-                            <div className="grid gap-6 lg:grid-cols-[320px_1fr] lg:items-center">
+                        <SectionCard className="overflow-hidden border-primary/15 bg-primary/[0.045] p-4 sm:p-5">
+                            <div className="grid gap-5 lg:grid-cols-[280px_1fr] lg:items-center">
                                 <img
                                     src={featuredProject.image}
                                     width={300}
                                     height={250}
                                     alt={`${featuredProject.title} preview`}
-                                    className="h-52 w-full rounded-[1.2rem] border border-border object-cover"
+                                    className="h-44 w-full rounded-[1.2rem] border border-border object-cover"
                                 />
                                 <div>
                                     <span className="inline-flex rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
@@ -99,7 +99,7 @@ const Projects = () => {
                         </SectionCard>
                     </motion.a>
                 ) : null}
-                <div className="grid gap-5 lg:grid-cols-3">
+                <div className="grid gap-4 lg:grid-cols-3">
                     {supportingProjects.map((project, index) => (
                         <motion.a
                             key={project.id}
@@ -114,13 +114,13 @@ const Projects = () => {
                             whileHover={{ scale: 1.02 }}
                             className="block rounded-[1.4rem] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                         >
-                            <SectionCard className="flex h-full flex-col overflow-hidden p-5">
+                            <SectionCard className="flex h-full flex-col overflow-hidden p-4">
                                 <img
                                     src={project.image}
                                     width={300}
                                     height={250}
                                     alt={`${project.title} preview`}
-                                    className="h-40 w-full rounded-[1rem] border border-border object-cover"
+                                    className="h-32 w-full rounded-[1rem] border border-border object-cover"
                                 />
                                 <div className="flex h-full flex-col">
                                     <h3 className="mt-4 text-2xl font-semibold leading-none text-foreground">{project.title}</h3>

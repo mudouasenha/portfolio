@@ -4,8 +4,8 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const LANGUAGES = [
-    { code: "en", flag: "🇺🇸", label: "EN" },
-    { code: "pt", flag: "🇧🇷", label: "PT" },
+    { code: "en", label: "EN" },
+    { code: "pt", label: "PT" },
 ];
 
 export const LanguageSwitcher = () => {
@@ -33,7 +33,7 @@ export const LanguageSwitcher = () => {
     };
 
     return (
-        <div className="inline-flex items-center rounded-lg border border-border bg-background p-0.5">
+        <div className="inline-flex items-center rounded-full border border-border/80 bg-background/90 p-0.5 shadow-xs">
             {LANGUAGES.map((lang) => {
                 const isActive = activeCode === lang.code;
                 return (
@@ -42,12 +42,11 @@ export const LanguageSwitcher = () => {
                         type="button"
                         variant={isActive ? "default" : "ghost"}
                         size="xs"
-                        className="h-7 px-2 text-xs"
+                        className="h-7 rounded-full px-2.5 text-[11px] font-semibold uppercase tracking-[0.14em]"
                         onClick={() => handleLanguageChange(lang.code)}
                         aria-pressed={isActive}
                         aria-label={`Switch language to ${lang.label}`}
                     >
-                        <span aria-hidden="true">{lang.flag}</span>
                         <span>{lang.label}</span>
                     </Button>
                 );
