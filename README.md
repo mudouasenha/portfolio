@@ -1,6 +1,6 @@
 # Portfolio — Personal Website
 
-Personal portfolio application built with React + TypeScript.  
+Personal portfolio application built with React 18 + TypeScript.  
 It presents projects, skills, certifications, contact information, and professional experience with bilingual support (`pt` and `en`).
 
 ## Live Demo
@@ -8,6 +8,20 @@ It presents projects, skills, certifications, contact information, and professio
 - [Visit My Portfolio](https://portfolio-matheus-miranda-torres-gomes-projects.vercel.app/)
 
 ![website sample](image.png)
+
+## Design System
+
+The visual design system is documented in **`DESIGN.md`** at the repository root. This is the canonical reference for:
+
+- Color tokens (OKLCH values, semantic roles, CSS variables)
+- Typography (Cormorant Garamond headings, Manrope body, exact sizes and weights)
+- Component specifications (buttons, cards, navbar, tags — exact CSS values)
+- Layout principles, spacing, grid patterns, and border radius scale
+- Shadow/elevation levels and frosted-glass conventions
+- Responsive breakpoints and collapsing strategy
+- Do's and Don'ts guardrails for consistent UI
+
+**Any UI change should reference `DESIGN.md` to stay consistent with the established design language.**
 
 ## Prerequisites
 
@@ -46,7 +60,7 @@ If you already started Chrome manually with remote debugging enabled, use `Attac
 ## Build & Test Commands
 
 ```bash
-# Build (TypeScript + Vite)
+# Build (TypeScript check + Vite)
 npm run build
 
 # Run Storybook locally
@@ -66,21 +80,30 @@ npm run lint
 
 # Preview production build
 npm run preview
+
+# Integration tests (Vitest)
+npm run test:integration
+
+# Accessibility scans (Playwright + axe-core)
+npm run test:a11y
+
+# Full Phase 3 verification
+npm run verify:phase3
 ```
 
 ## Storybook
 
-This repo now includes Storybook for isolated component development and documentation.
+This repo includes Storybook for isolated component development and documentation.
 
 ```bash
 # Start Storybook on http://localhost:6006
-rtk npm run storybook
+npm run storybook
 
 # Build the static Storybook output into storybook-static/
-rtk npm run build-storybook
+npm run build-storybook
 ```
 
-Initial stories cover foundational UI and layout primitives under `src/components/ui/` and `src/components/sections/`.
+Stories cover UI primitives (`src/components/ui/`), section components (`src/components/sections/`), and page-level sections (`src/components/`).
 
 ## Boneyard Skeletons
 
@@ -100,20 +123,10 @@ Final sign-off instructions and evidence placeholders are tracked in:
 Verification command suite:
 
 ```bash
-rtk npm run lint
-rtk npm run build
-rtk npm run test:integration
-rtk npm run test:a11y
-```
-
-## Accessibility Runtime Dependencies
-
-Linux host libraries must be installed before a11y scans can launch Playwright Chromium.
-
-```bash
-rtk npm run a11y:install-deps
-rtk npm run test:a11y
-rtk npm run verify:phase3
+npm run lint
+npm run build
+npm run test:integration
+npm run test:a11y
 ```
 
 ## Build Baseline Recovery
@@ -126,28 +139,38 @@ npm install
 npm run verify:baseline
 ```
 
-This is the required Phase 1 baseline flow before marking work as done.
-
 ## Technology Stack
 
 - **Framework:** React 18
 - **Language:** TypeScript
 - **Build Tool:** Vite
-- **Styling:** TailwindCSS
+- **Styling:** TailwindCSS + shadcn/ui (radix-vega style)
 - **Routing:** React Router
-- **Localization:** i18next + react-i18next
-- **Animation:** Motion
+- **Localization:** i18next + react-i18next (`en` and `pt`)
+- **Animation:** Framer Motion (`motion/react`)
+- **Icons:** Lucide React + react-icons (brands)
+- **State Utilities:** CVA (class-variance-authority), clsx + tailwind-merge
+- **Component Primitives:** Radix UI
+- **Skeleton Loading:** boneyard-js
+- **Testing:** Vitest (integration), Playwright + axe-core (a11y)
+- **Storybook:** v10 with addon-a11y and addon-docs
 - **Deployment:** Vercel
 
 ## Repository Structure
 
 | Path | Purpose |
 |---|---|
-| `src/components/` | Page sections and reusable UI blocks |
-| `src/models/` | Typed content models (`Project`, `SkillSet`, `ExperienceItem`, etc.) |
-| `src/locales/` | Translation dictionaries (`en` and `pt`) |
+| `DESIGN.md` | Canonical design system — colors, typography, components, layout rules |
+| `src/components/` | Page sections (Hero, About, Experience, Projects, Skills, Technologies, Certifications, Contact, Navbar, LanguageSwitcher, Tag) |
+| `src/components/ui/` | Reusable UI primitives (Button, NavigationMenu, Sheet) — shadcn/ui |
+| `src/components/sections/` | Shared section layout primitives (SectionCard, SectionHeader, SectionShell) |
+| `src/models/` | Typed content models (`Project`, `SkillSet`, `ExperienceItem`, `Certification`, `ContactInfo`, `Languages`) |
+| `src/locales/` | Translation dictionaries (`en/` and `pt/`) |
 | `src/assets/` | Images for profile, projects, and certifications |
 | `src/constants/` | Shared constants and static labels |
+| `src/bones/` | Boneyard skeleton registry and generated bones |
+| `tests/` | Integration tests (`tests/integration/`) and a11y scans (`tests/a11y/`) |
+| `.planning/codebase/` | Architecture, structure, conventions, stack, and testing docs |
 | `public/` | Public static assets |
 
 ## Content Update Guide
@@ -162,3 +185,4 @@ This is the required Phase 1 baseline flow before marking work as done.
 - Keep changes aligned with current folder organization.
 - Prefer small, focused pull requests.
 - Validate with `npm run lint` and `npm run build` before opening a PR.
+- Any visual changes should respect the design system in `DESIGN.md`.
