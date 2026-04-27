@@ -1,16 +1,87 @@
 {
   "aboutMe": "About <1>Me</1>",
+  "aboutNav": "About",
+  "skillsTitle": "Skills",
   "experience": "Experience",
-  "projects": "Projects",
+  "experienceCollapse": {
+    "showMore": "Show {{count}} more experiences",
+    "showLess": "Show less"
+  },
+  "projects": "AI Systems & Projects",
+  "projectsViewProject": "View project (opens in a new tab)",
   "technologies": "Technologies",
-  "getInTouch":  "Get In Touch",
+  "getInTouch": "Get In Touch",
+  "certificationsTitle": "Certifications",
+  "certificationsIssuedBy": "Issued by:",
+  "certificationsOn": "on",
+  "navigation": {
+    "menu": "Navigate",
+    "cta": "View résumé",
+    "role": "Backend, Platform, AI Systems"
+  },
+  "validationFallback": {
+    "skills": "Some skill entries could not be displayed.",
+    "projects": "Some project entries could not be displayed.",
+    "experience": "Some experience entries could not be displayed.",
+    "certifications": "Some certification entries could not be displayed.",
+    "contact": "Some contact details could not be displayed."
+  },
   "hero": {
-    "content": "I am a .NET developer with professional software development experience since 2020, specializing in C#, .NET, MS SQL, Azure, and related technologies. I have a strong passion for creating clean, scalable, and maintainable solutions, always prioritizing concise and readable code.\n\nExperienced in agile environments, I excel at collaborating with diverse teams to deliver high-quality software efficiently. I am fluent in English, adaptable to new challenges, and currently enhancing my expertise in microservices, Azure, Domain-Driven Design (DDD), and AI programming to deliver even more robust and modern solutions."
+    "eyebrow": "Recruiter-ready profile",
+    "title": "Backend and AI systems engineer turning production constraints into clean delivery.",
+    "subtitle": ".NET backend, platform engineering, and applied AI",
+    "lead": "I build production-grade APIs, delivery pipelines, and AI-enabled workflows with a strong bias toward reliability, clarity, and measurable business outcomes.",
+    "primaryCta": "View résumé",
+    "secondaryCta": "Review selected work",
+    "highlights": [
+      "Production software delivery since 2020",
+      "11k+ invoices/month backend context",
+      "R$4k/month infrastructure cost reduction"
+    ],
+    "proofStrip": [
+      ".NET / C# + APIs + cloud architecture",
+      "DevOps: Kubernetes, Azure DevOps, Google Cloud",
+      "Leading internal agentic AI practices",
+      "Recruiter focus: backend, platform, AI systems"
+    ],
+    "portraitLabel": "Current focus",
+    "portraitCaption": "Building resilient backend and AI delivery systems in production.",
+    "recruiterSnapshotLabel": "Recruiter snapshot",
+    "recruiterSnapshot": [
+      "5+ years in software delivery and backend engineering",
+      "Best fit: backend, platform, and applied AI systems roles",
+      "Core stack: .NET / C#, SQL Server, Azure, Kubernetes, CI/CD",
+      "Strengths: production reliability, AI enablement, and pragmatic ownership"
+    ]
   },
   "about": {
-    "text": "I am a dedicated and versatile backend developer, passionate about building **robust, modern, and maintainable solutions**. With **5 years** of professional experience, I have worked with various systems and technologies, contributing to the entire **Software Development Life Cycle (SDLC)** while ensuring **scalability and business value**.\n\nMy journey began in high school, where I obtained a technical diploma in Telecommunications and developed a deep curiosity about how the internet and software systems work. Starting in technical support, I transitioned to backend development, continuously seeking to **learn, improve, and adapt to new challenges**.\n\nI thrive in **collaborative and high-communication environments**, where I can exchange knowledge with colleagues and other business areas. With experience in **solving complex and critical problems**, I am dedicated to delivering **high-quality and robust solutions** that make a real impact. My stack includes **.NET, Azure, Entity Framework, MSSQL, PostgreSQL**, among others.\n\nOutside of programming, I enjoy going to the gym, spending time with family and friends, and exploring new technologies. I also love refining my code, researching best practices, and watching technical content on YouTube."
+    "kicker": "Editorial profile",
+    "summary": "Production-minded engineering with infrastructure awareness, system design discipline, and practical AI execution.",
+    "text": "I build backend and AI systems with a strong production mindset, focusing on **reliability, clarity, and measurable outcomes**.\n\nIn my current work, I lead and structure **agentic AI development processes**, using **spec-driven development** to align requirements, implementation, and validation. I also design reusable internal tooling for **Claude Code usage**, create shared AI **skills and workflows**, and mentor engineers on practical AI delivery patterns.\n\nI am building a production-oriented **AI Agent for bill parsing** and integrating **AI-assisted code review** into CI/CD with human validation gates. My goal is to improve engineering speed and quality without sacrificing ownership or standards.\n\nI also operate in DevOps-related domains, including **Kubernetes**, **Azure DevOps**, and **Google Cloud**, connecting application delivery with infrastructure reliability.\n\nCore stack: **.NET / C#**, **PostgreSQL and SQL Server**, **Azure and Google Cloud**, CI/CD automation, and AI API integrations (including personal projects with Gemini image transformation)."
   },
+  "experienceKicker": "Career record",
+  "experienceSummary": "Roles and outcomes that show a progression from execution to ownership in backend and platform delivery.",
+  "experienceCurrentRole": "Current role",
+  "projectsKicker": "Selected work",
+  "projectsSummary": "Projects that best represent my backend, AI systems, and delivery mindset.",
+  "projectsFeaturedLabel": "Featured case",
+  "skillsKicker": "Capability map",
+  "skillsSummary": "Capability areas that complement the core stack: system design, AI enablement, backend delivery, and engineering execution.",
+  "skillsCountLabel": "signals",
+  "technologiesKicker": "Core stack",
+  "technologiesSummary": "A compact view of the tools and platforms that appear repeatedly in production work, separate from broader engineering capabilities.",
+  "technologiesLeadLabel": "Production tools",
+  "technologiesLeadTitle": "The stack behind backend delivery, platform work, and applied AI execution.",
+  "technologiesLeadBody": "These are the technologies that show up repeatedly in my day-to-day work: backend APIs, data systems, cloud infrastructure, and integration-heavy delivery environments.",
   "certifications": [
+    {
+      "id": "ai-for-devs-branas",
+      "name": "Artificial Intelligence for Devs",
+      "issued_by": "branas.io",
+      "date": "2025-12-01",
+      "description": "Developed skills in using AI agents, spec-driven design, agentic AI development, and AI fluency. Credential ID: e9f3d49f-1da3-4278-acc4-132d67b1fb36.",
+      "url": "https://ll-app-certificates.s3.sa-east-1.amazonaws.com/e9f3d49f-1da3-4278-acc4-132d67b1fb36.png"
+    },
     {
       "id": "azure-fundamentals",
       "name": "Azure Fundamentals (AZ-900)",
@@ -21,9 +92,17 @@
     }
   ],
   "contact": {
+    "kicker": "Hiring conversations",
+    "summary": "The strongest fit is backend, platform, or AI-systems work where delivery quality matters.",
+    "title": "Available for recruiter and hiring-manager conversations.",
+    "body": "If you are hiring for backend engineering, platform work, or applied AI systems, LinkedIn is the fastest way to reach me. I reply with context, not buzzwords.",
+    "locationLabel": "Location",
+    "responseLabel": "Preferred contact",
+    "linkedinCta": "Message on LinkedIn",
+    "githubCta": "Review GitHub",
     "address": "Florianopolis, SC, Brazil",
-    "phoneNo": "Phone number: Contact me at LinkedIn",
-    "email": "Email: contact.me@linkedin"
+    "phoneNo": "Fastest response on LinkedIn",
+    "email": "Available on request"
   },
   "languages": {
     "Portuguese": "Native",
@@ -31,6 +110,19 @@
     "Spanish": "Intermediate"
   },
   "skills": [
+    {
+      "name": "AI Engineering & Agentic Systems",
+      "skills": [
+        "Spec-Driven Development",
+        "Agentic AI Workflows",
+        "Claude Code Enablement",
+        "Reusable AI Skills",
+        "AI Code Review in CI/CD",
+        "Prompt Engineering",
+        "OpenAI APIs",
+        "Gemini APIs"
+      ]
+    },
     {
       "name": "Programming and Frameworks",
       "skills": [
@@ -58,6 +150,9 @@
       "name": "Cloud & DevOps",
       "skills": [
         "Azure",
+        "Google Cloud",
+        "Kubernetes",
+        "Azure DevOps",
         "CI/CD",
         "Azure API Management",
         "Docker",
@@ -105,7 +200,7 @@
       "year": "2021 - Present",
       "role": "Mid-Level Backend Developer",
       "company": "Way2 Technology",
-      "description": "Designed and developed enterprise-level microservice applications of an Invoice Collection and Processing Engine, responsible for providing access to over 11k invoices/month via Azure API Management. Developed and maintained scalable systems and APIs for a telemetry data management ecosystem. Enriched and analyzed system metrics by integrating microservices with telemetry using ElasticSearch. Pull requests, code reviews, QA testing, and deployment were part of the daily routine. Learned, put in practice and reinforced Domain Driven Design, Clean Architecture and SOLID concepts in daily basis development.",
+      "description": "Shipped invoice collection and telemetry services exposing 11k+ invoices/month through Azure API Management.\n- Owned PRs, code reviews, QA, and deployment for release-ready delivery.\n- Applied DDD, Clean Architecture, and SOLID in production APIs and telemetry enrichment.",
       "technologies": [
         ".NET",
         "Azure",
@@ -113,7 +208,6 @@
         "SQL Server",
         "GraphQL",
         "CI/CD",
-        "Hangfire",
         "Testing"
       ]
     },
@@ -121,7 +215,7 @@
       "year": "2020 - 2021",
       "role": "Backend Developer Intern",
       "company": "Way2 Technology",
-      "description": "Developed and maintained APIs, databases and services to serve solutions inside and outside the product roadmap.",
+      "description": "Built APIs, databases, and support services for product and out-of-roadmap requests.\n- Turned ad hoc work into stable delivery with clear handoffs.\n- Kept internal teams unblocked while the roadmap kept moving.",
       "technologies": [
         "Node.js",
         "SQL Server",
@@ -132,7 +226,7 @@
       "year": "2020 - 2020",
       "role": "Frontend Developer Intern",
       "company": "Pipz Platform",
-      "description": "Developed and maintained frontend applications of a Marketing Automation SaaS Platform using React and AngularJS. Implemented marketing automation and contact segmentation using Python and Flask.",
+      "description": "Built React and AngularJS features for a marketing automation SaaS platform.\n- Implemented contact segmentation and automation flows with Python and Flask.\n- Contributed across frontend, API, and data layers.",
       "technologies": [
         "Python",
         "Flask",
@@ -145,7 +239,7 @@
       "year": "2016 - 2020",
       "role": "Technical Support Analyst",
       "company": "Dígitro Technology",
-      "description": "Analyzed, and maintained high-security, critical telephony systems using UNIX and PostgreSQL. Developed automation and optimization scripts using Shell Script. Assisted non-technical clients with clear communication and support, simplifying complex technical concepts for end-users, in diagnosing and resolving urgent issues to minimize downtime.",
+      "description": "Supported high-security telephony systems using UNIX and PostgreSQL.\n- Automated repetitive operations with shell scripts.\n- Translated complex incidents for non-technical clients and minimized downtime.",
       "technologies": [
         "UNIX",
         "PostgreSQL",
@@ -154,30 +248,51 @@
     }
   ],
   "projectsList": [
-  {
-    "id": "cachara-social-platform",
-    "title": "Cachara Social Platform (In Progress...)",
-    "description": "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
-    "technologies": [".NET", "SQL Server", "Microservices", "Redis", "DDD", "MongoDB"]
-  },
-  {
-    "id": "cachara-ai-image-classifier",
-    "title": "Cachara AI Image classifier and data extraction Platform (In Progress...)",
-    "description": "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
-    "technologies": [".NET", "OpenAI", "ML.NET", "Next.js", "React"]
-  },
-  {
-    "id": "portfolio-website",
-    "title": "Portfolio Website",
-    "description": "A personal portfolio website showcasing projects, skills, and contact information.",
-    "technologies": ["HTML", "CSS", "React", "Tailwindcss"]
-  },
-  {
-    "id": "monography-data-serialization",
-    "title": "Monography - Data Serialization Techniques evaluation",
-    "description": "Evaluation of Serialization Strategies for Communication in Distributed Systems.",
-    "technologies": [".NET", "R", "MessagePack", "Protobuf", "Grafana k6", "BenchmarkDotNet"]
-  }
-]
-
+    {
+      "id": "cachara-social-platform",
+      "title": "AI Agent for Bill Parsing",
+      "description": "Production-oriented bill parsing agent designed for structured extraction, validation, and exception routing in an operation with 11k+ invoices per month and real reliability constraints.",
+      "technologies": [
+        ".NET",
+        "OpenAI",
+        "Azure",
+        "SQL Server"
+      ]
+    },
+    {
+      "id": "cachara-ai-image-classifier",
+      "title": "Internal Claude Code Enablement",
+      "description": "Built internal Claude Code onboarding with reusable skills, prompt scaffolds, and delivery guardrails so engineers could adopt agentic workflows faster without lowering standards.",
+      "technologies": [
+        "Claude Code",
+        "Enablement",
+        "Prompting",
+        "Documentation"
+      ]
+    },
+    {
+      "id": "portfolio-website",
+      "title": "AI Code Review in CI/CD",
+      "description": "Integrated AI review into CI/CD to summarize diffs, surface risky changes earlier, and preserve human approval as the final gate for release decisions.",
+      "technologies": [
+        "CI/CD",
+        "GitHub Actions",
+        "AI Review",
+        "Automation"
+      ]
+    },
+    {
+      "id": "monography-data-serialization",
+      "title": "Personal AI API Integrations",
+      "description": "Personal API experiments with Gemini and other tools, focused on image transformation workflows, multimodal prototyping, and fast validation of new AI capabilities.",
+      "technologies": [
+        "Gemini",
+        "APIs",
+        "Image Transformation",
+        "TypeScript"
+      ]
+    }
+  ],
+  "certificationsKicker": "Supporting credentials",
+  "certificationsSummary": "Relevant certifications that reinforce applied cloud and AI learning, while experience and shipped work remain the main proof."
 }

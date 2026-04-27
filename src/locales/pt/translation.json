@@ -1,16 +1,87 @@
 {
   "aboutMe": "Sobre <1>Mim</1>",
+  "aboutNav": "Sobre",
+  "skillsTitle": "Habilidades",
   "experience": "Experiência",
-  "projects": "Projetos",
+  "experienceCollapse": {
+    "showMore": "Mostrar mais {{count}} experiências",
+    "showLess": "Mostrar menos"
+  },
+  "projects": "Sistemas de IA e Projetos",
+  "projectsViewProject": "Ver projeto (abre em uma nova aba)",
   "technologies": "Tecnologias",
-  "getInTouch":  "Entre em Contato",
+  "getInTouch": "Entre em Contato",
+  "certificationsTitle": "Certificações",
+  "certificationsIssuedBy": "Emitido por:",
+  "certificationsOn": "em",
+  "navigation": {
+    "menu": "Navegar",
+    "cta": "Ver currículo",
+    "role": "Backend, Plataforma, Sistemas de IA"
+  },
+  "validationFallback": {
+    "skills": "Alguns itens de habilidades não puderam ser exibidos.",
+    "projects": "Alguns itens de projetos não puderam ser exibidos.",
+    "experience": "Alguns itens de experiência não puderam ser exibidos.",
+    "certifications": "Alguns itens de certificações não puderam ser exibidos.",
+    "contact": "Alguns dados de contato não puderam ser exibidos."
+  },
   "hero": {
-    "content": "Sou um desenvolvedor .NET com experiência profissional em desenvolvimento de software desde 2020, especializado em C#, .NET, MS SQL, Azure e tecnologias relacionadas. Tenho uma forte paixão por criar soluções limpas, escaláveis e fáceis de manter, sempre priorizando código conciso e legível.\n\nExperiente em ambientes ágeis, destaco-me na colaboração com equipes diversas para entregar software de alta qualidade de forma eficiente. Sou fluente em inglês, adaptável a novos desafios e atualmente aprimorando minha expertise em microserviços, Azure, Domain-Driven Design (DDD) e programação de IA para entregar soluções ainda mais robustas e modernas."
+    "eyebrow": "Perfil pronto para recrutadores",
+    "title": "Engenheiro de backend e sistemas de IA que transforma restrições de produção em entrega limpa.",
+    "subtitle": "Backend .NET, engenharia de plataforma e IA aplicada",
+    "lead": "Construo APIs, pipelines de entrega e workflows com IA voltados para produção, com foco forte em confiabilidade, clareza e resultado mensurável.",
+    "primaryCta": "Ver currículo",
+    "secondaryCta": "Ver trabalhos selecionados",
+    "highlights": [
+      "Entrega de software em produção desde 2020",
+      "Contexto de backend com 11k+ faturas/mês",
+      "Redução de R$4k/mês em infraestrutura"
+    ],
+    "proofStrip": [
+      ".NET / C# + APIs + arquitetura em nuvem",
+      "DevOps: Kubernetes, Azure DevOps e Google Cloud",
+      "Liderança em práticas internas de IA agentiva",
+      "Foco para recrutamento: backend, plataforma, sistemas de IA"
+    ],
+    "portraitLabel": "Foco atual",
+    "portraitCaption": "Construindo sistemas resilientes de backend e entrega com IA em produção.",
+    "recruiterSnapshotLabel": "Resumo para recrutadores",
+    "recruiterSnapshot": [
+      "5+ anos em entrega de software e engenharia backend",
+      "Melhor encaixe: vagas de backend, plataforma e sistemas de IA aplicada",
+      "Stack principal: .NET / C#, SQL Server, Azure, Kubernetes e CI/CD",
+      "Pontos fortes: confiabilidade em produção, enablement com IA e ownership pragmático"
+    ]
   },
   "about": {
-    "text": "Sou um desenvolvedor backend dedicado e versátil, apaixonado por construir soluções **robustas, modernas e fáceis de manter**. Com **5 anos** de experiência profissional, trabalhei com diversos sistemas e tecnologias, contribuindo para todo o **Ciclo de Vida do Desenvolvimento de Software (SDLC)**, sempre garantindo **escalabilidade e valor para o negócio**.\n\nMinha jornada começou no ensino médio, onde obtive um diploma técnico em Telecomunicações e desenvolvi uma profunda curiosidade sobre o funcionamento da internet e dos sistemas de software. Começando no suporte técnico, migrei para o desenvolvimento backend, buscando continuamente **aprender, melhorar e me adaptar a novos desafios**.\n\nEu prospero em ambientes **colaborativos e com alta comunicação**, onde posso trocar conhecimentos com colegas e outras áreas do negócio. Com experiência em **resolver problemas complexos e críticos**, sou dedicado a entregar soluções **de alta qualidade e robustas** que geram impacto real. Minha stack inclui **.NET, Azure, Entity Framework, MSSQL, PostgreSQL** entre outras.\n\nFora da programação, gosto de ir à academia, passar tempo com família e amigos, e explorar novas tecnologias. Também adoro refinar meu código, pesquisar boas práticas e assistir conteúdos técnicos no YouTube."
+    "kicker": "Perfil editorial",
+    "summary": "Engenharia com mentalidade de produção, atenção à infraestrutura, disciplina de arquitetura e execução prática com IA.",
+    "text": "Construo sistemas de backend e IA com forte mindset de produção, priorizando **confiabilidade, clareza e resultado mensurável**.\n\nNo trabalho atual, lidero e estruturo processos de **desenvolvimento de IA agentiva**, usando **desenvolvimento orientado por specs** para alinhar requisitos, implementação e validação. Também desenho tooling interno reutilizável para **uso de Claude Code**, crio **skills e workflows** compartilháveis e faço mentoria do time em práticas de entrega com IA.\n\nEstou construindo um **Agente de IA para leitura de faturas** com foco em produção e integrando **code review assistido por IA** ao CI/CD com etapas de validação humana. O objetivo é aumentar velocidade e qualidade de entrega sem perder padrão técnico.\n\nTambém atuo em frentes de DevOps, incluindo **Kubernetes**, **Azure DevOps** e **Google Cloud**, conectando entrega de aplicação com confiabilidade de infraestrutura.\n\nStack principal: **.NET / C#**, **PostgreSQL e SQL Server**, **Azure e Google Cloud**, automação de CI/CD e integrações com APIs de IA (incluindo projetos pessoais com transformação de imagens via Gemini)."
   },
+  "experienceKicker": "Trajetória",
+  "experienceSummary": "Papéis e resultados que mostram a evolução de execução para ownership em backend e entrega de plataforma.",
+  "experienceCurrentRole": "Cargo atual",
+  "projectsKicker": "Trabalhos selecionados",
+  "projectsSummary": "Projetos que melhor representam meu perfil em backend, sistemas de IA e qualidade de entrega.",
+  "projectsFeaturedLabel": "Caso em destaque",
+  "skillsKicker": "Mapa de capacidades",
+  "skillsSummary": "Áreas de capacidade que complementam a stack principal: arquitetura, enablement com IA, entrega backend e execução de engenharia.",
+  "skillsCountLabel": "sinais",
+  "technologiesKicker": "Stack principal",
+  "technologiesSummary": "Uma visão compacta das ferramentas e plataformas que mais se repetem no trabalho em produção, separadas das capacidades mais amplas de engenharia.",
+  "technologiesLeadLabel": "Ferramentas de produção",
+  "technologiesLeadTitle": "A stack por trás de entrega backend, trabalho de plataforma e execução prática com IA.",
+  "technologiesLeadBody": "Essas são as tecnologias que mais se repetem no meu dia a dia: APIs backend, sistemas de dados, infraestrutura em nuvem e ambientes de entrega com muitas integrações.",
   "certifications": [
+    {
+      "id": "ai-for-devs-branas",
+      "name": "Artificial Inteligence for Devs",
+      "issued_by": "branas.io",
+      "date": "2025-12-01",
+      "description": "Desenvolveu habilidades no uso de agentes de IA, spec-driven design, agentic AI development e AI fluency. Credential ID: e9f3d49f-1da3-4278-acc4-132d67b1fb36.",
+      "url": "https://ll-app-certificates.s3.sa-east-1.amazonaws.com/e9f3d49f-1da3-4278-acc4-132d67b1fb36.png"
+    },
     {
       "id": "azure-fundamentals",
       "name": "Fundamentos do Azure (AZ-900)",
@@ -21,9 +92,17 @@
     }
   ],
   "contact": {
+    "kicker": "Conversas de contratação",
+    "summary": "O melhor encaixe é para vagas de backend, plataforma ou sistemas de IA onde qualidade de entrega realmente importa.",
+    "title": "Disponível para conversar com recrutadores e gestores de contratação.",
+    "body": "Se você está contratando para backend, plataforma ou sistemas de IA aplicada, o LinkedIn é a forma mais rápida de falar comigo. Eu respondo com contexto, não com buzzwords.",
+    "locationLabel": "Localização",
+    "responseLabel": "Contato preferencial",
+    "linkedinCta": "Chamar no LinkedIn",
+    "githubCta": "Ver GitHub",
     "address": "Florianópolis, SC, Brasil",
-    "phoneNo": "Telefone: Contate-me pelo LinkedIn",
-    "email": "Email: contact.me@linkedin"
+    "phoneNo": "Resposta mais rápida pelo LinkedIn",
+    "email": "Disponível sob solicitação"
   },
   "languages": {
     "Portuguese": "Nativo",
@@ -31,6 +110,19 @@
     "Spanish": "Intermediário"
   },
   "skills": [
+    {
+      "name": "Engenharia de IA e Sistemas Agentivos",
+      "skills": [
+        "Desenvolvimento Orientado por Specs",
+        "Workflows de IA Agentiva",
+        "Enablement com Claude Code",
+        "Skills de IA Reutilizáveis",
+        "Code Review com IA no CI/CD",
+        "Engenharia de Prompt",
+        "APIs da OpenAI",
+        "APIs do Gemini"
+      ]
+    },
     {
       "name": "Programação e Frameworks",
       "skills": [
@@ -58,6 +150,9 @@
       "name": "Cloud & DevOps",
       "skills": [
         "Azure",
+        "Google Cloud",
+        "Kubernetes",
+        "Azure DevOps",
         "CI/CD",
         "Azure API Management",
         "Docker",
@@ -105,7 +200,7 @@
       "year": "2021 - Presente",
       "role": "Desenvolvedor Backend Pleno",
       "company": "Way2 Technology",
-      "description": "Projetei e desenvolvi aplicações de microsserviços de nível empresarial para um motor de Coleta e Processamento de Faturas, responsável por fornecer acesso a mais de 11 mil faturas/mês via Azure API Management. Desenvolvi e mantive sistemas e APIs escaláveis para um ecossistema de gestão de dados de telemetria. Enriquece e analisei métricas do sistema integrando microsserviços com ElasticSearch. Pull requests, revisões de código, testes de QA e deploy faziam parte da rotina diária. Aprendi, pratiquei e reforcei conceitos de Domain Driven Design, Clean Architecture e SOLID no desenvolvimento cotidiano.",
+      "description": "Entreguei serviços de coleta de faturas e telemetria com 11k+ faturas/mês via Azure API Management.\n- Assumi PRs, code review, QA e deploy para garantir entrega pronta para produção.\n- Apliquei DDD, Clean Architecture e SOLID em APIs e enriquecimento de telemetria.",
       "technologies": [
         ".NET",
         "Azure",
@@ -113,7 +208,6 @@
         "SQL Server",
         "GraphQL",
         "CI/CD",
-        "Hangfire",
         "Testes"
       ]
     },
@@ -121,7 +215,7 @@
       "year": "2020 - 2021",
       "role": "Estagiário em Desenvolvimento Backend",
       "company": "Way2 Technology",
-      "description": "Desenvolvi e mantive APIs, bancos de dados e serviços para atender soluções dentro e fora do roadmap do produto.",
+      "description": "Construí APIs, bancos de dados e serviços de apoio para demandas do produto e fora do roadmap.\n- Transformei demandas pontuais em entregas estáveis com handoffs claros.\n- Mantive times internos desobstruídos enquanto o roadmap seguia avançando.",
       "technologies": [
         "Node.js",
         "SQL Server",
@@ -132,7 +226,7 @@
       "year": "2020 - 2020",
       "role": "Estagiário em Desenvolvimento Frontend",
       "company": "Pipz Platform",
-      "description": "Desenvolvi e mantive aplicações frontend de uma plataforma SaaS de Automação de Marketing usando React e AngularJS. Implementei automação de marketing e segmentação de contatos usando Python e Flask.",
+      "description": "Construí recursos em React e AngularJS para uma plataforma SaaS de automação de marketing.\n- Implementei segmentação de contatos e fluxos de automação com Python e Flask.\n- Contribuí em frontend, API e dados.",
       "technologies": [
         "Python",
         "Flask",
@@ -145,7 +239,7 @@
       "year": "2016 - 2020",
       "role": "Analista de Suporte Técnico",
       "company": "Dígitro Technology",
-      "description": "Analisei e mantive sistemas críticos de telefonia de alta segurança usando UNIX e PostgreSQL. Desenvolvi scripts de automação e otimização usando Shell Script. Auxiliei clientes não técnicos com comunicação clara, simplificando conceitos técnicos complexos e resolvendo problemas urgentes para minimizar tempo de inatividade.",
+      "description": "Apoiei sistemas críticos de telefonia usando UNIX e PostgreSQL.\n- Automatizei operações repetitivas com Shell Script.\n- Traduzi incidentes complexos para clientes não técnicos e minimizei indisponibilidade.",
       "technologies": [
         "UNIX",
         "PostgreSQL",
@@ -154,29 +248,51 @@
     }
   ],
   "projectsList": [
-  {
-    "id": "cachara-social-platform",
-    "title": "Plataforma Social Cachara (Em andamento...)",
-    "description": "Um site de e-commerce totalmente funcional com funcionalidades como listagem de produtos, carrinho de compras e autenticação de usuários.",
-    "technologies": [".NET", "SQL Server", "Microsserviços", "Redis", "DDD", "MongoDB"]
-  },
-  {
-    "id": "cachara-ai-image-classifier",
-    "title": "Cachara Plataforma de classificação de imagens e extração de dados com IA (Em andamento...)",
-    "description": "Uma aplicação para gerenciamento de tarefas e projetos, com recursos como criação de tarefas, atribuições e acompanhamento de progresso.",
-    "technologies": [".NET", "OpenAI", "ML.NET", "Next.js", "React"]
-  },
-  {
-    "id": "portfolio-website",
-    "title": "Site de Portfólio",
-    "description": "Um site pessoal de portfólio exibindo projetos, habilidades e informações de contato.",
-    "technologies": ["HTML", "CSS", "React", "Tailwindcss"]
-  },
-  {
-    "id": "monography-data-serialization",
-    "title": "Monografia - Avaliação de Técnicas de Serialização de Dados",
-    "description": "Avaliação de Estratégias de Serialização para Comunicação em Sistemas Distribuídos.",
-    "technologies": [".NET", "R", "MessagePack", "Protobuf", "Grafana k6", "BenchmarkDotNet"]
-  }
-]
+    {
+      "id": "cachara-social-platform",
+      "title": "Agente de IA para Leitura de Faturas",
+      "description": "Agente de leitura de faturas orientado à produção, pensado para extração estruturada, validação e roteamento de exceções em uma operação com 11k+ faturas por mês e restrições reais de confiabilidade.",
+      "technologies": [
+        ".NET",
+        "OpenAI",
+        "Azure",
+        "SQL Server"
+      ]
+    },
+    {
+      "id": "cachara-ai-image-classifier",
+      "title": "Enablement Interno do Claude Code",
+      "description": "Criei onboarding interno para Claude Code com skills reutilizáveis, scaffolds de prompt e guardrails de entrega para acelerar a adoção de workflows agentivos sem reduzir o padrão técnico.",
+      "technologies": [
+        "Claude Code",
+        "Enablement",
+        "Prompts",
+        "Documentação"
+      ]
+    },
+    {
+      "id": "portfolio-website",
+      "title": "Code Review com IA no CI/CD",
+      "description": "Integrei review com IA ao CI/CD para resumir diffs, antecipar mudanças arriscadas e manter a aprovação humana como etapa final das decisões de release.",
+      "technologies": [
+        "CI/CD",
+        "GitHub Actions",
+        "IA",
+        "Automação"
+      ]
+    },
+    {
+      "id": "monography-data-serialization",
+      "title": "Integrações Pessoais com APIs de IA",
+      "description": "Experimentos pessoais com Gemini e outras APIs, com foco em transformação de imagens, prototipação multimodal e validação rápida de novas capacidades de IA.",
+      "technologies": [
+        "Gemini",
+        "APIs",
+        "Transformação de Imagens",
+        "TypeScript"
+      ]
+    }
+  ],
+  "certificationsKicker": "Credenciais de apoio",
+  "certificationsSummary": "Certificações relevantes que reforçam aprendizado aplicado em cloud e IA, enquanto experiência e trabalho entregue continuam sendo a principal prova."
 }

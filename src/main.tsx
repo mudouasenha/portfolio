@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom'
 import './index.css'
 import MainRoutes from './MainRoutes'
 import './i18n';
+import './bones/registry';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

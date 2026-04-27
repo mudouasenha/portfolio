@@ -1,0 +1,13 @@
+> vitest run tests/integration --config vitest.config.ts
+ RUN  v2.1.9 /mnt/c/Users/mathe/Documents/Development/source/repos/portfolio
+ ✓ tests/integration/final-polish-task1.test.ts (3 tests) 28ms
+ ✓ tests/integration/locale-parity.test.ts (3 tests) 3ms
+ ✓ tests/integration/content-adapters.test.ts (3 tests) 5ms
+ ✓ tests/integration/final-polish-task2.test.ts (3 tests) 27ms
+stdout | tests/integration/i18n-routing.test.tsx
+🌐 i18next is made possible by our own product, Locize — consider powering your project with managed localization (AI, CDN, integrations): https://locize.com 💙
+ ✓ tests/integration/i18n-routing.test.tsx (3 tests) 334ms
+ Test Files  5 passed (5)
+      Tests  15 passed (15)
+   Start at  17:33:31
+   Duration  20.74s (transform 2.05s, setup 4.51s, collect 11.51s, tests 397ms, environment 23.11s, prepare 2.24s)

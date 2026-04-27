@@ -1,91 +1,41 @@
 # Testing Patterns
 
-**Analysis Date:** 2026-03-28
+**Last Updated:** 2026-04-01
 
-## Test Framework
+## Test Stack
 
-**Runner:**
-- Not detected (no `test` script in `package.json`; scripts are `dev`, `build`, `lint`, `preview` in `package.json`).
-- No common runner config detected (no `vitest.config.*`, `jest.config.*`, `playwright.config.*`, `cypress.config.*` found in repo root listing).
+- **Runner:** Vitest (`vitest`)
+- **Browser Automation:** Playwright (`@playwright/test`)
+- **Accessibility Engine:** `@axe-core/playwright`
+- **Lint Gate:** ESLint
 
-**Assertion Library:**
-- Not applicable (no test runner detected).
+## Commands
 
-**Run Commands:**
 ```bash
-npm run lint          # Lint (closest available quality gate)
-npm run build         # Type-check + build (`tsc -b && vite build`)
+rtk npm run lint
+rtk npm run test:integration
+rtk npm run test:a11y
+rtk npm run verify:phase3
 ```
 
-## Test File Organization
+## Test Organization
 
-**Location:**
-- Not detected (no `*.test.*` / `*.spec.*` files discovered under `src/` based on repository scan).
+- `tests/integration`
+  - Route/language continuity assertions
+  - i18n schema and fallback behavior checks
+- `tests/a11y`
+  - Homepage and mobile navigation accessibility checks
+  - Axe violations gate under Playwright execution
 
-**Naming:**
-- Not applicable (no tests detected).
+## Config Sources
 
-**Structure:**
-- Not applicable (no tests detected).
+- `vitest.config.ts`
+- `playwright.config.ts`
+- `tests/setup.ts`
 
-## Test Structure
+## Execution Notes
 
-**Suite Organization:**
-- Not applicable (no tests detected).
-
-**Patterns:**
-- Not applicable (no tests detected).
-
-## Mocking
-
-**Framework:** Not applicable (no tests detected).
-
-**Patterns:**
-- Not applicable (no tests detected).
-
-**What to Mock:**
-- Not applicable (no tests detected).
-
-**What NOT to Mock:**
-- Not applicable (no tests detected).
-
-## Fixtures and Factories
-
-**Test Data:**
-- Not applicable (no tests detected).
-
-**Location:**
-- Not applicable (no tests detected).
-
-## Coverage
-
-**Requirements:** Not applicable (no tests detected).
-
-**View Coverage:**
-```bash
-# Not configured (no test runner detected)
-```
-
-## Test Types
-
-**Unit Tests:**
-- Not detected.
-
-**Integration Tests:**
-- Not detected.
-
-**E2E Tests:**
-- Not detected.
-
-## Common Patterns
-
-**Async Testing:**
-- Not applicable (no tests detected).
-
-**Error Testing:**
-- Not applicable (no tests detected).
-
----
-
-*Testing analysis: 2026-03-28*
-
+- `verify:phase3` is the strict phase gate (`lint` + `build` + `tests/integration` + `tests/a11y`).
+- Linux hosts may require browser dependencies before a11y execution:
+  - `rtk npm run a11y:install-deps`
+- Manual visual checks remain required for final release screenshots/evidence.
