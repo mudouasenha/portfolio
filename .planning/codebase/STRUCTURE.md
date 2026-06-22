@@ -8,6 +8,7 @@
 [project-root]/
 ├── .planning/                 # Project planning artifacts (codebase maps, phases, etc.)
 │   └── codebase/              # Generated architecture/structure docs
+├── .storybook/               # Storybook configuration for isolated component development
 ├── public/                    # Static public assets served as-is by Vite
 ├── src/                       # Application source (React SPA)
 │   ├── assets/                # Images used by components (imported by bundler)
@@ -41,6 +42,7 @@
 - Purpose: Visual sections and reusable UI pieces.
 - Contains: Section components like `src/components/Hero.tsx`, `src/components/Experience.tsx`, `src/components/Projects.tsx`, plus small UI helpers like `src/components/Tag.tsx`.
 - Key files: `src/components/Navbar.tsx`, `src/components/LanguageSwitcher.tsx`
+- Storybook stories now live alongside selected components (examples: `src/components/ui/button.stories.tsx`, `src/components/sections/SectionCard.stories.tsx`).
 
 **`src/locales/`:**
 - Purpose: Translation keys and structured content per language.

@@ -1,0 +1,5 @@
+> playwright test tests/a11y --config playwright.config.ts
+Running 2 tests using 2 workers
+  ✓  1 [chromium] › tests/a11y/homepage.a11y.spec.ts:8:1 › homepage /en has no serious or critical accessibility violations (2.0s)
+  ✓  2 [chromium] › tests/a11y/mobile-nav.a11y.spec.ts:8:1 › mobile navigation open state has no serious or critical accessibility violations (2.0s)
+  2 passed (5.7s)

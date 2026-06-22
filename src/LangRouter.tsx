@@ -1,6 +1,7 @@
 import { Navigate, useLocation, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Skeleton } from 'boneyard-js/react';
 
 const SUPPORTED_LANGS = ['en', 'pt'];
 
@@ -28,8 +29,20 @@ export default function LangRouter({ children }: { children: React.ReactNode }) 
   }
 
   if (!ready) {
-    // Optionally, show a loading spinner here
-    return null;
+    return (
+      <Skeleton
+        name="language-route-shell"
+        loading
+        animate="pulse"
+        fallback={
+          <div aria-live="polite" role="status">
+            Loading language...
+          </div>
+        }
+      >
+        <div className="min-h-screen" />
+      </Skeleton>
+    );
   }
 
   return <>{children}</>;

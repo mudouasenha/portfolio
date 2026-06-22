@@ -1,0 +1,6 @@
+> eslint .
+/mnt/c/Users/mathe/Documents/Development/source/repos/portfolio/src/components/ui/button.tsx
+  66:18  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+/mnt/c/Users/mathe/Documents/Development/source/repos/portfolio/src/components/ui/navigation-menu.tsx
+  163:3  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+✖ 2 problems (0 errors, 2 warnings)
