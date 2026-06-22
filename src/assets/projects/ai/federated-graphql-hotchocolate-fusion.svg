@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Federated GraphQL</title>
+  <desc id="desc">HotChocolate • Fusion • .NET</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#170a18"/>
+      <stop offset="100%" stop-color="#2c1130"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e10098" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.08"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#000000" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="700" rx="42" fill="url(#bg)"/>
+  <circle cx="1025" cy="118" r="180" fill="#e10098" opacity="0.16"/>
+  <circle cx="170" cy="575" r="145" fill="#ffffff" opacity="0.05"/>
+  <rect x="56" y="56" width="1088" height="588" rx="34" fill="url(#glow)" opacity="0.88"/>
+  <rect x="86" y="86" width="1028" height="528" rx="30" fill="#0b1020" fill-opacity="0.22" stroke="#ffffff" stroke-opacity="0.08"/>
+  <g filter="url(#shadow)">
+    <rect x="413" y="132" width="374" height="374" rx="54" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.14"/>
+    <svg x="477" y="196" width="246" height="246" viewBox="0 0 24 24" style="color:#ff5fc7; fill:#ff5fc7;">
+      <title>GraphQL</title><path d="M12.002 0a2.138 2.138 0 1 0 0 4.277 2.138 2.138 0 1 0 0-4.277zm8.54 4.931a2.138 2.138 0 1 0 0 4.277 2.138 2.138 0 1 0 0-4.277zm0 9.862a2.138 2.138 0 1 0 0 4.277 2.138 2.138 0 1 0 0-4.277zm-8.54 4.931a2.138 2.138 0 1 0 0 4.276 2.138 2.138 0 1 0 0-4.276zm-8.542-4.93a2.138 2.138 0 1 0 0 4.276 2.138 2.138 0 1 0 0-4.277zm0-9.863a2.138 2.138 0 1 0 0 4.277 2.138 2.138 0 1 0 0-4.277zm8.542-3.378L2.953 6.777v10.448l9.049 5.224 9.047-5.224V6.777zm0 1.601 7.66 13.27H4.34zm-1.387.371L3.97 15.037V7.363zm2.774 0 6.646 3.838v7.674zM5.355 17.44h13.293l-6.646 3.836z"/>
+    </svg>
+  </g>
+  <text x="600" y="562" text-anchor="middle" fill="#f8fafc" font-size="54" font-weight="700" font-family="Inter,Segoe UI,Arial,sans-serif">Federated GraphQL</text>
+  <text x="600" y="612" text-anchor="middle" fill="#dbe4f0" font-size="26" font-weight="500" font-family="Inter,Segoe UI,Arial,sans-serif" letter-spacing="1.2">HotChocolate • Fusion • .NET</text>
+</svg>

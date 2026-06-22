@@ -8,7 +8,14 @@
     "showLess": "Mostrar menos"
   },
   "projects": "Sistemas de IA e Projetos",
-  "projectsViewProject": "Ver projeto (abre em uma nova aba)",
+  "projectsViewProject": "Ver projeto",
+  "projectsViewCaseStudy": "Ver estudo de caso",
+  "projectsPrivateWorkLabel": "Estudo de caso de trabalho interno",
+  "projectsCaseStudyContext": "Contexto",
+  "projectsCaseStudyOwnership": "O que eu conduzi",
+  "projectsCaseStudyConstraints": "Restrições",
+  "projectsCaseStudyOutcome": "Resultado",
+  "projectsCaseStudyNote": "O código e a documentação interna são proprietários, então este estudo de caso foca em arquitetura, ownership, restrições e impacto de entrega.",
   "technologies": "Tecnologias",
   "getInTouch": "Entre em Contato",
   "certificationsTitle": "Certificações",
@@ -249,47 +256,82 @@
   ],
   "projectsList": [
     {
-      "id": "cachara-social-platform",
-      "title": "Agente de IA para Leitura de Faturas",
-      "description": "Agente de leitura de faturas orientado à produção, pensado para extração estruturada, validação e roteamento de exceções em uma operação com 11k+ faturas por mês e restrições reais de confiabilidade.",
+      "id": "prova-ai-systems-infrastructure",
+      "title": "Sistemas e Infraestrutura da ProvaAI",
+      "description": "Desenhei a espinha dorsal cloud e Kubernetes da ProvaAI, separando ambientes, endurecendo segredos, introduzindo GitOps com Argo CD e consolidando a observabilidade para uma operação mais enxuta.",
       "technologies": [
-        ".NET",
-        "OpenAI",
-        "Azure",
-        "SQL Server"
+        "GKE",
+        "Terraform",
+        "Argo CD",
+        "Kubernetes"
       ]
     },
     {
-      "id": "cachara-ai-image-classifier",
-      "title": "Enablement Interno do Claude Code",
-      "description": "Criei onboarding interno para Claude Code com skills reutilizáveis, scaffolds de prompt e guardrails de entrega para acelerar a adoção de workflows agentivos sem reduzir o padrão técnico.",
+      "id": "claude-code-ai-enablement",
+      "title": "Enablement de IA com Claude Code",
+      "description": "Liderei o enablement de IA do time mantendo skills, plugins e workflows compartilhados em Claude Code, tornando a entrega assistida por agentes mais rápida, segura e padronizável.",
+      "caseStudy": {
+        "context": "O time precisava de uma forma repetível de usar agentes de IA para código sem que cada engenheiro reinventasse prompts, workflows e verificações de segurança do zero.",
+        "ownership": "Estruturei e mantive skills, plugins e workflows compartilhados do Claude Code, transformando isso em padrões práticos que outros engenheiros podiam reutilizar no dia a dia.",
+        "constraints": "O trabalho precisava acelerar a entrega sem gerar sprawl de prompts, uso inconsistente ou queda no padrão de engenharia do time.",
+        "outcome": "O resultado foi um fluxo mais padronizado de entrega assistida por IA, tornando experimentação mais segura, onboarding mais simples e o uso de agentes mais reutilizável no time."
+      },
       "technologies": [
         "Claude Code",
-        "Enablement",
-        "Prompts",
-        "Documentação"
+        "Skills",
+        "Plugins",
+        "Developer Enablement"
       ]
     },
     {
-      "id": "portfolio-website",
-      "title": "Code Review com IA no CI/CD",
-      "description": "Integrei review com IA ao CI/CD para resumir diffs, antecipar mudanças arriscadas e manter a aprovação humana como etapa final das decisões de release.",
+      "id": "ai-bill-extraction-platform",
+      "title": "Plataforma de Extração de Contas com IA",
+      "description": "Modelei a arquitetura de uma plataforma de extração de contas de energia que combina parsing de PDF, RAG, regras por provedor e validação determinística antes de persistir contas verificadas no serviço principal.",
+      "caseStudy": {
+        "context": "A plataforma precisava extrair dados estruturados de contas de energia a partir de PDFs de provedores, lidando com variação documental, contexto de recuperação e validação antes de qualquer persistência no serviço principal.",
+        "ownership": "Defini a arquitetura em torno de parsing de PDF, extração assistida por retrieval, regras específicas por provedor e validação determinística para equilibrar automação com confiabilidade.",
+        "constraints": "O principal desafio era reduzir a ambiguidade do LLM e a variabilidade entre provedores, mantendo o pipeline confiável o suficiente para persistência em produção.",
+        "outcome": "O desenho criou um caminho mais limpo para ingestão de contas verificadas, com etapas explícitas de validação e separação mais clara entre extração assistida por IA e persistência segura para o negócio."
+      },
       "technologies": [
-        "CI/CD",
-        "GitHub Actions",
-        "IA",
-        "Automação"
+        ".NET",
+        "Python",
+        "Qdrant",
+        "RAG"
       ]
     },
     {
-      "id": "monography-data-serialization",
-      "title": "Integrações Pessoais com APIs de IA",
-      "description": "Experimentos pessoais com Gemini e outras APIs, com foco em transformação de imagens, prototipação multimodal e validação rápida de novas capacidades de IA.",
+      "id": "federated-graphql-hotchocolate-fusion",
+      "title": "GraphQL Federado com HotChocolate e Fusion",
+      "description": "Defini fronteiras de GraphQL federado com HotChocolate e Fusion para permitir evolução independente entre domínios por trás de uma superfície de API mais limpa e unificada.",
+      "caseStudy": {
+        "context": "Múltiplos domínios de backend precisavam evoluir de forma independente sem expor fronteiras fragmentadas de API para os consumidores.",
+        "ownership": "Ajudei a definir as fronteiras do GraphQL federado e a abordagem de integração para que os times de domínio mantivessem autonomia enquanto contribuíam para uma superfície de API coerente.",
+        "constraints": "A solução precisava reduzir a complexidade para consumidores sem acoplar excessivamente os times nem transformar a camada federada em gargalo.",
+        "outcome": "O formato resultante sustentou uma experiência de API unificada mais limpa, preservando linhas mais claras de ownership entre os domínios de backend."
+      },
       "technologies": [
-        "Gemini",
-        "APIs",
-        "Transformação de Imagens",
-        "TypeScript"
+        "GraphQL",
+        "HotChocolate",
+        "Fusion",
+        ".NET"
+      ]
+    },
+    {
+      "id": "observability-signoz-opentelemetry",
+      "title": "Observabilidade com SigNoz e OpenTelemetry",
+      "description": "Implementei padrões de observabilidade com OpenTelemetry e SigNoz para melhorar traces, logs e diagnóstico de produção em serviços distribuídos.",
+      "caseStudy": {
+        "context": "Serviços distribuídos estavam gerando complexidade operacional que exigia melhor rastreabilidade entre requisições, logs e incidentes de produção.",
+        "ownership": "Implementei a direção de observabilidade com instrumentação baseada em OpenTelemetry e padrões de diagnóstico com SigNoz para troubleshooting em produção.",
+        "constraints": "A instrumentação precisava ser útil para diagnóstico real de incidentes sem gerar telemetria ruidosa ou sinais com ownership confuso.",
+        "outcome": "Isso melhorou a capacidade do time de diagnosticar comportamento em produção com melhor correlação entre traces e uma base de observabilidade mais coerente entre serviços."
+      },
+      "technologies": [
+        "OpenTelemetry",
+        "SigNoz",
+        "Observabilidade",
+        ".NET"
       ]
     }
   ],

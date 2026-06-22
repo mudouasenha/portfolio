@@ -138,7 +138,7 @@ export function adaptProjects(raw: unknown): AdapterResult<ProjectSchemaItem> {
     section: 'projectsList',
     raw,
     schema: projectsSchema.element,
-    allowedKeys: ['id', 'title', 'description', 'technologies', 'url'],
+    allowedKeys: ['id', 'title', 'description', 'technologies', 'url', 'caseStudy'],
   });
 }
 

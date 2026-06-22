@@ -7,6 +7,12 @@ import { Button } from "@/components/ui/button";
 
 const DEFAULT_MOTION_DURATION_MEDIUM = 0.45;
 const DEFAULT_MOTION_EASE_STANDARD: [number, number, number, number] = [0.25, 0.1, 0.25, 1];
+const HERO_PROOF_STRIP_FALLBACK = [
+    ".NET / C# + APIs + cloud architecture",
+    "DevOps: Kubernetes, Azure DevOps, Google Cloud",
+    "Leading internal agentic AI practices",
+    "R$4k/month infra cost reduction",
+];
 
 const getMotionDurationMedium = () => {
     if (typeof window === "undefined") {
@@ -71,8 +77,10 @@ const Hero = () => {
     const resumeUrl = "https://docs.google.com/document/d/1Jg-Sh3dTa0GUqQ-YPFxiOGZY-79yrDN8Bqc7HcrYDD4/edit?usp=sharing";
     const heroLead = t("hero.lead");
     const heroHighlights = t("hero.highlights", { returnObjects: true });
+    const heroProofStrip = t("hero.proofStrip", { returnObjects: true });
     const heroRecruiterSnapshot = t("hero.recruiterSnapshot", { returnObjects: true });
     const highlights = Array.isArray(heroHighlights) ? heroHighlights : [];
+    const proofStrip = Array.isArray(heroProofStrip) ? heroProofStrip : HERO_PROOF_STRIP_FALLBACK;
     const recruiterSnapshot = Array.isArray(heroRecruiterSnapshot) ? heroRecruiterSnapshot : [];
     const reduceMotion = useReducedMotion();
     const shouldReduceMotion = reduceMotion ?? false;
@@ -156,6 +164,21 @@ const Hero = () => {
                                 <div key={item} className="rounded-[1rem] border border-border/80 bg-card/70 px-3 py-3">
                                     <p className="text-sm font-medium leading-snug text-foreground">{item}</p>
                                 </div>
+                            ))}
+                        </motion.div>
+                        <motion.div
+                            variants={container(0.5, shouldReduceMotion, motionDurationMedium, motionEaseStandard)}
+                            initial="hidden"
+                            animate="visible"
+                            className="mt-5 flex flex-wrap gap-2"
+                        >
+                            {proofStrip.map((item) => (
+                                <span
+                                    key={item}
+                                    className="rounded-full border border-border/70 bg-background/70 px-3 py-1 text-[11px] font-medium text-muted-foreground"
+                                >
+                                    {item}
+                                </span>
                             ))}
                         </motion.div>
                     </div>

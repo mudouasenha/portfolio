@@ -19,6 +19,15 @@ export const projectsSchema = z.array(
       description: nonEmptyString,
       technologies: z.array(nonEmptyString),
       url: nonEmptyString.optional(),
+      caseStudy: z
+        .object({
+          context: nonEmptyString,
+          ownership: nonEmptyString,
+          constraints: nonEmptyString,
+          outcome: nonEmptyString,
+        })
+        .strict()
+        .optional(),
     })
     .strict(),
 );

@@ -85,8 +85,11 @@ const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const navItems = [
         { href: "#about", label: t("aboutNav") },
+        { href: "#skills", label: t("skillsTitle") },
         { href: "#experience", label: t("experience") },
         { href: "#projects", label: t("projects") },
+        { href: "#technologies", label: t("technologies") },
+        { href: "#certifications", label: t("certificationsTitle") },
         { href: "#contact", label: t("getInTouch") },
     ];
 

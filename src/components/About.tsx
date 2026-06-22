@@ -35,7 +35,7 @@ const About = () => {
                     className="w-full lg:pr-8"
                 >
                     <div className="flex items-center justify-center lg:justify-start">
-                        <div className="rounded-[1.8rem] border border-border/90 bg-card p-3 shadow-[0_18px_50px_-34px_rgba(28,36,60,0.45)] ring-1 ring-primary/10">
+                        <div className="rounded-2xl border border-border bg-card p-3 shadow-[0_18px_50px_-34px_rgba(28,36,60,0.45)] ring-1 ring-primary/20">
                             <img className="w-full max-w-sm rounded-xl object-cover sm:max-w-md" src={aboutImg} alt="about" />
                         </div>
                     </div>

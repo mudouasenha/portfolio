@@ -3,6 +3,23 @@
 Personal portfolio application built with React 18 + TypeScript.  
 It presents projects, skills, certifications, contact information, and professional experience with bilingual support (`pt` and `en`).
 
+## Documentation Map
+
+Start here, then move to the source-of-truth document that matches the kind of change you are making.
+
+| File | Purpose |
+|---|---|
+| `README.md` | Repo overview, setup, commands, and navigation map |
+| `PRODUCT.md` | Portfolio goal, audience, success criteria, non-goals, and content priorities |
+| `AGENTS.md` | Agent workflow, preferred skills, task routing, and doc hygiene |
+| `DESIGN.md` | Canonical design system and UI contract |
+| `docs/README.md` | Documentation index and reading order |
+| `docs/workflow.md` | Recommended way to work in the repo |
+| `docs/decisions/README.md` | Decision-log convention and current architectural/design decisions |
+| `.planning/codebase/ARCHITECTURE.md` | Frontend architecture, routing, and content flow |
+| `.planning/codebase/CONVENTIONS.md` | Coding and component conventions |
+| `.planning/codebase/TESTING.md` | Validation strategy and quality gates |
+
 ## Live Demo
 
 - [Visit My Portfolio](https://portfolio-matheus-miranda-torres-gomes-projects.vercel.app/)
@@ -22,6 +39,8 @@ The visual design system is documented in **`DESIGN.md`** at the repository root
 - Do's and Don'ts guardrails for consistent UI
 
 **Any UI change should reference `DESIGN.md` to stay consistent with the established design language.**
+
+Pair it with `PRODUCT.md`: the product doc explains what impression the portfolio must create, and the design doc explains how that impression is implemented visually.
 
 ## Prerequisites
 
@@ -186,3 +205,4 @@ npm run verify:baseline
 - Prefer small, focused pull requests.
 - Validate with `npm run lint` and `npm run build` before opening a PR.
 - Any visual changes should respect the design system in `DESIGN.md`.
+- Any audience-facing messaging changes should stay aligned with `PRODUCT.md`.

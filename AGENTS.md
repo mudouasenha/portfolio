@@ -32,7 +32,11 @@ npm run a11y:install-deps # Install Playwright Chromium + system deps
 | Where | What |
 |---|---|
 | `README.md` | Setup, scripts, stack, and repository structure |
+| `PRODUCT.md` | Audience, positioning, success criteria, non-goals, and messaging priorities |
 | `DESIGN.md` | **Canonical design system** — colors, typography, components, layout, elevation, and responsive rules. Read before any UI work. |
+| `docs/README.md` | Documentation index and reading order |
+| `docs/workflow.md` | Default execution loop for changes, verification, and doc upkeep |
+| `docs/decisions/README.md` | Durable architecture/product/design decisions worth preserving |
 | `.planning/codebase/ARCHITECTURE.md` | High-level frontend architecture and routing flow |
 | `.planning/codebase/STRUCTURE.md` | Directory layout and file responsibilities |
 | `.planning/codebase/CONVENTIONS.md` | Naming, component patterns, and coding conventions |
@@ -58,10 +62,40 @@ When in doubt about a color, spacing, or component style, check `DESIGN.md` befo
 
 ## Skills Available
 
+Use these skills by default when the task matches their domain instead of improvising process from scratch.
+
 | Skill | When to use |
 |---|---|
+| `find-rules` | First pass for discovering repo rules, conventions, and which docs apply to the task |
+| `crafting-effective-readmes` | Updating `README.md`, docs entrypoints, or repo-facing documentation |
+| `writing-clearly-and-concisely` | Editing recruiter-facing copy, documentation, or UI text |
+| `react` | Changing React components, routing, composition, or UI state |
+| `tailwindcss` | Modifying layout, utility classes, responsive behavior, or design tokens in JSX |
+| `shadcn-ui` | Working on `src/components/ui/` primitives, dialogs, sheets, buttons, or Radix-backed UI patterns |
+| `storybook` | Adding or updating stories, Storybook config, or visual component examples |
+| `vitest` | Updating integration tests, mocks, or Vitest configuration |
+| `a11y-testing` | Running or extending accessibility checks, especially modal, keyboard, and page-level audits |
+| `verification-before-completion` | Before claiming a fix, build, test result, or UI change is complete |
 | `gsd-map-codebase` | Refresh codebase mapping docs after significant structural changes |
 | `requesting-code-review` | Request a focused review before merge or handoff |
+
+## Default Work Loop
+
+1. Read `README.md` for repo orientation.
+2. Read `PRODUCT.md` for audience, positioning, success criteria, and non-goals.
+3. Read `DESIGN.md` before any UI, layout, copy hierarchy, or visual-system change.
+4. Read the relevant `.planning/codebase/*.md` reference docs for the task.
+5. Make the smallest change that solves the problem while preserving the current design direction.
+6. Run the appropriate verification commands before claiming completion.
+7. Update any impacted docs as part of the same task.
+
+## Task Routing
+
+- **UI or visual polish** → `DESIGN.md`, then `react`, `tailwindcss`, `shadcn-ui`, and `storybook` as needed.
+- **Portfolio positioning or copy changes** → `PRODUCT.md`, locale files, and `writing-clearly-and-concisely`.
+- **Routing, i18n, or architecture changes** → `.planning/codebase/ARCHITECTURE.md` and `.planning/codebase/CONVENTIONS.md`.
+- **Tests or regressions** → `.planning/codebase/TESTING.md`, `vitest`, and `a11y-testing`.
+- **Docs updates** → `README.md`, `docs/`, and `crafting-effective-readmes`.
 
 ## Git Workflow
 
@@ -76,7 +110,10 @@ After any AI-assisted work, verify whether these files need updating before cons
 | File | Update when |
 |---|---|
 | `README.md` | Setup steps, scripts, stack, or structure changed |
+| `PRODUCT.md` | Audience, positioning, portfolio goal, or messaging priorities changed |
 | `DESIGN.md` | Colors, typography, component styles, layout patterns, or visual conventions changed |
+| `docs/README.md` / `docs/workflow.md` | Repo workflow, reading order, or documentation routing changed |
+| `docs/decisions/*.md` | A durable product, architecture, or design decision should be preserved |
 | `.planning/codebase/ARCHITECTURE.md` | Routing flow, component architecture, or app entry changed |
 | `.planning/codebase/STRUCTURE.md` | New directories/files or responsibility shifts |
 | `.planning/codebase/CONVENTIONS.md` | New coding/naming patterns introduced |

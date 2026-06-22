@@ -1,5 +1,34 @@
 # Design System — Personal Portfolio
 
+## 0. Design Governance
+
+`DESIGN.md` is the canonical design system and UI contract for this repository. It should be read together with `PRODUCT.md`: the product doc defines the audience and impression goals, while this document defines the visual and interaction rules that express them.
+
+### Design Source-of-Truth Stack
+
+These files together define the implemented design direction:
+
+- `PRODUCT.md` — positioning, audience, and communication priorities
+- `DESIGN.md` — visual principles, tokens, component rules, and guardrails
+- `src/index.css` — CSS variables, theme tokens, background effects, and global styling hooks
+- `src/components/ui/` — reusable visual primitives and interaction shells
+- `src/components/sections/` — shared section layout primitives
+- `src/components/*.tsx` — page-level composition of the design system
+- `src/assets/` — images and visual assets used in presentation
+- `.storybook/` and `*.stories.tsx` — visual reference and isolated component review surface
+
+### Design Change Policy
+
+If a change affects any of the following, update both the implementation and the documentation in the same task:
+
+- color tokens or semantic roles
+- typography, spacing, or border-radius scale
+- component shape, elevation, or blur treatment
+- responsive layout behavior
+- motion patterns or interaction expectations
+
+When a visual change is significant, update Storybook stories or add one if the affected component does not already have visual coverage.
+
 ## 1. Visual Theme & Atmosphere
 
 The portfolio is a warm editorial canvas with a quiet, professional confidence — closer to a refined magazine spread than a typical developer site. The design pairs an elegant serif display face (Cormorant Garamond) with a geometric sans-serif (Manrope) to create a literary-meets-modern tension. Every heading reads like a book title; every body line reads like a well-typeset paragraph.
