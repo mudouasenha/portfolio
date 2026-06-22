@@ -68,7 +68,7 @@ const Contact = () => {
                                 href="https://www.linkedin.com/in/matheus-gomes-98823b185"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                aria-label="Contact on LinkedIn (opens in a new tab)"
+                                aria-label="LinkedIn profile (opens in a new tab)"
                             >
                                 {t("contact.linkedinCta")}
                             </a>

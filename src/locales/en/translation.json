@@ -7,7 +7,7 @@
     "showMore": "Show {{count}} more experiences",
     "showLess": "Show less"
   },
-  "projects": "AI Systems & Projects",
+  "projects": "Selected Systems & Case Studies",
   "projectsViewProject": "View project",
   "projectsViewCaseStudy": "View case study",
   "projectsPrivateWorkLabel": "Private company case study",
@@ -24,7 +24,7 @@
   "navigation": {
     "menu": "Navigate",
     "cta": "View résumé",
-    "role": "Backend, Platform, AI Systems"
+    "role": "Tech Lead · Backend · Product Platform"
   },
   "validationFallback": {
     "skills": "Some skill entries could not be displayed.",
@@ -34,52 +34,52 @@
     "contact": "Some contact details could not be displayed."
   },
   "hero": {
-    "eyebrow": "Recruiter-ready profile",
-    "title": "Backend and AI systems engineer turning production constraints into clean delivery.",
-    "subtitle": ".NET backend, platform engineering, and applied AI",
-    "lead": "I build production-grade APIs, delivery pipelines, and AI-enabled workflows with a strong bias toward reliability, clarity, and measurable business outcomes.",
+    "eyebrow": "Hands-on tech lead profile",
+    "title": "Hands-on Tech Lead for backend, product platform, observability, and modernization.",
+    "subtitle": "Tech lead execution across backend systems, platform operations, and applied AI enablement",
+    "lead": "I lead technical execution across backend systems, product-scoped platform work, observability, and modernization—while staying close to code, delivery, and engineering standards.",
     "primaryCta": "View résumé",
-    "secondaryCta": "Review selected work",
+    "secondaryCta": "Review case studies",
     "highlights": [
-      "Production software delivery since 2020",
-      "11k+ invoices/month backend context",
-      "R$4k/month infrastructure cost reduction"
+      "11k+ monthly invoices supported",
+      "20k+ connected devices/day",
+      "R$ 9.8K/month cloud savings"
     ],
     "proofStrip": [
-      ".NET / C# + APIs + cloud architecture",
-      "DevOps: Kubernetes, Azure DevOps, Google Cloud",
-      "Leading internal agentic AI practices",
-      "Recruiter focus: backend, platform, AI systems"
+      "Tech Lead / Backend Software Engineer at PowerHub",
+      "~22 services instrumented with observability",
+      "Backend, platform, modernization, and AI enablement",
+      "Pragmatic ownership from architecture to shipped delivery"
     ],
     "portraitLabel": "Current focus",
-    "portraitCaption": "Building resilient backend and AI delivery systems in production.",
+    "portraitCaption": "Leading backend, platform, and AI-enabled delivery in production.",
     "recruiterSnapshotLabel": "Recruiter snapshot",
     "recruiterSnapshot": [
-      "5+ years in software delivery and backend engineering",
-      "Best fit: backend, platform, and applied AI systems roles",
-      "Core stack: .NET / C#, SQL Server, Azure, Kubernetes, CI/CD",
-      "Strengths: production reliability, AI enablement, and pragmatic ownership"
+      "Tech Lead and Senior Backend Engineer with 5+ years in software delivery",
+      "Best fit: tech lead, staff backend, and product-platform roles",
+      "Proof: billing, telemetry, observability, modernization, and AI enablement",
+      "Core stack: .NET / C#, GraphQL, PostgreSQL, Azure, Kubernetes, CI/CD"
     ]
   },
   "about": {
     "kicker": "Editorial profile",
-    "summary": "Production-minded engineering with infrastructure awareness, system design discipline, and practical AI execution.",
-    "text": "I build backend and AI systems with a strong production mindset, focusing on **reliability, clarity, and measurable outcomes**.\n\nIn my current work, I lead and structure **agentic AI development processes**, using **spec-driven development** to align requirements, implementation, and validation. I also design reusable internal tooling for **Claude Code usage**, create shared AI **skills and workflows**, and mentor engineers on practical AI delivery patterns.\n\nI am building a production-oriented **AI Agent for bill parsing** and integrating **AI-assisted code review** into CI/CD with human validation gates. My goal is to improve engineering speed and quality without sacrificing ownership or standards.\n\nI also operate in DevOps-related domains, including **Kubernetes**, **Azure DevOps**, and **Google Cloud**, connecting application delivery with infrastructure reliability.\n\nCore stack: **.NET / C#**, **PostgreSQL and SQL Server**, **Azure and Google Cloud**, CI/CD automation, and AI API integrations (including personal projects with Gemini image transformation)."
+    "summary": "Hands-on technical leadership across backend delivery, product-scoped platform work, observability, and modernization.",
+    "text": "I work as a **hands-on Tech Lead** who turns architecture direction into shipped backend, platform, and reliability work. My best environment is a complex product where delivery needs both technical depth and calm execution.\n\nAt PowerHub, I lead technical execution across billing, telemetry, observability, data migration, and modernization work. That includes mentoring engineers, shaping delivery direction with product and architecture stakeholders, and staying close enough to the implementation to keep quality high.\n\nI have led initiatives around **GraphQL federation**, **OpenTelemetry-based observability**, **SQL Server to PostgreSQL migration**, **cost reduction**, and **product-scoped platform operations** in partnership with DevOps. The throughline is practical ownership: improve the system, reduce risk, and leave the team with clearer operating patterns.\n\nAI is part of that leverage, not the whole story. I build reusable AI-assisted engineering workflows, shared tooling, and review guardrails that help teams move faster without lowering standards.\n\nCore stack: **.NET / C#**, **GraphQL**, **PostgreSQL and SQL Server**, **Azure and Kubernetes**, **CI/CD**, **OpenTelemetry**, and applied AI tooling for engineering workflows."
   },
   "experienceKicker": "Career record",
-  "experienceSummary": "Roles and outcomes that show a progression from execution to ownership in backend and platform delivery.",
+  "experienceSummary": "A progression from execution to hands-on technical leadership in backend, observability, modernization, and product-platform delivery.",
   "experienceCurrentRole": "Current role",
   "projectsKicker": "Selected work",
-  "projectsSummary": "Projects that best represent my backend, AI systems, and delivery mindset.",
+  "projectsSummary": "A recruiter-friendly mix of public product work and internal case studies that shows backend depth, platform judgment, and delivery ownership.",
   "projectsFeaturedLabel": "Featured case",
   "skillsKicker": "Capability map",
-  "skillsSummary": "Capability areas that complement the core stack: system design, AI enablement, backend delivery, and engineering execution.",
+  "skillsSummary": "Capability areas that support the target positioning: hands-on technical leadership, backend architecture, observability, modernization, and AI-enabled engineering.",
   "skillsCountLabel": "signals",
   "technologiesKicker": "Core stack",
-  "technologiesSummary": "A compact view of the tools and platforms that appear repeatedly in production work, separate from broader engineering capabilities.",
-  "technologiesLeadLabel": "Production tools",
-  "technologiesLeadTitle": "The stack behind backend delivery, platform work, and applied AI execution.",
-  "technologiesLeadBody": "These are the technologies that show up repeatedly in my day-to-day work: backend APIs, data systems, cloud infrastructure, and integration-heavy delivery environments.",
+  "technologiesSummary": "A compact view of the tools and platforms that recur in production backend, product-platform, and modernization work.",
+  "technologiesLeadLabel": "Recurring stack",
+  "technologiesLeadTitle": "The stack behind backend systems, observability, migration work, and product-platform execution.",
+  "technologiesLeadBody": "These are the technologies that show up repeatedly in production work: APIs, data systems, cloud infrastructure, GraphQL contracts, caching, and operational tooling.",
   "certifications": [
     {
       "id": "ai-for-devs-branas",
@@ -100,9 +100,9 @@
   ],
   "contact": {
     "kicker": "Hiring conversations",
-    "summary": "The strongest fit is backend, platform, or AI-systems work where delivery quality matters.",
-    "title": "Available for recruiter and hiring-manager conversations.",
-    "body": "If you are hiring for backend engineering, platform work, or applied AI systems, LinkedIn is the fastest way to reach me. I reply with context, not buzzwords.",
+    "summary": "Best fit: tech lead, staff backend, or product-platform roles that need modernization, observability, and delivery ownership.",
+    "title": "Available for conversations about hands-on leadership in backend and platform-heavy products.",
+    "body": "If you are hiring for a role that needs backend depth, modernization work, observability maturity, and someone who can turn technical direction into delivery, LinkedIn is the fastest way to reach me.",
     "locationLabel": "Location",
     "responseLabel": "Preferred contact",
     "linkedinCta": "Message on LinkedIn",
@@ -118,111 +118,97 @@
   },
   "skills": [
     {
-      "name": "AI Engineering & Agentic Systems",
+      "name": "Technical Leadership",
       "skills": [
-        "Spec-Driven Development",
-        "Agentic AI Workflows",
-        "Claude Code Enablement",
-        "Reusable AI Skills",
-        "AI Code Review in CI/CD",
-        "Prompt Engineering",
-        "OpenAI APIs",
-        "Gemini APIs"
+        "Technical Execution",
+        "Architecture-to-Delivery Ownership",
+        "Mentoring",
+        "Cross-Functional Delivery",
+        "Modernization Planning",
+        "Engineering Standards"
       ]
     },
     {
-      "name": "Programming and Frameworks",
+      "name": "Backend & Architecture",
       "skills": [
         "C#",
-        ".NET 9",
-        "Entity Framework Core",
+        ".NET 10",
         "GraphQL",
-        "Typescript",
-        "React",
-        "R",
-        "Hangfire"
+        "HotChocolate Fusion",
+        "DDD",
+        "Distributed Systems",
+        "Clean Architecture",
+        "API Design"
       ]
     },
     {
-      "name": "Databases",
+      "name": "Data & Performance",
       "skills": [
-        "Microsoft SQL Server",
-        "ElasticSearch",
-        "Postgres",
+        "PostgreSQL",
+        "SQL Server",
         "Redis",
-        "TimescaleDB"
+        "Read Replicas",
+        "Query Discipline",
+        "Caching",
+        "Billing Data Flows"
       ]
     },
     {
-      "name": "Cloud & DevOps",
+      "name": "Platform & Delivery",
       "skills": [
         "Azure",
-        "Google Cloud",
         "Kubernetes",
         "Azure DevOps",
         "CI/CD",
-        "Azure API Management",
-        "Docker",
-        "Terraform"
+        "Canary Releases",
+        "Resource Tuning",
+        "Product-Scoped Platform Operations"
       ]
     },
     {
-      "name": "Software Architecture",
+      "name": "Observability & Reliability",
       "skills": [
-        "Microservices",
-        "Distributed Systems",
-        "Cloud Computing",
-        "Clean Architecture",
-        "Backend",
-        "DDD",
-        "SOLID",
-        "OOP"
+        "OpenTelemetry",
+        "SigNoz",
+        "Logging Standards",
+        "Operational Visibility",
+        "Incident Diagnostics",
+        "Error Handling"
       ]
     },
     {
-      "name": "Testing & Monitoring",
+      "name": "AI Engineering Enablement",
       "skills": [
-        "XUnit",
-        "Unit Testing",
-        "Integration Testing",
-        "Grafana Load Testing",
-        "BenchmarkDotNet"
-      ]
-    },
-    {
-      "name": "Languages and other Skills",
-      "skills": [
-        "English",
-        "Brazilian Portuguese",
-        "Spanish",
-        "Scrum",
-        "Problem-Solving",
-        "Git",
-        "Agile"
+        "Spec-Driven Development",
+        "Claude Code Enablement",
+        "Reusable AI Skills",
+        "AI Code Review Workflows",
+        "MCP Integrations",
+        "Governed AI Adoption"
       ]
     }
   ],
   "experiences": [
     {
       "year": "2021 - Present",
-      "role": "Mid-Level Backend Developer",
+      "role": "Tech Lead / Backend Software Engineer",
       "company": "Way2 Technology",
-      "description": "Shipped invoice collection and telemetry services exposing 11k+ invoices/month through Azure API Management.\n- Owned PRs, code reviews, QA, and deployment for release-ready delivery.\n- Applied DDD, Clean Architecture, and SOLID in production APIs and telemetry enrichment.",
+      "description": "Lead technical execution for the PowerHub SaaS product across backend engineering, observability, modernization, and product-scoped platform work.\n- Supported billing systems serving 11k+ monthly invoices and telemetry flows from 20k+ connected devices per day.\n- Led GraphQL federation, observability rollout across ~22 services, SQL Server to PostgreSQL migration, and cost-reduction work that saved R$ 9.8K/month.\n- Mentored 4 engineers and partnered with product, architecture, and DevOps to turn technical direction into shipped delivery.",
       "technologies": [
         ".NET",
-        "Azure",
-        "EF Core",
-        "SQL Server",
         "GraphQL",
-        "CI/CD",
-        "Testing"
+        "PostgreSQL",
+        "Azure",
+        "Kubernetes",
+        "OpenTelemetry",
+        "CI/CD"
       ]
     },
     {
       "year": "2020 - 2021",
       "role": "Backend Developer Intern",
       "company": "Way2 Technology",
-      "description": "Built APIs, databases, and support services for product and out-of-roadmap requests.\n- Turned ad hoc work into stable delivery with clear handoffs.\n- Kept internal teams unblocked while the roadmap kept moving.",
+      "description": "Built APIs, databases, and support services for product and out-of-roadmap requests.\n- Turned ad hoc work into stable delivery with clearer handoffs.\n- Helped internal teams keep shipping while roadmap work continued.",
       "technologies": [
         "Node.js",
         "SQL Server",
@@ -267,46 +253,48 @@
       ]
     },
     {
-      "id": "claude-code-ai-enablement",
-      "title": "Claude Code AI Enablement",
-      "description": "Led team AI enablement by maintaining shared Claude Code skills, plugins, and workflows that made agent-assisted delivery faster, safer, and easier to standardize.",
+      "id": "powerhub-billing-platform-modernization",
+      "title": "PowerHub Billing & Platform Modernization",
+      "description": "Led technical execution across billing, telemetry, observability, and modernization work for the PowerHub SaaS product, supporting 11k+ monthly invoices and 20k+ connected devices per day.",
       "caseStudy": {
-        "context": "The team needed a repeatable way to use AI coding agents without every engineer reinventing prompts, workflows, or safety checks from scratch.",
-        "ownership": "I structured and maintained shared Claude Code skills, plugins, and operating workflows, then turned them into practical patterns other engineers could reuse day to day.",
-        "constraints": "The work had to improve delivery speed without creating prompt sprawl, inconsistent usage, or lower engineering standards across the team.",
-        "outcome": "The result was a more standardized AI-assisted delivery flow that made experimentation safer, onboarding easier, and agent usage more reusable across the team."
-      },
-      "technologies": [
-        "Claude Code",
-        "Skills",
-        "Plugins",
-        "Developer Enablement"
-      ]
-    },
-    {
-      "id": "ai-bill-extraction-platform",
-      "title": "AI Bill Extraction Platform",
-      "description": "Shaped the architecture for an energy-bill extraction platform that combines PDF parsing, RAG retrieval, provider-aware rules, and deterministic validation before persisting verified bills into the core service.",
-      "caseStudy": {
-        "context": "The platform had to extract structured energy-bill data from provider PDFs while handling document variation, retrieval context, and validation before anything reached the core service.",
-        "ownership": "I defined the architecture around PDF parsing, retrieval-assisted extraction, provider-specific rules, and deterministic validation so the system could balance automation with reliability.",
-        "constraints": "The main challenge was reducing LLM ambiguity and provider variability while keeping the pipeline trustworthy enough for production persistence.",
-        "outcome": "The design created a cleaner path for verified bill ingestion, with explicit validation stages and clearer separation between AI-assisted extraction and business-safe persistence."
+        "context": "PowerHub needed backend and platform work that could improve delivery speed, operating visibility, and system reliability without disrupting a live product surface used by critical billing and measurement flows.",
+        "ownership": "I led technical execution across backend engineering, GraphQL federation, observability rollout, SQL Server to PostgreSQL migration work, cost-reduction initiatives, and product-scoped platform operations in partnership with DevOps.",
+        "constraints": "The work had to balance modernization with delivery pressure, avoid overstating platform ownership, and improve operational quality without exposing proprietary implementation details.",
+        "outcome": "The product gained stronger delivery patterns, fuller observability across ~22 services, better migration direction, and cloud-cost reductions of R$ 9.8K/month while retiring 4 legacy systems."
       },
       "technologies": [
         ".NET",
-        "Python",
-        "Qdrant",
-        "RAG"
+        "GraphQL",
+        "PostgreSQL",
+        "Azure",
+        "OpenTelemetry",
+        "Kubernetes"
+      ]
+    },
+    {
+      "id": "observability-signoz-opentelemetry",
+      "title": "Observability with SigNoz & OpenTelemetry",
+      "description": "Implemented OpenTelemetry-based observability patterns with SigNoz to improve traces, logs, and production diagnostics across distributed services.",
+      "caseStudy": {
+        "context": "Distributed services were generating operational complexity that required better traceability across requests, logs, and production incidents.",
+        "ownership": "I implemented the observability direction around OpenTelemetry instrumentation and SigNoz-based diagnostics patterns for production troubleshooting.",
+        "constraints": "The instrumentation needed to be useful enough for real incident diagnosis without creating noisy telemetry or unclear ownership of signals.",
+        "outcome": "This improved the team’s ability to diagnose production behavior with better trace correlation and a more coherent observability baseline across ~22 services."
+      },
+      "technologies": [
+        "OpenTelemetry",
+        "SigNoz",
+        "Observability",
+        ".NET"
       ]
     },
     {
       "id": "federated-graphql-hotchocolate-fusion",
       "title": "Federated GraphQL with HotChocolate & Fusion",
-      "description": "Defined federated GraphQL boundaries with HotChocolate and Fusion so multiple domains could ship independently behind a cleaner, unified API surface.",
+      "description": "Led the migration path from a legacy GraphQL gateway to federation so backend domains could evolve more independently behind a cleaner API surface.",
       "caseStudy": {
         "context": "Multiple backend domains needed to evolve independently without exposing fragmented API boundaries to consumers.",
-        "ownership": "I helped define the federated GraphQL boundaries and integration approach so domain teams could keep autonomy while contributing to one coherent API surface.",
+        "ownership": "I helped define the federated GraphQL boundaries and the migration approach so domain teams could keep autonomy while contributing to one coherent API surface.",
         "constraints": "The solution had to reduce consumer complexity without coupling teams too tightly or turning the federated layer into a bottleneck.",
         "outcome": "The resulting shape supported a cleaner unified API experience while preserving clearer ownership lines across backend domains."
       },
@@ -318,20 +306,20 @@
       ]
     },
     {
-      "id": "observability-signoz-opentelemetry",
-      "title": "Observability with SigNoz & OpenTelemetry",
-      "description": "Implemented OpenTelemetry-based observability patterns with SigNoz to improve traces, logs, and production diagnostics across distributed services.",
+      "id": "claude-code-ai-enablement",
+      "title": "Claude Code AI Enablement",
+      "description": "Built the team AI engineering environment with shared Claude Code skills, plugins, and workflows that made AI-assisted delivery faster, safer, and easier to govern.",
       "caseStudy": {
-        "context": "Distributed services were generating operational complexity that required better traceability across requests, logs, and production incidents.",
-        "ownership": "I implemented the observability direction around OpenTelemetry instrumentation and SigNoz-based diagnostics patterns for production troubleshooting.",
-        "constraints": "The instrumentation needed to be useful enough for real incident diagnosis without creating noisy telemetry or unclear ownership of signals.",
-        "outcome": "This improved the team’s ability to diagnose production behavior with better trace correlation and a more coherent observability baseline across services."
+        "context": "The team needed a repeatable way to use AI coding agents without every engineer reinventing prompts, workflows, or safety checks from scratch.",
+        "ownership": "I structured and maintained shared Claude Code skills, plugins, and operating workflows, then onboarded engineers into practical patterns they could reuse day to day.",
+        "constraints": "The work had to improve delivery speed without creating prompt sprawl, inconsistent usage, or lower engineering standards across the team.",
+        "outcome": "The result was a more standardized AI-assisted delivery flow that made experimentation safer, onboarding easier, and adoption easier to govern."
       },
       "technologies": [
-        "OpenTelemetry",
-        "SigNoz",
-        "Observability",
-        ".NET"
+        "Claude Code",
+        "Skills",
+        "Plugins",
+        "Developer Enablement"
       ]
     }
   ],

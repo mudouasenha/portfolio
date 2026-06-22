@@ -5,6 +5,7 @@ import aiBillExtractionPlatform from "../assets/projects/ai/ai-bill-extraction-p
 import claudeCodeAiEnablement from "../assets/projects/ai/claude-code-ai-enablement.svg";
 import federatedGraphqlHotChocolateFusion from "../assets/projects/ai/federated-graphql-hotchocolate-fusion.svg";
 import observabilitySignozOpenTelemetry from "../assets/projects/ai/observability-signoz-opentelemetry.svg";
+import powerhubBillingPlatformModernization from "../assets/projects/ai/powerhub-billing-platform-modernization.svg";
 import provaAiSystemsInfrastructure from "../assets/projects/ai/prova-ai-systems-infrastructure.svg";
 import cachara from "../assets/projects/cachara.jpg";
 import portfolio from "../assets/projects/portfolio.jpg";
@@ -29,6 +30,7 @@ const Projects = () => {
 
     const imagesMap: Record<string, string> = {
         "prova-ai-systems-infrastructure": provaAiSystemsInfrastructure,
+        "powerhub-billing-platform-modernization": powerhubBillingPlatformModernization,
         "claude-code-ai-enablement": claudeCodeAiEnablement,
         "ai-bill-extraction-platform": aiBillExtractionPlatform,
         "federated-graphql-hotchocolate-fusion": federatedGraphqlHotChocolateFusion,

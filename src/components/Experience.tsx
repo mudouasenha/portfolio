@@ -28,7 +28,7 @@ const Experience = () => {
 
     const { items: experiences, invalidCount } = adaptExperiences(t("experiences", { returnObjects: true }));
     const showFallback = experiences.length === 0 || invalidCount > 0;
-    const defaultVisibleCount = 2;
+    const defaultVisibleCount = 1;
     const hasHiddenItems = experiences.length > defaultVisibleCount;
     const visibleExperiences = isExpanded ? experiences : experiences.slice(0, defaultVisibleCount);
     const hiddenCount = Math.max(experiences.length - defaultVisibleCount, 0);
