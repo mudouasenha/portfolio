@@ -8,10 +8,10 @@ import { Button } from "@/components/ui/button";
 const DEFAULT_MOTION_DURATION_MEDIUM = 0.45;
 const DEFAULT_MOTION_EASE_STANDARD: [number, number, number, number] = [0.25, 0.1, 0.25, 1];
 const HERO_PROOF_STRIP_FALLBACK = [
-    ".NET / C# + APIs + cloud architecture",
-    "DevOps: Kubernetes, Azure DevOps, Google Cloud",
-    "Leading internal agentic AI practices",
-    "R$4k/month infra cost reduction",
+    "Tech Lead / Backend Software Engineer at PowerHub",
+    "~22 services instrumented with observability",
+    "Backend, platform, modernization, and AI enablement",
+    "R$ 9.8K/month cloud savings",
 ];
 
 const getMotionDurationMedium = () => {
@@ -120,7 +120,7 @@ const Hero = () => {
                             variants={container(0.25, shouldReduceMotion, motionDurationMedium, motionEaseStandard)}
                             initial="hidden"
                             animate="visible"
-                            className="mt-5 max-w-2xl text-balance text-base leading-relaxed text-muted-foreground sm:text-lg"
+                            className="mt-5 max-w-2xl text-balance text-base leading-relaxed text-foreground/80 sm:text-lg"
                         >
                             {heroLead}
                         </motion.p>
@@ -130,7 +130,7 @@ const Hero = () => {
                             animate="visible"
                             className="mt-5 max-w-3xl rounded-[1.15rem] border border-border/80 bg-card/75 p-3.5 sm:p-4"
                         >
-                            <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+                            <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-foreground/70">
                                 {t("hero.recruiterSnapshotLabel")}
                             </p>
                             <ul className="mt-3 grid gap-2 sm:grid-cols-2">
@@ -147,11 +147,11 @@ const Hero = () => {
                             animate="visible"
                             className="mt-6 flex w-full flex-col gap-2.5 sm:w-auto sm:flex-row sm:flex-wrap"
                         >
-                            <Button asChild size="lg" className="min-w-40 rounded-full px-4">
-                                <a href={resumeUrl} target="_blank" rel="noopener noreferrer">{t("hero.primaryCta")}</a>
+                            <Button asChild size="lg" className="min-w-40 rounded-full bg-[#245b71] px-4 text-white hover:bg-[#1f4c5f]">
+                                <a href="#projects">{t("hero.secondaryCta")}</a>
                             </Button>
                             <Button asChild variant="outline" size="lg" className="min-w-40 rounded-full px-4">
-                                <a href="#projects">{t("hero.secondaryCta")}</a>
+                                <a href={resumeUrl} target="_blank" rel="noopener noreferrer">{t("hero.primaryCta")}</a>
                             </Button>
                         </motion.div>
                         <motion.div
@@ -161,7 +161,7 @@ const Hero = () => {
                             className="mt-7 grid gap-2.5 sm:grid-cols-3"
                         >
                             {highlights.map((item) => (
-                                <div key={item} className="rounded-[1rem] border border-border/80 bg-card/70 px-3 py-3">
+                                <div key={item} className="rounded-[1rem] border border-border bg-card px-3 py-3 shadow-sm">
                                     <p className="text-sm font-medium leading-snug text-foreground">{item}</p>
                                 </div>
                             ))}
@@ -175,7 +175,7 @@ const Hero = () => {
                             {proofStrip.map((item) => (
                                 <span
                                     key={item}
-                                    className="rounded-full border border-border/70 bg-background/70 px-3 py-1 text-[11px] font-medium text-muted-foreground"
+                                    className="rounded-full border border-border bg-card px-3 py-1 text-[11px] font-medium text-foreground"
                                 >
                                     {item}
                                 </span>

@@ -51,13 +51,13 @@ describe("ai portfolio structure refresh", () => {
     it("keeps the hero proof strip and localized project heading", () => {
         const heroSource = readSource("src/components/Hero.tsx");
 
-        expect(heroSource).toContain("R$4k/month infra cost reduction");
+        expect(heroSource).toContain("R$ 9.8K/month cloud savings");
         expect(heroSource).toContain("hero.proofStrip");
         expect(heroSource).toContain("hero.subtitle");
     });
 
     it("keeps projects localized in both languages", () => {
-        expect(enLocale.projects).toBe("AI Systems & Projects");
-        expect(ptLocale.projects).toBe("Sistemas de IA e Projetos");
+        expect(enLocale.projects).toBe("Selected Systems & Case Studies");
+        expect(ptLocale.projects).toBe("Sistemas e Estudos de Caso");
     });
 });

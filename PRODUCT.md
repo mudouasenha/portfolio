@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This portfolio should position Matheus Gomes as a strong candidate for backend, platform, and AI systems roles. It is not just a gallery of work; it is a curated proof surface for recruiters, hiring managers, and technical leads making an early evaluation.
+This portfolio should position Matheus Gomes as a strong candidate for tech lead, staff-backend, and product-platform roles. It is not just a gallery of work; it is a curated proof surface for recruiters, hiring managers, and technical leads making an early evaluation.
 
 ## Primary Audience
 
@@ -20,7 +20,7 @@ This portfolio should position Matheus Gomes as a strong candidate for backend, 
 
 A successful portfolio visit should make the following clear within the first minute:
 
-- Matheus fits best in backend, platform, or applied AI systems work
+- Matheus fits best in hands-on tech lead, staff backend, or product-platform work
 - The work is production-minded, not tutorial-driven
 - The communication style is clear, calm, and credible
 - Internal/company work is presented responsibly without leaking proprietary details
@@ -38,7 +38,7 @@ This repository is not optimizing for:
 
 ## Positioning Statement
 
-The portfolio should read as: production-minded engineering with strong backend delivery, infrastructure awareness, and practical AI execution.
+The portfolio should read as: hands-on technical leadership across backend delivery, product-scoped platform work, observability, modernization, and practical AI enablement.
 
 ## Content Priorities
 

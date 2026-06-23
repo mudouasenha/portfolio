@@ -10,7 +10,12 @@ import { adaptContact } from "@/features/i18n/contentAdapters";
 const Contact = () => {
     const { t } = useTranslation();
   
-    const { items: contacts, invalidCount } = adaptContact(t("contact", { returnObjects: true }));
+    const contactContent = t("contact", { returnObjects: true }) as Record<string, string>;
+    const { items: contacts, invalidCount } = adaptContact({
+        address: contactContent.address,
+        phoneNo: contactContent.phoneNo,
+        email: contactContent.email,
+    });
     const contact = contacts[0];
     const showFallback = contacts.length === 0 || invalidCount > 0;
     
@@ -68,7 +73,7 @@ const Contact = () => {
                                 href="https://www.linkedin.com/in/matheus-gomes-98823b185"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                aria-label="Contact on LinkedIn (opens in a new tab)"
+                                aria-label="LinkedIn profile (opens in a new tab)"
                             >
                                 {t("contact.linkedinCta")}
                             </a>

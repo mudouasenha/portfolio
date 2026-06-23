@@ -1,0 +1,32 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" rx="48" fill="#F7F0E6"/>
+  <rect x="56" y="56" width="1088" height="788" rx="36" fill="#FFFDF9" stroke="#D8CAB8" stroke-width="4"/>
+  <rect x="96" y="104" width="300" height="36" rx="18" fill="#E7D8C6"/>
+  <rect x="96" y="176" width="640" height="72" rx="24" fill="#1F2937" fill-opacity="0.06"/>
+  <rect x="96" y="272" width="550" height="28" rx="14" fill="#1F2937" fill-opacity="0.08"/>
+  <rect x="96" y="320" width="490" height="28" rx="14" fill="#1F2937" fill-opacity="0.08"/>
+  <rect x="96" y="400" width="240" height="120" rx="24" fill="#E9F2EE" stroke="#A9C7B6" stroke-width="3"/>
+  <rect x="368" y="400" width="240" height="120" rx="24" fill="#EEF1F7" stroke="#B8C3D9" stroke-width="3"/>
+  <rect x="640" y="400" width="240" height="120" rx="24" fill="#F7EDEB" stroke="#D7B8B1" stroke-width="3"/>
+  <rect x="912" y="240" width="168" height="368" rx="28" fill="#FBF7F0" stroke="#D8CAB8" stroke-width="3"/>
+  <circle cx="996" cy="336" r="52" fill="#1D7A66" fill-opacity="0.12"/>
+  <circle cx="996" cy="460" r="52" fill="#174A78" fill-opacity="0.12"/>
+  <circle cx="996" cy="584" r="52" fill="#8C4F2D" fill-opacity="0.12"/>
+  <rect x="96" y="588" width="448" height="188" rx="28" fill="#FBF7F0" stroke="#D8CAB8" stroke-width="3"/>
+  <rect x="576" y="588" width="304" height="188" rx="28" fill="#FBF7F0" stroke="#D8CAB8" stroke-width="3"/>
+  <text x="96" y="134" fill="#8C6E4D" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="4">POWERHUB CASE STUDY</text>
+  <text x="96" y="224" fill="#1F2937" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="700">Billing &amp; Platform</text>
+  <text x="96" y="292" fill="#1F2937" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="700">Modernization</text>
+  <text x="96" y="454" fill="#1D7A66" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="700">11k+</text>
+  <text x="96" y="492" fill="#48605B" font-family="Inter, Arial, sans-serif" font-size="24">monthly invoices</text>
+  <text x="368" y="454" fill="#174A78" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="700">20k+</text>
+  <text x="368" y="492" fill="#4D5C6C" font-family="Inter, Arial, sans-serif" font-size="24">devices / day</text>
+  <text x="640" y="454" fill="#8C4F2D" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="700">22</text>
+  <text x="640" y="492" fill="#6D554A" font-family="Inter, Arial, sans-serif" font-size="24">services observed</text>
+  <text x="96" y="658" fill="#1F2937" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700">Observability</text>
+  <text x="96" y="700" fill="#5B6470" font-family="Inter, Arial, sans-serif" font-size="22">GraphQL federation, SQL migration,</text>
+  <text x="96" y="732" fill="#5B6470" font-family="Inter, Arial, sans-serif" font-size="22">cost reduction, and safer product delivery.</text>
+  <text x="576" y="658" fill="#1F2937" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700">Outcome</text>
+  <text x="576" y="700" fill="#5B6470" font-family="Inter, Arial, sans-serif" font-size="22">R$ 9.8K / month cloud savings</text>
+  <text x="576" y="732" fill="#5B6470" font-family="Inter, Arial, sans-serif" font-size="22">and 4 legacy systems retired.</text>
+</svg>

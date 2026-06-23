@@ -31,7 +31,7 @@ for (const scenario of scenarios) {
       await expect(page.getByRole("dialog")).toBeVisible();
     } else {
       await expect(menuButton).toHaveCount(0);
-      await expect(page.getByRole("link", { name: /contact|contato/i })).toBeVisible();
+      await expect(page.getByRole("link", { name: /get in touch|entre em contato/i }).first()).toBeVisible();
     }
   });
 }
