@@ -24,7 +24,8 @@
   "navigation": {
     "menu": "Navegar",
     "cta": "Ver currículo",
-    "role": "Tech Lead · Backend · Plataforma de Produto"
+    "role": "Tech Lead · Backend · Plataforma de Produto",
+    "projectsShort": "Casos"
   },
   "validationFallback": {
     "skills": "Alguns itens de habilidades não puderam ser exibidos.",

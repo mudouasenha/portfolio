@@ -85,9 +85,9 @@ const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const navItems = [
         { href: "#about", label: t("aboutNav") },
-        { href: "#skills", label: t("skillsTitle") },
         { href: "#experience", label: t("experience") },
-        { href: "#projects", label: t("projects") },
+        { href: "#projects", label: t("navigation.projectsShort") },
+        { href: "#skills", label: t("skillsTitle") },
         { href: "#technologies", label: t("technologies") },
         { href: "#certifications", label: t("certificationsTitle") },
         { href: "#contact", label: t("getInTouch") },
@@ -165,7 +165,7 @@ const Navbar = () => {
                         );
                     })}
                     <LanguageSwitcher />
-                    <Button asChild size="sm" className="rounded-full px-4">
+                    <Button asChild variant="outline" size="sm" className="rounded-full px-4">
                         <a href={RESUME_URL} target="_blank" rel="noopener noreferrer">{t("navigation.cta")}</a>
                     </Button>
                 </div>

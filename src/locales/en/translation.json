@@ -24,7 +24,8 @@
   "navigation": {
     "menu": "Navigate",
     "cta": "View résumé",
-    "role": "Tech Lead · Backend · Product Platform"
+    "role": "Tech Lead · Backend · Product Platform",
+    "projectsShort": "Case studies"
   },
   "validationFallback": {
     "skills": "Some skill entries could not be displayed.",
